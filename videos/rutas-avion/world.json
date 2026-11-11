@@ -1,7 +1,10 @@
 {
  "style": "3d",
  "shots": [
-  { "id": "test-quality", "title": "¿Por qué los aviones no vuelan recto?", "highlight": "recto", "duration": 3, "snap": [0.3, 2.7] },
-  { "id": "test-low", "title": "Círculo máximo", "highlight": "máximo", "duration": 2, "snap": [1] }
+  { "id": "test-quality", "title": "¿Por qué los aviones no vuelan recto?", "highlight": "recto", "duration": 3, "snap": [1.5] },
+  { "id": "test-earth", "title": "Globo y mapa", "duration": 3.6, "snap": [0.3, 1.05, 2.0] },
+  { "id": "test-globe", "title": "Hilo y círculo máximo", "highlight": "máximo", "duration": 4, "snap": [0.2, 1.6, 3.6], "keys": [ { "id": "pins", "t": 0.1 }, { "id": "grow", "t": 0.6 }, { "id": "ring", "t": 1.8 }, { "id": "jets", "t": 2.4 } ] },
+  { "id": "test-compare", "title": "14 veces", "duration": 3, "snap": [0.4, 2.5], "keys": [ { "id": "shrink", "t": 1.0 } ] },
+  { "id": "test-bars", "title": "Ida y vuelta", "duration": 2.5, "snap": [1.8], "keys": [ { "id": "fill", "t": 0.4 } ] }
  ]
 }

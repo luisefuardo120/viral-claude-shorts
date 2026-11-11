@@ -1,0 +1,384 @@
+{
+ "style": "3d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "Diorama look like the reference train video: smooth rounded heroes, faceted background, cut soil edge, heavy caps titles (key word lime, numbers red), word captions. Watermark @curiosferagfx.",
+ "music": {
+  "bpm": 96
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "question",
+   "title": "¿Por qué no vuelan en línea recta?",
+   "highlight": "recta",
+   "mood": "curious",
+   "ambience": [
+    "wind"
+   ],
+   "visual": "the airfield diorama from its corner, the plane parked on the runway",
+   "from": 0,
+   "transition": "cut",
+   "t0": 0,
+   "t1": 2.67
+  },
+  {
+   "id": "raya",
+   "type": "map",
+   "title": "Una raya recta",
+   "highlight": "recta",
+   "mood": "curious",
+   "keys": [
+    {
+     "id": "pins",
+     "at": 14,
+     "sfx": "pop",
+     "t": 3.46
+    },
+    {
+     "id": "raya",
+     "at": 21,
+     "sfx": "whoosh",
+     "t": 5.12
+    }
+   ],
+   "visual": "flat Mercator map; London and Los Angeles pins pop; the red straight line grows",
+   "from": 11,
+   "transition": "cut",
+   "t0": 2.67,
+   "t1": 6.56
+  },
+  {
+   "id": "arriba",
+   "type": "map",
+   "title": "Por encima de Groenlandia",
+   "highlight": "Groenlandia",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "vuela",
+     "at": 27,
+     "sfx": "whoosh",
+     "t": 7.14
+    }
+   ],
+   "visual": "flat map; the small plane flies from London up over Greenland to Los Angeles, the green route trailing",
+   "from": 25,
+   "transition": "cut",
+   "t0": 6.56,
+   "t1": 9.95
+  },
+  {
+   "id": "bola",
+   "type": "object",
+   "title": "La Tierra es una bola",
+   "highlight": "bola",
+   "mood": "wonder",
+   "keys": [
+    {
+     "id": "bola",
+     "at": 46,
+     "sfx": "whoosh",
+     "t": 11.94
+    }
+   ],
+   "visual": "the flat map folds into a globe",
+   "from": 38,
+   "transition": "cut",
+   "t0": 9.95,
+   "t1": 12.71
+  },
+  {
+   "id": "estira",
+   "type": "process",
+   "title": "El mapa la estira",
+   "highlight": "estira",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "estira",
+     "at": 56,
+     "sfx": "whoosh",
+     "t": 14.84
+    },
+    {
+     "id": "polos",
+     "at": 59,
+     "t": 15.98
+    }
+   ],
+   "visual": "the globe unrolls into the Mercator map; the camera rises to the stretched north",
+   "from": 49,
+   "transition": "cut",
+   "t0": 12.71,
+   "t1": 17.27
+  },
+  {
+   "id": "groenlandia",
+   "type": "comparison",
+   "title": "Groenlandia vs África",
+   "highlight": "África",
+   "mood": "epic",
+   "stat": {
+    "value": "14 veces",
+    "text": "más grande es África"
+   },
+   "keys": [
+    {
+     "id": "shrink",
+     "at": 73,
+     "sfx": "pop",
+     "t": 20.72
+    },
+    {
+     "id": "stat",
+     "at": 76,
+     "sfx": "impact",
+     "t": 21.96
+    }
+   ],
+   "visual": "Greenland and Africa side by side at Mercator size; Greenland shrinks to its real size",
+   "from": 63,
+   "transition": "cut",
+   "t0": 17.27,
+   "t1": 23.39
+  },
+  {
+   "id": "hilo",
+   "type": "process",
+   "title": "Un hilo entre dos ciudades",
+   "highlight": "hilo",
+   "mood": "wonder",
+   "keys": [
+    {
+     "id": "pins",
+     "at": 83,
+     "sfx": "pop",
+     "t": 24.6
+    },
+    {
+     "id": "tensas",
+     "at": 86,
+     "sfx": "whoosh",
+     "t": 25.68
+    }
+   ],
+   "visual": "globe; both pins pop; the green thread stretches from London to Los Angeles",
+   "from": 80,
+   "transition": "cut",
+   "t0": 23.39,
+   "t1": 27.69
+  },
+  {
+   "id": "polo",
+   "type": "comparison",
+   "title": "Se curva hacia el polo",
+   "highlight": "polo",
+   "mood": "curious",
+   "keys": [
+    {
+     "id": "raya",
+     "at": 98,
+     "sfx": "whoosh",
+     "t": 28.88
+    }
+   ],
+   "visual": "globe with the green thread; the red map line appears on the globe, bending south",
+   "from": 93,
+   "transition": "cut",
+   "t0": 27.69,
+   "t1": 31.18
+  },
+  {
+   "id": "circulo",
+   "type": "object",
+   "title": "Círculo máximo",
+   "highlight": "máximo",
+   "mood": "epic",
+   "keys": [
+    {
+     "id": "corto",
+     "at": 111,
+     "sfx": "whoosh",
+     "t": 32.5
+    },
+    {
+     "id": "circulo",
+     "at": 118,
+     "sfx": "shimmer",
+     "t": 34.36
+    }
+   ],
+   "visual": "the small plane flies the thread; the great-circle disc slices the globe through its center",
+   "from": 106,
+   "transition": "cut",
+   "t0": 31.18,
+   "t1": 35.75
+  },
+  {
+   "id": "plano",
+   "type": "map",
+   "title": "La recta de verdad",
+   "highlight": "recta",
+   "mood": "wonder",
+   "keys": [
+    {
+     "id": "plano",
+     "at": 126,
+     "sfx": "whoosh",
+     "t": 37.32
+    },
+    {
+     "id": "recta",
+     "at": 135,
+     "sfx": "shimmer",
+     "t": 39.78
+    }
+   ],
+   "visual": "the globe unrolls into the map with both routes: the green one is curved",
+   "from": 120,
+   "transition": "cut",
+   "t0": 35.75,
+   "t1": 40.67
+  },
+  {
+   "id": "altura",
+   "type": "process",
+   "title": "A 10 km de altura",
+   "highlight": "km",
+   "mood": "tense",
+   "ambience": [
+    "wind"
+   ],
+   "keys": [
+    {
+     "id": "despega",
+     "at": 141,
+     "sfx": "whoosh",
+     "t": 41.58
+    },
+    {
+     "id": "tren",
+     "at": 146,
+     "sfx": "tick",
+     "t": 43.02
+    }
+   ],
+   "visual": "the plane takes off from the diorama and climbs, folding its gear",
+   "from": 138,
+   "transition": "cut",
+   "t0": 40.67,
+   "t1": 44.55
+  },
+  {
+   "id": "viento",
+   "type": "stat",
+   "title": "De oeste a este",
+   "highlight": "este",
+   "mood": "energetic",
+   "stat": {
+    "value": "+200 km/h",
+    "text": "sopla ese viento"
+   },
+   "keys": [
+    {
+     "id": "jets",
+     "at": 151,
+     "sfx": "whoosh",
+     "t": 44.94
+    },
+    {
+     "id": "stat",
+     "at": 163,
+     "sfx": "impact",
+     "t": 47.64
+    }
+   ],
+   "visual": "the globe spins; white jet-stream streaks race from west to east",
+   "from": 150,
+   "transition": "cut",
+   "t0": 44.55,
+   "t1": 49.19
+  },
+  {
+   "id": "chorro",
+   "type": "process",
+   "title": "Corrientes en chorro",
+   "highlight": "chorro",
+   "mood": "energetic",
+   "ambience": [
+    "wind"
+   ],
+   "keys": [
+    {
+     "id": "sube",
+     "at": 178,
+     "sfx": "whoosh",
+     "t": 52.44
+    },
+    {
+     "id": "oeste",
+     "at": 188,
+     "sfx": "pop",
+     "t": 54.8
+    }
+   ],
+   "visual": "in the sky the plane flies east riding the white streaks; another plane flies west below, out of the wind",
+   "from": 167,
+   "transition": "cut",
+   "t0": 49.19,
+   "t1": 55.76
+  },
+  {
+   "id": "vuelta",
+   "type": "comparison",
+   "title": "Ida y vuelta",
+   "highlight": "vuelta",
+   "mood": "curious",
+   "stat": {
+    "value": "+1 hora",
+    "text": "puede tardar la vuelta"
+   },
+   "keys": [
+    {
+     "id": "barras",
+     "at": 194,
+     "sfx": "whoosh",
+     "t": 56.46
+    },
+    {
+     "id": "stat",
+     "at": 203,
+     "sfx": "impact",
+     "t": 58.4
+    }
+   ],
+   "visual": "two time bars, outbound and return; the return one is longer",
+   "from": 191,
+   "transition": "cut",
+   "t0": 55.76,
+   "t1": 59.58
+  },
+  {
+   "id": "cierre",
+   "type": "closing",
+   "title": "La recta está sobre una bola",
+   "highlight": "bola",
+   "mood": "triumphant",
+   "keys": [
+    {
+     "id": "recta",
+     "at": 217,
+     "sfx": "shimmer",
+     "t": 61.48
+    }
+   ],
+   "visual": "the globe turns while the small plane flies the green great circle around it",
+   "from": 209,
+   "transition": "cut",
+   "t0": 59.58,
+   "t1": 64.862
+  }
+ ],
+ "duration": 64.862
+}

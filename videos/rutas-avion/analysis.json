@@ -1,0 +1,391 @@
+{
+ "duration": 64.862,
+ "phrases": [
+  {
+   "n": 1,
+   "t0": 0,
+   "t1": 2.56,
+   "from": 0,
+   "to": 10,
+   "text": "Porque los aviones no vuelan en línea recta en el mapa.",
+   "question": false
+  },
+  {
+   "n": 2,
+   "t0": 2.92,
+   "t1": 4.44,
+   "from": 11,
+   "to": 17,
+   "text": "Si vas de Londres a Los Ángeles,",
+   "question": false
+  },
+  {
+   "n": 3,
+   "t0": 4.74,
+   "t1": 6.52,
+   "from": 18,
+   "to": 24,
+   "text": "en el mapa trazas una raya recta.",
+   "question": false
+  },
+  {
+   "n": 4,
+   "t0": 6.64,
+   "t1": 9.86,
+   "from": 25,
+   "to": 37,
+   "text": "Pero el avión se va hacia arriba y pasa por encima de Groenlandia.",
+   "question": false
+  },
+  {
+   "n": 5,
+   "t0": 10.2,
+   "t1": 12.52,
+   "from": 38,
+   "to": 48,
+   "text": "Y es que la tierra no es plana, es una bola.",
+   "question": false
+  },
+  {
+   "n": 6,
+   "t0": 12.96,
+   "t1": 14,
+   "from": 49,
+   "to": 52,
+   "text": "Para dibujarla en papel,",
+   "question": false
+  },
+  {
+   "n": 7,
+   "t0": 14.38,
+   "t1": 17.02,
+   "from": 53,
+   "to": 62,
+   "text": "el mapa la estira, sobre todo cerca de los polos.",
+   "question": false
+  },
+  {
+   "n": 8,
+   "t0": 17.52,
+   "t1": 23.34,
+   "from": 63,
+   "to": 79,
+   "text": "Por eso Groenlandia parece tan grande como África, cuando en realidad África es catorce veces más grande.",
+   "question": false
+  },
+  {
+   "n": 9,
+   "t0": 23.64,
+   "t1": 27.46,
+   "from": 80,
+   "to": 92,
+   "text": "Entonces coges un globo terráqueo y tensas un hilo entre las dos ciudades.",
+   "question": false
+  },
+  {
+   "n": 10,
+   "t0": 27.94,
+   "t1": 29.58,
+   "from": 93,
+   "to": 100,
+   "text": "El hilo no sigue la raya del mapa,",
+   "question": false
+  },
+  {
+   "n": 11,
+   "t0": 29.92,
+   "t1": 31.14,
+   "from": 101,
+   "to": 105,
+   "text": "se curva hacia el polo.",
+   "question": false
+  },
+  {
+   "n": 12,
+   "t0": 31.42,
+   "t1": 33.58,
+   "from": 106,
+   "to": 114,
+   "text": "Ese es el camino más corto sobre una bola,",
+   "question": false
+  },
+  {
+   "n": 13,
+   "t0": 33.92,
+   "t1": 35.42,
+   "from": 115,
+   "to": 119,
+   "text": "y se llama Círculo Máximo.",
+   "question": false
+  },
+  {
+   "n": 14,
+   "t0": 36,
+   "t1": 37.72,
+   "from": 120,
+   "to": 126,
+   "text": "Si pasas ese hilo al mapa plano,",
+   "question": false
+  },
+  {
+   "n": 15,
+   "t0": 38.06,
+   "t1": 40.44,
+   "from": 127,
+   "to": 137,
+   "text": "se ve como una curva, pero es la recta de verdad.",
+   "question": false
+  },
+  {
+   "n": 16,
+   "t0": 40.92,
+   "t1": 43.36,
+   "from": 138,
+   "to": 146,
+   "text": "Pero no siempre vuelan justo por ahí, porque arriba,",
+   "question": false
+  },
+  {
+   "n": 17,
+   "t0": 43.66,
+   "t1": 44.22,
+   "from": 147,
+   "to": 149,
+   "text": "a 10 km,",
+   "question": false
+  },
+  {
+   "n": 18,
+   "t0": 44.8,
+   "t1": 49.06,
+   "from": 150,
+   "to": 166,
+   "text": "hay corrientes de aire que soplan de oeste a este a más de 200 km por hora.",
+   "question": false
+  },
+  {
+   "n": 19,
+   "t0": 49.44,
+   "t1": 50.88,
+   "from": 167,
+   "to": 171,
+   "text": "Son las corrientes en chorro.",
+   "question": false
+  },
+  {
+   "n": 20,
+   "t0": 51.36,
+   "t1": 54.02,
+   "from": 172,
+   "to": 184,
+   "text": "Hacia el este el avión se sube a ellas para ir más rápido,",
+   "question": false
+  },
+  {
+   "n": 21,
+   "t0": 54.36,
+   "t1": 55.72,
+   "from": 185,
+   "to": 190,
+   "text": "y hacia el oeste las esquiva.",
+   "question": false
+  },
+  {
+   "n": 22,
+   "t0": 56,
+   "t1": 59.54,
+   "from": 191,
+   "to": 208,
+   "text": "Por eso el vuelo de vuelta a vez estarda más de una hora más que el de ida.",
+   "question": false
+  },
+  {
+   "n": 23,
+   "t0": 59.72,
+   "t1": 61.98,
+   "from": 209,
+   "to": 217,
+   "text": "Así que los aviones sí vuelan en línea recta.",
+   "question": false
+  },
+  {
+   "n": 24,
+   "t0": 62.18,
+   "t1": 64.62,
+   "from": 218,
+   "to": 228,
+   "text": "Lo que pasa es que la recta está sobre una bola.",
+   "question": false
+  }
+ ],
+ "pauses": [
+  {
+   "t0": 2.56,
+   "t1": 2.92,
+   "dur": 0.36,
+   "after": 10
+  },
+  {
+   "t0": 4.44,
+   "t1": 4.74,
+   "dur": 0.3,
+   "after": 17
+  },
+  {
+   "t0": 9.86,
+   "t1": 10.2,
+   "dur": 0.34,
+   "after": 37
+  },
+  {
+   "t0": 12.52,
+   "t1": 12.96,
+   "dur": 0.44,
+   "after": 48
+  },
+  {
+   "t0": 14,
+   "t1": 14.38,
+   "dur": 0.38,
+   "after": 52
+  },
+  {
+   "t0": 17.02,
+   "t1": 17.52,
+   "dur": 0.5,
+   "after": 62
+  },
+  {
+   "t0": 23.34,
+   "t1": 23.64,
+   "dur": 0.3,
+   "after": 79
+  },
+  {
+   "t0": 27.46,
+   "t1": 27.94,
+   "dur": 0.48,
+   "after": 92
+  },
+  {
+   "t0": 29.58,
+   "t1": 29.92,
+   "dur": 0.34,
+   "after": 100
+  },
+  {
+   "t0": 31.14,
+   "t1": 31.42,
+   "dur": 0.28,
+   "after": 105
+  },
+  {
+   "t0": 33.58,
+   "t1": 33.92,
+   "dur": 0.34,
+   "after": 114
+  },
+  {
+   "t0": 35.42,
+   "t1": 36,
+   "dur": 0.58,
+   "after": 119
+  },
+  {
+   "t0": 37.72,
+   "t1": 38.06,
+   "dur": 0.34,
+   "after": 126
+  },
+  {
+   "t0": 40.44,
+   "t1": 40.92,
+   "dur": 0.48,
+   "after": 137
+  },
+  {
+   "t0": 43.36,
+   "t1": 43.66,
+   "dur": 0.3,
+   "after": 146
+  },
+  {
+   "t0": 44.22,
+   "t1": 44.8,
+   "dur": 0.58,
+   "after": 149
+  },
+  {
+   "t0": 49.06,
+   "t1": 49.44,
+   "dur": 0.38,
+   "after": 166
+  },
+  {
+   "t0": 50.88,
+   "t1": 51.36,
+   "dur": 0.48,
+   "after": 171
+  },
+  {
+   "t0": 54.02,
+   "t1": 54.36,
+   "dur": 0.34,
+   "after": 184
+  },
+  {
+   "t0": 55.72,
+   "t1": 56,
+   "dur": 0.28,
+   "after": 190
+  }
+ ],
+ "numbers": [
+  {
+   "i": 22,
+   "w": "una",
+   "t0": 5.54
+  },
+  {
+   "i": 47,
+   "w": "una",
+   "t0": 12.08
+  },
+  {
+   "i": 91,
+   "w": "dos",
+   "t0": 26.8
+  },
+  {
+   "i": 113,
+   "w": "una",
+   "t0": 33.06
+  },
+  {
+   "i": 130,
+   "w": "una",
+   "t0": 38.5
+  },
+  {
+   "i": 148,
+   "w": "10",
+   "t0": 43.78
+  },
+  {
+   "i": 163,
+   "w": "200",
+   "t0": 47.64
+  },
+  {
+   "i": 202,
+   "w": "una",
+   "t0": 58.2
+  },
+  {
+   "i": 227,
+   "w": "una",
+   "t0": 64.16
+  }
+ ],
+ "words": 229
+}
