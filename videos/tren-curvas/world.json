@@ -1,0 +1,8 @@
+{
+ "style": "3d",
+ "shots": [
+  { "id": "test-land", "title": "¿Por qué no se sale en las curvas?", "highlight": "curvas", "duration": 3, "snap": [0.5, 2.5] },
+  { "id": "test-wheels", "title": "Cilindro, cono y pestaña", "highlight": "cono", "duration": 4.5, "snap": [0.5, 2.0, 4.2] },
+  { "id": "test-front", "title": "Contacto y chispas", "duration": 2.5, "snap": [0.8, 2.3] }
+ ]
+}

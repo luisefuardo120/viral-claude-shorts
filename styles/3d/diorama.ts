@@ -56,9 +56,11 @@ const dioHouse = (p: Vec3, ry = 0, s = 1) => {
 const dioTree = (p: Vec3, s = 1, c = '#4caf3e') => p3Group(
   p3Mesh(p3Cyl(0.12, 0.16, 1.2, 8), '#8a5a3b', { p: [p[0], p[1] + 0.6, p[2]], s }),
   p3Mesh(new THREE.IcosahedronGeometry(0.85 * s, 1), c, { p: [p[0], p[1] + 1.55 * s, p[2]] }));
-const DIO_W = 46, DIO_D = 28, DIO_H = 5;
-// o.road: the asphalt strip along x (an airfield); o.clear: half-width of the strip along x kept free of grass tufts
-const dioDiorama = (o: { road?: boolean; clear?: number } = {}) => {
+const DIO_W0 = 46, DIO_D0 = 28, DIO_H = 5;
+// o.road: the asphalt strip along x (an airfield); o.clear: half-width of the strip along x kept free of grass tufts,
+// or o.free(x, z): true where no tuft may grow; o.props: false leaves out the houses, trees and hills; o.w, o.d: its size
+const dioDiorama = (o: { road?: boolean; clear?: number; free?: (x: number, z: number) => boolean; props?: boolean; w?: number; d?: number } = {}) => {
+  const DIO_W = o.w ?? DIO_W0, DIO_D = o.d ?? DIO_D0, free = o.free ?? ((x: number, z: number) => Math.abs(z) < (o.clear ?? 4.4));
   const g = p3Group(), side = new THREE.MeshStandardMaterial({ map: dioSoil(), roughness: 0.95 }), sideX = side.clone();
   side.map!.repeat.set(DIO_W / 9, 1); sideX.map = side.map!.clone(); sideX.map.repeat.set(DIO_D / 9, 1); sideX.map.needsUpdate = true;
   const block = new THREE.Mesh(new THREE.BoxGeometry(DIO_W, DIO_H, DIO_D), [sideX, sideX, dioGrassMat(), side, side, side]);
@@ -67,9 +69,10 @@ const dioDiorama = (o: { road?: boolean; clear?: number } = {}) => {
   // grass tufts: three thin blades each, never on the clear strip
   const R = p3Rnd(5), N = 700, blade = new THREE.ConeGeometry(0.035, 0.42, 3); blade.translate(0, 0.21, 0);
   const tufts = p3Swarm(N * 3, blade, new THREE.MeshStandardMaterial({ color: '#2f8a24', roughness: 0.9 }));
-  for (let i = 0; i < N; i++) { let x = 0, z = 0; do { x = (R() - 0.5) * (DIO_W - 0.6); z = (R() - 0.5) * (DIO_D - 0.6); } while (Math.abs(z) < (o.clear ?? 4.4));
+  for (let i = 0; i < N; i++) { let x = 0, z = 0; do { x = (R() - 0.5) * (DIO_W - 0.6); z = (R() - 0.5) * (DIO_D - 0.6); } while (free(x, z));
     const k = 0.35 + R() * 0.35; for (let j = 0; j < 3; j++) tufts.put(i * 3 + j, x + (j - 1) * 0.06, 0, z + (R() - 0.5) * 0.08, k, k * (0.8 + R() * 0.5), k, (j - 1) * 0.35, R() * 3, (j - 1) * 0.3); }
   tufts.done(); g.add(tufts);
+  if (o.props === false) return g;
   const greens = ['#4caf3e', '#5cc24a', '#3f9a36', '#6acb55'];
   for (const [x, z, sc, i] of [[-15, -10, 7, 0], [-4, -11.5, 8.5, 1], [9, -10.5, 7.5, 2], [19, -11, 6, 3]]) { const h = new THREE.IcosahedronGeometry(1, 1); h.scale(sc * 1.2, sc * 0.75, sc * 0.45); g.add(p3Mesh(h, greens[i], { p: [x, 0, z] })); }
   g.add(dioHouse([-9, 0, -6.5], 0.25), dioHouse([5, 0, -7], -0.2, 0.9), dioHouse([14, 0, 7.5], 0.4, 0.85), dioHouse([-14, 0, 8], -0.5, 0.95));

@@ -1,0 +1,317 @@
+{
+ "style": "3d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "Channel diorama look (styles/3d/diorama.ts + theme.css): smooth heroes, cut soil edge, heavy caps titles, word captions. Watermark @curiosferagfx.",
+ "music": {
+  "bpm": 100
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "question",
+   "title": "¿Por qué no se sale en las curvas?",
+   "highlight": "curvas",
+   "mood": "curious",
+   "ambience": [
+    "wind"
+   ],
+   "visual": "the diorama with the oval track; the train runs into the curve",
+   "from": 0,
+   "transition": "cut",
+   "t0": 0,
+   "t1": 3.27
+  },
+  {
+   "id": "eje",
+   "type": "object",
+   "title": "Dos ruedas, un eje",
+   "highlight": "eje",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "gira",
+     "at": 22,
+     "sfx": "tick",
+     "t": 6.18
+    }
+   ],
+   "visual": "close-up of the wheelset (cylinders) on a piece of track; both wheels turn together",
+   "from": 12,
+   "transition": "cut",
+   "t0": 3.27,
+   "t1": 7.33
+  },
+  {
+   "id": "fuera",
+   "type": "comparison",
+   "title": "La de fuera recorre más",
+   "highlight": "fuera",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "huellas",
+     "at": 37,
+     "sfx": "whoosh",
+     "t": 9.74
+    }
+   ],
+   "visual": "top view of the curve: the outer wheel path (lime) and the inner one (red) grow; the outer one is longer",
+   "from": 27,
+   "transition": "cut",
+   "t0": 7.33,
+   "t1": 11.57
+  },
+  {
+   "id": "cilindros",
+   "type": "process",
+   "title": "Si fueran cilindros",
+   "highlight": "cilindros",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "chirria",
+     "at": 50,
+     "sfx": "scratch",
+     "t": 14
+    }
+   ],
+   "visual": "front view: cylinder wheels; the inner one skids with sparks",
+   "from": 44,
+   "transition": "cut",
+   "t0": 11.57,
+   "t1": 15.63
+  },
+  {
+   "id": "cono",
+   "type": "object",
+   "title": "En forma de cono",
+   "highlight": "cono",
+   "mood": "wonder",
+   "keys": [
+    {
+     "id": "cono",
+     "at": 60,
+     "sfx": "shimmer",
+     "t": 17.4
+    }
+   ],
+   "visual": "close-up: the wheels turn into cones, wider inside",
+   "from": 54,
+   "transition": "cut",
+   "t0": 15.63,
+   "t1": 19.03
+  },
+  {
+   "id": "apoya",
+   "type": "process",
+   "title": "Grande fuera, pequeña dentro",
+   "highlight": "grande",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "fuera",
+     "at": 73,
+     "sfx": "whoosh",
+     "t": 20.58
+    },
+    {
+     "id": "grande",
+     "at": 83,
+     "sfx": "pop",
+     "t": 22.96
+    },
+    {
+     "id": "dentro",
+     "at": 87,
+     "sfx": "pop",
+     "t": 23.76
+    }
+   ],
+   "visual": "front view: the wheelset slides outward; lime ring on the big part outside, red ring on the small part inside",
+   "from": 65,
+   "transition": "cut",
+   "t0": 19.03,
+   "t1": 24.87
+  },
+  {
+   "id": "vuelta",
+   "type": "comparison",
+   "title": "Misma vuelta, más camino",
+   "highlight": "vuelta",
+   "mood": "wonder",
+   "ambience": [
+    "wind"
+   ],
+   "keys": [
+    {
+     "id": "avanza",
+     "at": 100,
+     "sfx": "pop",
+     "t": 26.96
+    }
+   ],
+   "visual": "top view of the curve; the train goes round and both wheel paths grow, the outer longer",
+   "from": 92,
+   "transition": "cut",
+   "t0": 24.87,
+   "t1": 27.71
+  },
+  {
+   "id": "conicidad",
+   "type": "object",
+   "title": "La conicidad",
+   "highlight": "conicidad",
+   "mood": "epic",
+   "ambience": [
+    "wind"
+   ],
+   "keys": [
+    {
+     "id": "gira",
+     "at": 109,
+     "sfx": "shimmer",
+     "t": 29.68
+    }
+   ],
+   "visual": "the diorama: the train takes the curve on its own",
+   "from": 102,
+   "transition": "cut",
+   "t0": 27.71,
+   "t1": 30.47
+  },
+  {
+   "id": "baile",
+   "type": "process",
+   "title": "Baila de lado a lado",
+   "highlight": "lado",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "baila",
+     "at": 119,
+     "sfx": "whoosh",
+     "t": 32.5
+    },
+    {
+     "id": "rapido",
+     "at": 126,
+     "t": 34.06
+    }
+   ],
+   "visual": "the wheelset on a straight, swaying side to side more and more",
+   "from": 111,
+   "transition": "cut",
+   "t0": 30.47,
+   "t1": 35.98
+  },
+  {
+   "id": "amort",
+   "type": "process",
+   "title": "Amortiguadores",
+   "highlight": "Amortiguadores",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "poca",
+     "at": 135,
+     "t": 37.16
+    },
+    {
+     "id": "amort",
+     "at": 141,
+     "sfx": "pop",
+     "t": 38.9
+    }
+   ],
+   "visual": "the cones flatten, dampers appear and the sway dies out",
+   "from": 131,
+   "transition": "cut",
+   "t0": 35.98,
+   "t1": 40.72
+  },
+  {
+   "id": "cerrada",
+   "type": "question",
+   "title": "Curva cerrada",
+   "highlight": "cerrada",
+   "mood": "tense",
+   "ambience": [
+    "wind"
+   ],
+   "visual": "low view along the curve: the train comes fast",
+   "from": 146,
+   "transition": "cut",
+   "t0": 40.72,
+   "t1": 42.94
+  },
+  {
+   "id": "pestana",
+   "type": "object",
+   "title": "La pestaña",
+   "highlight": "pestaña",
+   "mood": "epic",
+   "keys": [
+    {
+     "id": "borde",
+     "at": 160,
+     "sfx": "pop",
+     "t": 44.48
+    },
+    {
+     "id": "choca",
+     "at": 166,
+     "sfx": "hit",
+     "t": 46.5
+    }
+   ],
+   "visual": "front view: the flange grows on each wheel; the wheelset slides out and the flange hits the rail",
+   "from": 154,
+   "transition": "cut",
+   "t0": 42.94,
+   "t1": 48.71
+  },
+  {
+   "id": "peralte",
+   "type": "process",
+   "title": "El peralte",
+   "highlight": "peralte",
+   "mood": "wonder",
+   "keys": [
+    {
+     "id": "empuja",
+     "at": 179,
+     "sfx": "whoosh",
+     "t": 49.84
+    },
+    {
+     "id": "alto",
+     "at": 189,
+     "sfx": "pop",
+     "t": 52.44
+    }
+   ],
+   "visual": "front view with a slice of the car: an arrow pushes out, then the outer rail rises and everything tilts in",
+   "from": 173,
+   "transition": "cut",
+   "t0": 48.71,
+   "t1": 54.91
+  },
+  {
+   "id": "cierre",
+   "type": "closing",
+   "title": "No son cilindros, son conos",
+   "highlight": "conos",
+   "mood": "triumphant",
+   "ambience": [
+    "wind"
+   ],
+   "visual": "the diorama: the train runs round the oval",
+   "from": 198,
+   "transition": "cut",
+   "t0": 54.91,
+   "t1": 60.029
+  }
+ ],
+ "duration": 60.029
+}
