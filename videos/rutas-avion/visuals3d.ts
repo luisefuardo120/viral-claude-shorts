@@ -66,7 +66,8 @@ defineVisuals({
     build(w) {
       const E = raEarthSet(w);
       return (t) => { const m = raGrow(t, w.K('estira')), up = raGrow(t, w.K('polos'));
-        E.pose(t, m); w.look([0, p3Lerp(1.2, 0.4, m) + up * 3, p3Lerp(15.5, 27, m)], [p3Lerp(0, -0.3, m), p3Lerp(0.5, 1.2, m) + up * 3.5, 0], 36); };
+        E.pose(t, m, { spin: (1 - m) * 25 }); const a = -0.6 * (1 - m), d = p3Lerp(13.5, 27, m);   // starts from the side, close: a different shot from the previous scene
+        w.look([Math.sin(a) * d, p3Lerp(3.5, 0.4, m) + up * 3, Math.cos(a) * d], [p3Lerp(0, -0.3, m), p3Lerp(0.9, 1.2, m) + up * 3.5, 0], 36); };
     },
   },
   // 6. Greenland vs Africa: Greenland shrinks to its real size
