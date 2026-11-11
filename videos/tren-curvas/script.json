@@ -1,0 +1,17 @@
+{
+  "language": "es",
+  "lead": 0.6,
+  "tail": 1.2,
+  "lines": [
+    { "id": "hook",     "text": "¿Por qué el tren no se sale en las curvas, si no tiene volante?", "pause": 0.4 },
+    { "id": "eje",      "text": "Sus dos ruedas van soldadas al mismo eje, así que giran siempre a la vez.", "pause": 0.3 },
+    { "id": "problema", "text": "Pero en una curva la rueda de fuera tiene que recorrer más camino que la de dentro. Si fueran cilindros, una patinaría y chirriaría todo el tiempo.", "pause": 0.35 },
+    { "id": "conos",    "text": "Entonces las haces en forma de cono, más anchas por dentro. En la curva el tren se va hacia fuera, la rueda de fuera apoya en su parte más grande y la de dentro en la más pequeña.", "pause": 0.3 },
+    { "id": "nombre",   "text": "Así, con la misma vuelta, la de fuera avanza más. Eso es la conicidad, y el tren gira solo.", "pause": 0.35 },
+    { "id": "lazo",     "text": "Pero en las rectas esos conos lo hacen bailar de lado a lado, y a mucha velocidad ese baile crece.", "pause": 0.3 },
+    { "id": "amort",    "text": "Entonces le das muy poca inclinación al cono y pones amortiguadores que frenan el baile.", "pause": 0.35 },
+    { "id": "pestana",  "text": "Pero en una curva cerrada eso no basta, así que cada rueda lleva un borde por dentro, la pestaña, que choca con el carril antes de salirse.", "pause": 0.35 },
+    { "id": "peralte",  "text": "Y como en la curva todo empuja hacia fuera, el carril de fuera se pone más alto que el de dentro. Eso es el peralte.", "pause": 0.4 },
+    { "id": "cierre",   "text": "Por eso el tren no se sale en las curvas: porque sus ruedas no son cilindros, son conos.", "pause": 0 }
+  ]
+}
