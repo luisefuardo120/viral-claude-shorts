@@ -1,0 +1,7 @@
+{
+ "style": "3d",
+ "shots": [
+  { "id": "test-quality", "title": "Prueba de calidad", "duration": 3, "snap": [0.3, 2.7] },
+  { "id": "test-low", "title": "De cerca", "duration": 2, "snap": [1] }
+ ]
+}
