@@ -47,7 +47,8 @@ defineVisuals({
     build(w) {
       const E = raEarthSet(w), ic = w.add(raPlaneIcon(0.06));
       return (t) => { const u = p3Ramp(t, w.K('vuela'), w.K('vuela') + 2.4);   // RA_GC starts in London, so the green route trails the plane
-        E.pose(t, 1, { pins: 1, rh: 1, gc: u }); ic.visible = t >= w.K('vuela') - 0.1; ic.pose(RA_GC, u, 1, 0.3); raEarthCam(w, 1); };
+        E.pose(t, 1, { pins: 1, rh: 1, gc: u }); ic.visible = t >= w.K('vuela') - 0.1; ic.pose(RA_GC, u, 1, 0.3);
+        const v = raU(w, t); w.look([-1 + v, 2.8, 22.5 - v], [-0.3, 2.4, 0], 36); };   // closer and higher than the previous scene: toward Greenland
     },
   },
   // 4. the Earth is a ball: the map folds into a globe
@@ -55,7 +56,8 @@ defineVisuals({
     bg: RA.sky,
     build(w) {
       const E = raEarthSet(w);
-      return (t) => { const m = 1 - raGrow(t, w.K('bola')); E.pose(t, m, { spin: m < 0.01 ? (t - w.K('bola') - 0.5) * 6 : 0 }); raEarthCam(w, m, raU(w, t)); };
+      return (t) => { const m = 1 - raGrow(t, w.K('bola')); E.pose(t, m, { spin: m < 0.01 ? (t - w.K('bola') - 0.5) * 6 : 0 });
+        const a = 0.55 * m; w.look([Math.sin(a) * p3Lerp(15.5, 25, m), p3Lerp(1.2, -2.5, m), Math.cos(a) * p3Lerp(15.5, 25, m)], [0, p3Lerp(0.5, 1.4, m), 0], 36); };   // the map seen at an angle, then the globe head-on
     },
   },
   // 5. the map stretches it: the globe unrolls, the camera rises to the stretched north
