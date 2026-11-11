@@ -29,7 +29,8 @@ const adapter: Adapter = {
     const P: Words = fs.existsSync(wf) ? JSON.parse(fs.readFileSync(wf, 'utf8')) : { duration: E.duration, words: [] };   // no voice: a silent animation
     fs.mkdirSync(PROJ, { recursive: true });
     fs.copyFileSync(path.join(HERE, 'node_modules', 'gsap', 'dist', 'gsap.min.js'), path.join(PROJ, 'gsap.min.js'));
-    fs.copyFileSync(path.join(HERE, 'theme.css'), path.join(PROJ, 'theme.css'));
+    // the style's theme, plus the video's own theme.css on top if it has one (its fonts and colors go in videos/<topic>/assets/)
+    fs.writeFileSync(path.join(PROJ, 'theme.css'), [path.join(HERE, 'theme.css'), path.join(v, 'theme.css')].filter((f) => fs.existsSync(f)).map((f) => fs.readFileSync(f, 'utf8')).join('\n'));
     for (const f of ['engine', 'library']) fs.writeFileSync(path.join(PROJ, `${f}.js`), toJs(path.join(HERE, `${f}.ts`)));
     // the video's world (reusable pieces, their states, sets) and its scenes
     for (const [src, out] of [['world.ts', 'world.js'], ['visuals.ts', 'visuals.js']]) { const f = path.join(v, src); fs.writeFileSync(path.join(PROJ, out), fs.existsSync(f) ? toJs(f) : ''); }
