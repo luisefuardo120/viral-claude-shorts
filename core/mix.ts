@@ -11,6 +11,8 @@ import path from 'node:path';
 const argv = process.argv.slice(2);
 const opt = (k: string, d: number) => { const i = argv.indexOf(k); return i >= 0 ? argv.splice(i, 2)[1] : d; };
 const MUS = Number(opt('--music', -16));
+// the channel's handle, burned into every final.mp4: centered, just above the zone the apps cover at the bottom (y 1600)
+const WATERMARK = '@curiosferagfx';
 const [dir, video] = argv;
 if (!dir || !video) { console.error('usage: node core/mix.ts videos/<topic> <video.mp4> [--music -16]'); process.exit(2); }
 const ROOT = path.resolve(dir);
@@ -33,6 +35,7 @@ const meas = spawnSync('ffmpeg', ['-hide_banner', '-i', raw, '-af', `${LN}:print
 const m = JSON.parse(meas.slice(meas.lastIndexOf('{'), meas.lastIndexOf('}') + 1));
 run(['-i', raw, '-af', `${LN}:measured_I=${m.input_i}:measured_TP=${m.input_tp}:measured_LRA=${m.input_lra}:measured_thresh=${m.input_thresh}:offset=${m.target_offset}:linear=true`, '-ar', '48000', mix]);
 fs.rmSync(raw, { force: true });
-run(['-i', video, '-i', mix, '-map', '0:v:0', '-map', '1:a:0', '-c:v', 'libx264', '-preset', 'slow', '-crf', '18', '-pix_fmt', 'yuv420p',
+const mark = `drawtext=text='${WATERMARK}':font=Sans:fontsize=34:fontcolor=white@0.75:shadowcolor=black@0.6:shadowx=2:shadowy=2:x=(w-text_w)/2:y=1600-text_h-8`;
+run(['-i', video, '-i', mix, '-map', '0:v:0', '-map', '1:a:0', '-vf', mark, '-c:v', 'libx264', '-preset', 'slow', '-crf', '18', '-pix_fmt', 'yuv420p',
   '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', out]);
 console.log(`final.mp4: ${vdur.toFixed(2)} s, voice ${path.basename(voice)}${fs.existsSync(mus) ? ` + music at ${MUS} dB` : ''}, -14 LUFS -> ${out}`);

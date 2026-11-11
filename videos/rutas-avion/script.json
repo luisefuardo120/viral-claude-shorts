@@ -1,0 +1,18 @@
+{
+  "language": "es",
+  "lead": 0.6,
+  "tail": 1.2,
+  "lines": [
+    { "id": "hook",      "text": "¿Por qué los aviones no vuelan en línea recta en el mapa?", "pause": 0.4 },
+    { "id": "ruta",      "text": "Si vas de Londres a Los Ángeles, en el mapa trazas una raya recta. Pero el avión se va hacia arriba y pasa por encima de Groenlandia.", "pause": 0.35 },
+    { "id": "bola",      "text": "Y es que la Tierra no es plana, es una bola. Para dibujarla en papel, el mapa la estira, sobre todo cerca de los polos.", "pause": 0.3 },
+    { "id": "estira",    "text": "Por eso Groenlandia parece tan grande como África, cuando en realidad África es catorce veces más grande.", "pause": 0.35 },
+    { "id": "hilo",      "text": "Entonces coges un globo terráqueo y tensas un hilo entre las dos ciudades. El hilo no sigue la raya del mapa: se curva hacia el polo.", "pause": 0.3 },
+    { "id": "circulo",   "text": "Ese es el camino más corto sobre una bola, y se llama círculo máximo.", "pause": 0.35 },
+    { "id": "plano",     "text": "Si pasas ese hilo al mapa plano, se ve como una curva, pero es la recta de verdad.", "pause": 0.35 },
+    { "id": "viento",    "text": "Pero no siempre vuelan justo por ahí, porque arriba, a diez kilómetros, hay corrientes de aire que soplan de oeste a este a más de doscientos kilómetros por hora.", "pause": 0.3 },
+    { "id": "chorro",    "text": "Son las corrientes en chorro. Hacia el este el avión se sube a ellas para ir más rápido, y hacia el oeste las esquiva.", "pause": 0.3 },
+    { "id": "vuelta",    "text": "Por eso el vuelo de vuelta a veces tarda más de una hora más que el de ida.", "pause": 0.4 },
+    { "id": "cierre",    "text": "Así que los aviones sí vuelan en línea recta. Lo que pasa es que la recta está sobre una bola.", "pause": 0 }
+  ]
+}
