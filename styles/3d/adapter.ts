@@ -1,6 +1,6 @@
 // 3D: HyperFrames + Three.js. Same interface as every other style:
 //   build(video): writes project/index.html (one canvas, one <section class="clip"> per scene for the titles) + Three.js, GSAP,
-//     engine, library, detail and the video's world3d.ts + visuals3d.ts (the browser can't read TypeScript: esbuild strips the types into project/)
+//     engine, library, detail, diorama and the video's world3d.ts + visuals3d.ts (the browser can't read TypeScript: esbuild strips the types into project/)
 //   frames(video, times, dir): `hyperframes snapshot`    video(video): `hyperframes render` -> MP4 (mix.ts adds the audio)
 //   texts(video): `hyperframes check` (text out of frame, overlaps, contrast)
 //   preview(video): builds and reuses the `hyperframes preview` server if it's running (it reloads by itself), or starts it in the background
@@ -35,7 +35,7 @@ const adapter: Adapter = {
     bundleThree(path.join(PROJ, 'three.js'));
     // the style's theme, plus the video's own theme.css on top if it has one (its fonts and colors go in videos/<topic>/assets/)
     fs.writeFileSync(path.join(PROJ, 'theme.css'), [path.join(HERE, 'theme.css'), path.join(v, 'theme.css')].filter((f) => fs.existsSync(f)).map((f) => fs.readFileSync(f, 'utf8')).join('\n'));
-    for (const f of ['engine', 'library', 'detail']) fs.writeFileSync(path.join(PROJ, `${f}.js`), toJs(path.join(HERE, `${f}.ts`)));
+    for (const f of ['engine', 'library', 'detail', 'diorama']) fs.writeFileSync(path.join(PROJ, `${f}.js`), toJs(path.join(HERE, `${f}.ts`)));
     // the video's world (reusable pieces, their states, sets, camera moves) and its scenes
     for (const [src, out] of [['world3d.ts', 'world.js'], ['visuals3d.ts', 'visuals.js']]) { const f = path.join(v, src); fs.writeFileSync(path.join(PROJ, out), fs.existsSync(f) ? toJs(f) : ''); }
     fs.rmSync(path.join(PROJ, 'assets'), { recursive: true, force: true });
@@ -69,6 +69,7 @@ ${voice ? `      <audio id="voice" src="voice.wav" data-start="0" data-duration=
     </script>
     <script src="library.js"></script>
     <script src="detail.js"></script>
+    <script src="diorama.js"></script>
     <script src="world.js"></script>
     <script src="visuals.js"></script>
     <script src="engine.js"></script>

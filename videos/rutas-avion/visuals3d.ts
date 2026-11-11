@@ -9,8 +9,8 @@ const raGrow = (t: number, k: number) => p3Ramp(t, k, k + 0.5);
 const raEarthCam = (w: World, m: number, u = 0) => w.look([0, p3Lerp(1.2, 0.4, m), p3Lerp(15.5 - u * 0.8, 27, m)], [p3Lerp(0, -0.3, m), p3Lerp(0.5, 1.2, m), 0], 36);
 // an Earth scene: sky, clouds, the Earth, both routes, both pins and the captions
 const raEarthSet = (w: World) => {
-  raLights(w); raSkyBack(w);
-  const e = w.add(raEarth()), gc = w.add(raRoute(RA_GC, RA.key)), rh = w.add(raRoute(RA_RH, RA.red)), pins = [w.add(raPin()), w.add(raPin())], cap = raCaptions(w);
+  dioLights(w); dioSkyBack(w);
+  const e = w.add(raEarth()), gc = w.add(raRoute(RA_GC, RA.key)), rh = w.add(raRoute(RA_RH, RA.red)), pins = [w.add(raPin()), w.add(raPin())], cap = dioCaptions(w, RA_FIX);
   const pose = (t: number, m: number, o: { gc?: number; rh?: number; pins?: number; spin?: number } = {}) => {
     const sp = o.spin ?? 0; e.pose(m, sp); gc.pose(m, o.gc ?? 0, sp); rh.pose(m, o.rh ?? 0, sp);
     pins.forEach((p, i) => { const k = o.pins ?? 0; p.visible = k > 0.002; p.pose(i ? RA_LA : RA_LONDON, m, k, sp); }); cap(t);
@@ -18,10 +18,10 @@ const raEarthSet = (w: World) => {
   return { e, gc, rh, pins, pose };
 };
 const raAirfieldSet = (w: World) => {
-  raLights(w); w.add(raDiorama()); [[-10, 14, -26, 1.8], [12, 16, -32, 2.2], [30, 20, -10, 2]].forEach(([x, y, z, s]) => w.add(raCloud([x, y, z], s)));
-  const sun = w.add(raSun()); sun.position.set(-14, 22, -40);
+  dioLights(w); w.add(dioDiorama()); [[-10, 14, -26, 1.8], [12, 16, -32, 2.2], [30, 20, -10, 2]].forEach(([x, y, z, s]) => w.add(dioCloud([x, y, z], s)));
+  const sun = w.add(dioSun()); sun.position.set(-14, 22, -40);
   const plane = w.add(raPlane()); plane.position.set(1, plane.height + 0.03, 0);
-  return { plane, cap: raCaptions(w) };
+  return { plane, cap: dioCaptions(w, RA_FIX) };
 };
 
 defineVisuals({
@@ -74,7 +74,7 @@ defineVisuals({
   groenlandia: {
     bg: RA.sky,
     build(w) {
-      raLights(w); raSkyBack(w); const c = w.add(raCompare()), cap = raCaptions(w);
+      dioLights(w); dioSkyBack(w); const c = w.add(raCompare()), cap = dioCaptions(w, RA_FIX);
       return (t) => { c.pose(t, w.K('shrink')); w.look([0, 0, 16 - raU(w, t) * 1.2], [0, 0.2, 0], 36); cap(t); };
     },
   },
@@ -136,10 +136,10 @@ defineVisuals({
   chorro: {
     bg: RA.sky,
     build(w) {
-      raLights(w); const cap = raCaptions(w), R = p3Rnd(31);
+      dioLights(w); const cap = dioCaptions(w, RA_FIX), R = p3Rnd(31);
       const east = w.add(raPlane()), west = w.add(raPlane()); west.rotation.y = Math.PI; west.scale.setScalar(0.7); east.gear.forEach((l) => (l.visible = false)); west.gear.forEach((l) => (l.visible = false));
-      const clouds = Array.from({ length: 9 }, (_, i) => ({ c: w.add(raCloud([0, -9 + (i % 3) * 2.5, -14 - (i % 4) * 4], 1.2 + (i % 3) * 0.5)), x0: i * 9 }));
-      const mat = raSmooth('#ffffff', 0.5); mat.transparent = true; mat.opacity = 0.85; const geo = new THREE.CapsuleGeometry(0.05, 2.4, 4, 8); geo.rotateZ(Math.PI / 2);
+      const clouds = Array.from({ length: 9 }, (_, i) => ({ c: w.add(dioCloud([0, -9 + (i % 3) * 2.5, -14 - (i % 4) * 4], 1.2 + (i % 3) * 0.5)), x0: i * 9 }));
+      const mat = dioSmooth('#ffffff', 0.5); mat.transparent = true; mat.opacity = 0.85; const geo = new THREE.CapsuleGeometry(0.05, 2.4, 4, 8); geo.rotateZ(Math.PI / 2);
       const streaks = Array.from({ length: 26 }, () => ({ m: w.add(new THREE.Mesh(geo, mat)), x0: R() * 40, y: 1 + R() * 4.5, z: -3 + R() * 6, v: 14 + R() * 8 }));
       return (t) => { const lt = t - w.s.t0, boost = raGrow(t, w.K('sube'));
         east.position.set(0, 2.4 + 0.15 * Math.sin(lt * 1.6), 0); east.rotation.x = 0.05 * Math.sin(lt * 1.2);
@@ -153,7 +153,7 @@ defineVisuals({
   vuelta: {
     bg: RA.sky,
     build(w) {
-      raLights(w); raSkyBack(w); const b = w.add(raBars()), cap = raCaptions(w); b.position.y = 0.6;
+      dioLights(w); dioSkyBack(w); const b = w.add(raBars()), cap = dioCaptions(w, RA_FIX); b.position.y = 0.6;
       return (t) => { const k = w.K('barras'); b.pose(raGrow(t, k), raGrow(t, k + 0.3)); w.look([0, 0.2, 16], [0.2, 0.2, 0], 36); cap(t); };
     },
   },

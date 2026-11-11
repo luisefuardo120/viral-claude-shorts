@@ -11,5 +11,5 @@
 .card { background: none; border: 0; box-shadow: none; justify-content: center; flex-direction: column; gap: 4px; height: auto; top: 1330px; }
 .card .value { font-size: 120px; font-weight: 900; color: var(--ra-num); letter-spacing: -2px; -webkit-text-stroke: 16px var(--ra-outline); paint-order: stroke fill; text-shadow: 0 8px 0 var(--ra-outline); }
 .card .text { font-size: 44px; font-weight: 900; color: #fff; text-transform: uppercase; -webkit-text-stroke: 10px var(--ra-outline); paint-order: stroke fill; text-align: center; }
-.ra-cap { position: absolute; top: 1110px; left: 540px; transform: translateX(-50%); white-space: nowrap; font-weight: 900; font-size: 68px; color: #fff;
+.dio-cap { position: absolute; top: 1110px; left: 540px; transform: translateX(-50%); white-space: nowrap; font-weight: 900; font-size: 68px; color: #fff;
   -webkit-text-stroke: 12px var(--ra-outline); paint-order: stroke fill; text-shadow: 0 6px 0 var(--ra-outline); }

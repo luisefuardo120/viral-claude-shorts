@@ -12,5 +12,5 @@
     "skipLibCheck": true,
     "types": ["gsap"]
   },
-  "include": ["globals.d.ts", "three-global.d.ts", "library.ts", "detail.ts", "engine.ts", "../../videos/*/world3d.ts", "../../videos/*/visuals3d.ts"]
+  "include": ["globals.d.ts", "three-global.d.ts", "library.ts", "detail.ts", "diorama.ts", "engine.ts", "../../videos/*/world3d.ts", "../../videos/*/visuals3d.ts"]
 }
