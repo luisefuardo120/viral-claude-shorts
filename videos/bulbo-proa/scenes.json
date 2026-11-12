@@ -1,0 +1,270 @@
+{
+ "style": "3d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "Channel formula (prompts/canal.md): port diorama, detailed ship, waves as curves, lens with gauges. Watermark @curiosferagfx.",
+ "music": {
+  "bpm": 96
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "question",
+   "title": "¿Por qué tienen esta bola?",
+   "highlight": "bola",
+   "mood": "curious",
+   "ambience": [
+    "wind"
+   ],
+   "keys": [
+    {
+     "id": "lupa",
+     "at": 7,
+     "sfx": "pop",
+     "t": 1.92
+    }
+   ],
+   "visual": "the harbour: the container ship sails; the lens shows the bulb under the water",
+   "from": 0,
+   "transition": "cut",
+   "t0": 0,
+   "t1": 3.49
+  },
+  {
+   "id": "ola",
+   "type": "process",
+   "title": "Una ola enorme delante",
+   "highlight": "ola",
+   "mood": "calm",
+   "ambience": [
+    "wind"
+   ],
+   "keys": [
+    {
+     "id": "ola",
+     "at": 20,
+     "sfx": "whoosh",
+     "t": 6.22
+    }
+   ],
+   "visual": "close on the bow: the bow wave rises in front of it",
+   "from": 12,
+   "transition": "cut",
+   "t0": 3.49,
+   "t1": 8.05
+  },
+  {
+   "id": "combustible",
+   "type": "stat",
+   "title": "Gasta combustible",
+   "highlight": "combustible",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "gasta",
+     "at": 29,
+     "sfx": "thump",
+     "t": 9.32
+    }
+   ],
+   "visual": "thick smoke from the funnel; the lens shows the fuel gauge dropping",
+   "from": 25,
+   "transition": "cut",
+   "t0": 8.05,
+   "t1": 10.95
+  },
+  {
+   "id": "pero",
+   "type": "question",
+   "title": "No puedes quitarla",
+   "highlight": "quitar",
+   "mood": "tense",
+   "ambience": [
+    "wind"
+   ],
+   "visual": "tracking alongside the ship: the bow wave stays with it",
+   "from": 32,
+   "transition": "cut",
+   "t0": 10.95,
+   "t1": 15.15
+  },
+  {
+   "id": "bola",
+   "type": "object",
+   "title": "Una bola bajo el agua",
+   "highlight": "bola",
+   "mood": "wonder",
+   "keys": [
+    {
+     "id": "bulbo",
+     "at": 51,
+     "sfx": "pop",
+     "t": 17.06
+    }
+   ],
+   "visual": "close on the bow: the bulb grows under the water",
+   "from": 47,
+   "transition": "cut",
+   "t0": 15.15,
+   "t1": 18.67
+  },
+  {
+   "id": "desfase",
+   "type": "process",
+   "title": "Su propia ola",
+   "highlight": "ola",
+   "mood": "wonder",
+   "keys": [
+    {
+     "id": "bulbola",
+     "at": 60,
+     "sfx": "whoosh",
+     "t": 20.08
+    }
+   ],
+   "visual": "side cut: the ship's wave (red), then the bulb's wave (lime), upside down",
+   "from": 56,
+   "transition": "cut",
+   "t0": 18.67,
+   "t1": 22.29
+  },
+  {
+   "id": "anulan",
+   "type": "comparison",
+   "title": "Las dos se anulan",
+   "highlight": "anulan",
+   "mood": "epic",
+   "keys": [
+    {
+     "id": "sube",
+     "at": 71,
+     "sfx": "tick",
+     "t": 23.58
+    },
+    {
+     "id": "baja",
+     "at": 76,
+     "sfx": "tick",
+     "t": 24.7
+    },
+    {
+     "id": "suma",
+     "at": 77,
+     "sfx": "shimmer",
+     "t": 25.4
+    }
+   ],
+   "visual": "side cut: red up, lime down, and the sum is a flat white line",
+   "from": 66,
+   "transition": "cut",
+   "t0": 22.29,
+   "t1": 26.37
+  },
+  {
+   "id": "nombre",
+   "type": "stat",
+   "title": "El bulbo de proa",
+   "highlight": "proa",
+   "mood": "epic",
+   "stat": {
+    "value": "5–15 %",
+    "text": "menos combustible"
+   },
+   "keys": [
+    {
+     "id": "stat",
+     "at": 95,
+     "sfx": "impact",
+     "t": 29.86
+    }
+   ],
+   "visual": "the bow with its bulb glowing lime; the sea calm in front",
+   "from": 82,
+   "transition": "cut",
+   "t0": 26.37,
+   "t1": 32.33
+  },
+  {
+   "id": "truco",
+   "type": "process",
+   "title": "Solo a una velocidad",
+   "highlight": "velocidad",
+   "mood": "curious",
+   "keys": [
+    {
+     "id": "encajan",
+     "at": 111,
+     "sfx": "tick",
+     "t": 34.72
+    }
+   ],
+   "visual": "side cut aligned; the lens shows the speed gauge in its green band",
+   "from": 103,
+   "transition": "cut",
+   "t0": 32.33,
+   "t1": 36.77
+  },
+  {
+   "id": "despacio",
+   "type": "comparison",
+   "title": "Si va despacio, frena",
+   "highlight": "despacio",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "lento",
+     "at": 119,
+     "sfx": "whoosh",
+     "t": 37.58
+    },
+    {
+     "id": "frena",
+     "at": 127,
+     "sfx": "fail",
+     "t": 39.98
+    }
+   ],
+   "visual": "the gauge drops out of the green; the waves slide apart and the sum turns wavy",
+   "from": 116,
+   "transition": "cut",
+   "t0": 36.77,
+   "t1": 40.75
+  },
+  {
+   "id": "nariz",
+   "type": "process",
+   "title": "Le cambiaron la nariz",
+   "highlight": "nariz",
+   "mood": "playful",
+   "keys": [
+    {
+     "id": "cambio",
+     "at": 142,
+     "sfx": "pop",
+     "t": 45.02
+    }
+   ],
+   "visual": "close on the bow: the old bulb shrinks and a new one, slimmer, takes its place",
+   "from": 130,
+   "transition": "cut",
+   "t0": 40.75,
+   "t1": 46.75
+  },
+  {
+   "id": "cierre",
+   "type": "closing",
+   "title": "Una ola para borrar otra",
+   "highlight": "ola",
+   "mood": "triumphant",
+   "ambience": [
+    "wind"
+   ],
+   "visual": "the harbour: the ship sails away on a calm sea, gulls circling",
+   "from": 148,
+   "transition": "cut",
+   "t0": 46.75,
+   "t1": 52.114
+  }
+ ],
+ "duration": 52.114
+}

@@ -1,0 +1,8 @@
+{
+ "style": "3d",
+ "shots": [
+  { "id": "test-ship", "title": "¿Por qué tienen esta bola?", "highlight": "bola", "duration": 3, "snap": [0.5, 2.5] },
+  { "id": "test-bow", "title": "La ola de proa", "highlight": "ola", "duration": 3, "snap": [0.5, 2.5] },
+  { "id": "test-curves", "title": "Las dos se anulan", "highlight": "anulan", "duration": 3, "snap": [0.8, 2.5] }
+ ]
+}

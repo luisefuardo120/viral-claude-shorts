@@ -1,0 +1,47 @@
+{
+  "language": "es",
+  "lead": 0.6,
+  "tail": 1.2,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "¿Por qué los barcos grandes tienen una bola gigante bajo la proa?",
+      "pause": 0.4
+    },
+    {
+      "id": "ola",
+      "text": "Cuando un barco avanza, empuja el agua y levanta una ola enorme delante. Y levantar esa ola gasta muchísimo combustible.",
+      "pause": 0.35
+    },
+    {
+      "id": "pero",
+      "text": "Pero no puedes quitar la ola: mientras el barco se mueva, la va a hacer.",
+      "pause": 0.35
+    },
+    {
+      "id": "bola",
+      "text": "Entonces le pones delante, bajo el agua, esta bola. Al avanzar, la bola levanta su propia ola, pero desfasada: donde la ola del barco sube, la de la bola baja. Y las dos se anulan.",
+      "pause": 0.35
+    },
+    {
+      "id": "nombre",
+      "text": "Eso es el bulbo de proa. Con él, un barco gasta entre un cinco y un quince por ciento menos de combustible.",
+      "pause": 0.35
+    },
+    {
+      "id": "truco",
+      "text": "Pero tiene un truco: las dos olas solo encajan a una velocidad concreta. Si el barco va más despacio, el bulbo ya no ayuda, y hasta frena.",
+      "pause": 0.35
+    },
+    {
+      "id": "nariz",
+      "text": "Por eso algunas navieras, cuando decidieron navegar más lento para ahorrar, le cambiaron la nariz a sus barcos.",
+      "pause": 0.35
+    },
+    {
+      "id": "cierre",
+      "text": "Así que esa bola no es un adorno: es una ola hecha a propósito para borrar otra.",
+      "pause": 0
+    }
+  ]
+}

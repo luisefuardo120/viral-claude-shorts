@@ -1,0 +1,353 @@
+{
+ "duration": 52.114,
+ "phrases": [
+  {
+   "n": 1,
+   "t0": 0,
+   "t1": 3.38,
+   "from": 0,
+   "to": 11,
+   "text": "¿Por qué los barcos grandes tienen una bola gigante bajo la proa?",
+   "question": true
+  },
+  {
+   "n": 2,
+   "t0": 3.74,
+   "t1": 4.84,
+   "from": 12,
+   "to": 15,
+   "text": "Cuando un barco avanza,",
+   "question": false
+  },
+  {
+   "n": 3,
+   "t0": 5.12,
+   "t1": 7.98,
+   "from": 16,
+   "to": 24,
+   "text": "empuja el agua y levanta una ola enorme delante.",
+   "question": false
+  },
+  {
+   "n": 4,
+   "t0": 8.3,
+   "t1": 10.9,
+   "from": 25,
+   "to": 31,
+   "text": "Y levantar esa ola gasta muchísimo combustible.",
+   "question": false
+  },
+  {
+   "n": 5,
+   "t0": 11.2,
+   "t1": 15.02,
+   "from": 32,
+   "to": 46,
+   "text": "Pero no puedes quitar la ola, mientras el barco se mueva, la va a hacer.",
+   "question": false
+  },
+  {
+   "n": 6,
+   "t0": 15.4,
+   "t1": 17.66,
+   "from": 47,
+   "to": 53,
+   "text": "Entonces le pones delante, bajo el agua,",
+   "question": false
+  },
+  {
+   "n": 7,
+   "t0": 17.98,
+   "t1": 18.46,
+   "from": 54,
+   "to": 55,
+   "text": "esta bola.",
+   "question": false
+  },
+  {
+   "n": 8,
+   "t0": 18.92,
+   "t1": 22.24,
+   "from": 56,
+   "to": 65,
+   "text": "Al avanzar, la bola levanta su propia ola, pero desfasada.",
+   "question": false
+  },
+  {
+   "n": 9,
+   "t0": 22.54,
+   "t1": 23.94,
+   "from": 66,
+   "to": 71,
+   "text": "Donde la ola del barco sube,",
+   "question": false
+  },
+  {
+   "n": 10,
+   "t0": 24.24,
+   "t1": 25.04,
+   "from": 72,
+   "to": 76,
+   "text": "la de la bola baja.",
+   "question": false
+  },
+  {
+   "n": 11,
+   "t0": 25.4,
+   "t1": 26.28,
+   "from": 77,
+   "to": 81,
+   "text": "Y las dos se anulan.",
+   "question": false
+  },
+  {
+   "n": 12,
+   "t0": 26.62,
+   "t1": 27.9,
+   "from": 82,
+   "to": 87,
+   "text": "Eso es el bulbo de proa.",
+   "question": false
+  },
+  {
+   "n": 13,
+   "t0": 27.9,
+   "t1": 28.48,
+   "from": 88,
+   "to": 89,
+   "text": "Con él,",
+   "question": false
+  },
+  {
+   "n": 14,
+   "t0": 28.76,
+   "t1": 32.26,
+   "from": 90,
+   "to": 102,
+   "text": "un barco gasta entre un 5 y un 15 % menos de combustible.",
+   "question": false
+  },
+  {
+   "n": 15,
+   "t0": 32.58,
+   "t1": 33.48,
+   "from": 103,
+   "to": 106,
+   "text": "Pero tiene un truco.",
+   "question": false
+  },
+  {
+   "n": 16,
+   "t0": 33.82,
+   "t1": 36.52,
+   "from": 107,
+   "to": 115,
+   "text": "Las dos olas solo encajan a una velocidad concreta.",
+   "question": false
+  },
+  {
+   "n": 17,
+   "t0": 37.02,
+   "t1": 38.44,
+   "from": 116,
+   "to": 121,
+   "text": "Si el barco va más despacio,",
+   "question": false
+  },
+  {
+   "n": 18,
+   "t0": 38.76,
+   "t1": 40.64,
+   "from": 122,
+   "to": 129,
+   "text": "el bulbo ya no ayuda, y hasta frena.",
+   "question": false
+  },
+  {
+   "n": 19,
+   "t0": 41,
+   "t1": 46.62,
+   "from": 130,
+   "to": 147,
+   "text": "Por eso algunas navieras, cuando decidieron navegar más lento para ahorrar, le cambiaron la nariz a sus barcos.",
+   "question": false
+  },
+  {
+   "n": 20,
+   "t0": 47,
+   "t1": 48.8,
+   "from": 148,
+   "to": 155,
+   "text": "Así que esa bola no es un adorno.",
+   "question": false
+  },
+  {
+   "n": 21,
+   "t0": 49.22,
+   "t1": 51.68,
+   "from": 156,
+   "to": 164,
+   "text": "Es una ola hecha a propósito para borrar otra.",
+   "question": false
+  }
+ ],
+ "pauses": [
+  {
+   "t0": 3.38,
+   "t1": 3.74,
+   "dur": 0.36,
+   "after": 11
+  },
+  {
+   "t0": 4.84,
+   "t1": 5.12,
+   "dur": 0.28,
+   "after": 15
+  },
+  {
+   "t0": 7.98,
+   "t1": 8.3,
+   "dur": 0.32,
+   "after": 24
+  },
+  {
+   "t0": 10.9,
+   "t1": 11.2,
+   "dur": 0.3,
+   "after": 31
+  },
+  {
+   "t0": 15.02,
+   "t1": 15.4,
+   "dur": 0.38,
+   "after": 46
+  },
+  {
+   "t0": 17.66,
+   "t1": 17.98,
+   "dur": 0.32,
+   "after": 53
+  },
+  {
+   "t0": 18.46,
+   "t1": 18.92,
+   "dur": 0.46,
+   "after": 55
+  },
+  {
+   "t0": 22.24,
+   "t1": 22.54,
+   "dur": 0.3,
+   "after": 65
+  },
+  {
+   "t0": 23.94,
+   "t1": 24.24,
+   "dur": 0.3,
+   "after": 71
+  },
+  {
+   "t0": 25.04,
+   "t1": 25.4,
+   "dur": 0.36,
+   "after": 76
+  },
+  {
+   "t0": 26.28,
+   "t1": 26.62,
+   "dur": 0.34,
+   "after": 81
+  },
+  {
+   "t0": 28.48,
+   "t1": 28.76,
+   "dur": 0.28,
+   "after": 89
+  },
+  {
+   "t0": 32.26,
+   "t1": 32.58,
+   "dur": 0.32,
+   "after": 102
+  },
+  {
+   "t0": 33.48,
+   "t1": 33.82,
+   "dur": 0.34,
+   "after": 106
+  },
+  {
+   "t0": 36.52,
+   "t1": 37.02,
+   "dur": 0.5,
+   "after": 115
+  },
+  {
+   "t0": 38.44,
+   "t1": 38.76,
+   "dur": 0.32,
+   "after": 121
+  },
+  {
+   "t0": 40.64,
+   "t1": 41,
+   "dur": 0.36,
+   "after": 129
+  },
+  {
+   "t0": 46.62,
+   "t1": 47,
+   "dur": 0.38,
+   "after": 147
+  },
+  {
+   "t0": 48.8,
+   "t1": 49.22,
+   "dur": 0.42,
+   "after": 155
+  }
+ ],
+ "numbers": [
+  {
+   "i": 6,
+   "w": "una",
+   "t0": 1.66
+  },
+  {
+   "i": 21,
+   "w": "una",
+   "t0": 6.62
+  },
+  {
+   "i": 79,
+   "w": "dos",
+   "t0": 25.7
+  },
+  {
+   "i": 95,
+   "w": "5",
+   "t0": 29.86
+  },
+  {
+   "i": 98,
+   "w": "15",
+   "t0": 30.44
+  },
+  {
+   "i": 108,
+   "w": "dos",
+   "t0": 33.94
+  },
+  {
+   "i": 113,
+   "w": "una",
+   "t0": 35.32
+  },
+  {
+   "i": 157,
+   "w": "una",
+   "t0": 49.36
+  }
+ ],
+ "words": 165
+}

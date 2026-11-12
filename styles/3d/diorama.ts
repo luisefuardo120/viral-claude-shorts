@@ -155,7 +155,7 @@ const dioAirliner = (o: { wicks?: boolean } = {}) => {
 // height. Call .pose(t-free) every frame: pose(from, at, show 0..1, fov). The inset is drawn last, over everything.
 const dioLens = (w: World, o: { x?: number; y?: number; r?: number; size?: number } = {}) => {
   const size = o.size ?? 768, rt = new THREE.WebGLRenderTarget(size, size, { colorSpace: THREE.SRGBColorSpace, samples: 4 });
-  const cam = new THREE.PerspectiveCamera(30, 1, 0.02, 600), over = (m: THREE.Mesh) => { m.renderOrder = 999; (m.material as THREE.Material).depthTest = false; (m.material as THREE.Material).depthWrite = false; return m; };
+  const cam = new THREE.PerspectiveCamera(30, 1, 0.02, 600), over = (m: THREE.Mesh) => { const mt = m.material as THREE.Material; m.renderOrder = 999; mt.depthTest = false; mt.depthWrite = false; mt.transparent = true; return m; };   // transparent: drawn in the last pass, over the water too
   const g = p3Group(
     over(new THREE.Mesh(new THREE.CircleGeometry(1.16, 64), new THREE.MeshBasicMaterial({ color: '#13203a' }))),
     over(new THREE.Mesh(new THREE.CircleGeometry(1.1, 64), new THREE.MeshBasicMaterial({ color: '#b6f23c' }))),

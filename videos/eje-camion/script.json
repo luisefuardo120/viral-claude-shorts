@@ -1,0 +1,47 @@
+{
+  "language": "es",
+  "lead": 0.6,
+  "tail": 1.2,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "¿Por qué algunos camiones van con ruedas que no tocan el suelo?",
+      "pause": 0.4
+    },
+    {
+      "id": "peso",
+      "text": "Un camión cargado pesa tanto que, si apoyara todo en pocas ruedas, destrozaría la carretera. Por eso la ley limita cuánto peso puede llevar cada eje.",
+      "pause": 0.35
+    },
+    {
+      "id": "ejes",
+      "text": "Entonces le pones más ejes, para repartir la carga entre más ruedas.",
+      "pause": 0.35
+    },
+    {
+      "id": "vacio",
+      "text": "Pero cuando el camión va vacío, esas ruedas de más sobran: se gastan, rozan contra el asfalto y hacen gastar más combustible.",
+      "pause": 0.35
+    },
+    {
+      "id": "aire",
+      "text": "Entonces ese eje lleva unos cojines de aire que lo suben cuando no hace falta y lo bajan cuando el camión va cargado.",
+      "pause": 0.3
+    },
+    {
+      "id": "nombre",
+      "text": "Eso es el eje elevable.",
+      "pause": 0.35
+    },
+    {
+      "id": "peaje",
+      "text": "Y tiene un premio extra: en muchas autopistas el peaje se cobra por cada eje que toca el suelo. Rueda levantada, peaje más barato.",
+      "pause": 0.35
+    },
+    {
+      "id": "cierre",
+      "text": "Así que esas ruedas no están rotas: suben y bajan según lo que lleva el camión.",
+      "pause": 0
+    }
+  ]
+}

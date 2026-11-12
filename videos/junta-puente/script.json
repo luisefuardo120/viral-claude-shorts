@@ -1,0 +1,47 @@
+{
+  "language": "es",
+  "lead": 0.6,
+  "tail": 1.2,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "¿Por qué hay esas planchas con dientes en los puentes?",
+      "pause": 0.4
+    },
+    {
+      "id": "acero",
+      "text": "El acero se estira con el calor y se encoge con el frío. Poco, pero en un puente de cien metros, del invierno al verano, la diferencia llega a unos cinco centímetros.",
+      "pause": 0.35
+    },
+    {
+      "id": "fijo",
+      "text": "Pero si el puente está fijo en los dos extremos y no tiene por dónde crecer, se empuja a sí mismo hasta agrietarse o doblarse.",
+      "pause": 0.35
+    },
+    {
+      "id": "hueco",
+      "text": "Entonces dejas un hueco en un extremo para que pueda estirarse.",
+      "pause": 0.3
+    },
+    {
+      "id": "golpe",
+      "text": "Pero un hueco en la carretera es un golpe en cada rueda que pasa.",
+      "pause": 0.35
+    },
+    {
+      "id": "peines",
+      "text": "Entonces pones dos peines de acero, uno a cada lado, con los dientes metidos unos entre otros. Con el calor se meten más, con el frío se separan, y la rueda siempre tiene donde apoyarse.",
+      "pause": 0.3
+    },
+    {
+      "id": "nombre",
+      "text": "Eso es la junta de dilatación de dientes.",
+      "pause": 0.35
+    },
+    {
+      "id": "cierre",
+      "text": "Así que esos dientes no son un adorno: son lo que deja respirar al puente.",
+      "pause": 0
+    }
+  ]
+}
