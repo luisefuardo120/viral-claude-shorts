@@ -66,7 +66,7 @@ defineVisuals({
     bg: BP.sky,
     build(w) { const H = bpCutSet(w);
       return (t) => { const x = bpSail(w, t, 4, 0.6), s = bpGrow(t, w.K('suma')), pr = 1 + 0.25 * Math.max(0, Math.sin((t - w.K('sube')) * 6)) * (t > w.K('sube') && t < w.K('baja') ? 1 : 0);
-        bpCut(H, t, x, { ship: (1 - 0.6 * s) * pr, bulb: 1 - 0.6 * s, sum: s, phase: 0 }); bpSideCam(w, x); H.cap(t); }; },
+        bpCut(H, t, x, { ship: (1 - 0.6 * s) * pr, bulb: 1 - 0.6 * s, sum: s, phase: 0 }); w.look([x + 17, 1.2, 44], [x + 17, 0.6, 0], 36); H.cap(t); }; },   // closer on the bow than the scene before: the cut reads
   },
   // 8. that's the bulbous bow: 5–15 % less fuel; the bow and its glowing bulb on a calm sea
   nombre: {
@@ -87,7 +87,7 @@ defineVisuals({
     bg: BP.sky,
     build(w) { const H = bpCutSet(w), gauge = bpGaugeSet(w, [0.45, 0.6]), lens = bpLens(w), red = dioSmooth(BP.red, 0.4); let white: THREE.Material | null = null;
       return (t) => { const x = bpSail(w, t, 8, 0.4), slow = p3Ramp(t, w.K('lento'), w.K('lento') + 1.2), sum = H.c.children[2] as THREE.Mesh; white ??= sum.material as THREE.Material;
-        bpCut(H, t, x, { ship: 0.4, bulb: 0.4, sum: 1, phase: 3.2 * slow }); sum.material = t > w.K('frena') ? red : white; gauge.pose(p3Lerp(0.53, 0.22, slow)); bpSideCam(w, x);
+        bpCut(H, t, x, { ship: 0.4, bulb: 0.4, sum: 1, phase: 3.2 * slow }); sum.material = t > w.K('frena') ? red : white; gauge.pose(p3Lerp(0.53, 0.22, slow)); w.look([x + 34, 4, 50], [x + 12, 0.6, 0], 36);   // at an angle from ahead: a different shot from the scene before
         lens.pose(...BP_GAUGE_VIEW, 1); H.cap(t); }; },
   },
   // 11. so some shipping lines, sailing slower to save fuel, changed their ships' noses
