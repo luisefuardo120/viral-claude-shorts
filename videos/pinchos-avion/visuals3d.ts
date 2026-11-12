@@ -6,8 +6,8 @@ const paGrow = (t: number, k: number) => p3Ramp(t, k, k + 0.5);
 const paPop = (t: number, k: number) => Math.max(0.001, p3Spring(t, k, 230, 15));
 // the whole plane, three-quarter from the front (it fits the vertical frame)
 const paWide = (w: World, u: number, d = 34) => w.look([16 - u * 3, 7, d], [0, 0.4, 0], 36);
-// the lens stays low on the right, inside the safe zone and away from the titles
-const paLens = (w: World) => dioLens(w, { x: 0.36, y: -0.28, r: 0.14 });
+// the lens sits on the right, inside the safe zone, between the title and the captions
+const paLens = (w: World) => dioLens(w, { x: 0.36, y: 0.2, r: 0.14 });   // between the title (ends ~y 420) and the captions (~y 1110)
 // where the lens looks at a wick: a little behind and above its tip
 const paWickView = (plane: Parameters<typeof paWickEnds>[0], i: number): [Vec3, Vec3] => { const { b } = paWickEnds(plane, i); return [[b.x - 0.55, b.y + 0.3, b.z + 0.65], [b.x + 0.12, b.y - 0.02, b.z]]; };
 // the radio sits far below the scene, where only the lens sees it
