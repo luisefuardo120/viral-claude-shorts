@@ -4,46 +4,6 @@
 
 const RA = { sky: '#5bb8f5', white: '#f5f6f8', blue: '#1f5fd6', red: '#e5484d', window: '#1b2433', metal: '#c9ced8', grass: '#5cc24a', key: '#b6f23c' };
 
-// ---------- the airliner: original, generic (no airline livery) ----------
-const raPlane = () => {
-  const g = p3Group(), white = dioSmooth(RA.white, 0.35);
-  // fuselage: rounded nose, long tube, tail cone rising (profile: [radius, position along the axis])
-  const P: number[][] = [[0, -5.75], [0.32, -5.5], [0.62, -4.9], [0.8, -4.1], [0.85, -3.2], [0.85, 2.5], [0.78, 4], [0.55, 5.2], [0.25, 6], [0, 6.2]];
-  const body = new THREE.Mesh(dioLathe(P), white); body.castShadow = true; g.add(body);
-  // cockpit windows and the row of cabin windows, painted as a strip of rounded dark slots
-  // u runs around the fuselage and v along it, so the slots are stacked along v
-  const tex = p3Paint(64, 1024, (c) => { c.fillStyle = RA.white; c.fillRect(0, 0, 64, 1024); c.fillStyle = RA.window;
-    for (let y = 30; y < 1000; y += 34) { c.beginPath(); c.roundRect(14, y, 36, 18, 8); c.fill(); } });
-  for (const s of [1, -1]) {
-    const strip = new THREE.Mesh(new THREE.CylinderGeometry(0.853, 0.853, 5.4, 40, 1, true, s > 0 ? 0.25 : Math.PI - 0.75, 0.5), new THREE.MeshStandardMaterial({ map: tex, roughness: 0.35 }));
-    strip.rotation.z = Math.PI / 2; strip.position.x = -0.3; g.add(strip);
-    const band = new THREE.Mesh(new THREE.CylinderGeometry(0.856, 0.856, 5.6, 40, 1, true, s > 0 ? -0.12 : Math.PI + 0.02, 0.1), dioSmooth(RA.blue, 0.4));
-    band.rotation.z = Math.PI / 2; band.position.x = -0.35; g.add(band);
-    g.add(p3Mesh(new THREE.SphereGeometry(0.16, 16, 10, 0, Math.PI), dioSmooth(RA.window, 0.2), { p: [4.85, 0.3, s * 0.45], r: [0, s > 0 ? 0 : Math.PI, 0], s: [1.4, 0.6, 0.5] }));
-  }
-  // wings: swept, thin, bevelled; engines under them
-  for (const s of [1, -1]) {
-    const wing = new THREE.Mesh(dioBevel([[0, 0], [1.4, 0], [-1.6, 5.6], [-2.3, 5.6]], 0.08, 0.05), white); wing.castShadow = true;
-    wing.rotation.set(s * Math.PI / 2 + 0.06 * s, 0, 0); wing.position.set(0.6, -0.35, 0); g.add(wing);
-    const tip = new THREE.Mesh(dioBevel([[0, 0], [0.5, 0], [0.1, 0.7], [-0.2, 0.7]], 0.05, 0.03), dioSmooth(RA.blue, 0.4));
-    tip.position.set(-1.65, -0.35, s * 5.6); g.add(tip);
-    const eng = new THREE.Mesh(dioLathe([[0, -1.0], [0.3, -1.0], [0.36, -0.8], [0.44, 0.2], [0.44, 0.8], [0.4, 1.05], [0, 1.05]], 32), dioSmooth('#dfe3ea', 0.3, 0.1));
-    eng.castShadow = true; eng.position.set(1.0, -0.85, s * 2.3); g.add(eng);
-    g.add(p3Mesh(new THREE.CircleGeometry(0.3, 24), dioSmooth('#2a2f3a', 0.6), { p: [2.06, -0.85, s * 2.3], r: [0, Math.PI / 2, 0] }));
-    g.add(p3Mesh(p3Box(0.9, 0.35, 0.08), white, { p: [0.75, -0.55, s * 2.3] }));
-  }
-  // tail: vertical fin in color, horizontal stabilizers
-  const fin = new THREE.Mesh(dioBevel([[0, 0], [1.8, 0], [-0.5, 2.6], [-1.2, 2.6]], 0.1, 0.05), dioSmooth(RA.blue, 0.4)); fin.castShadow = true;
-  fin.position.set(-4.0, 0.55, 0); g.add(fin);
-  for (const s of [1, -1]) { const st = new THREE.Mesh(dioBevel([[0, 0], [1.1, 0], [-0.4, 2.1], [-0.9, 2.1]], 0.06, 0.04), white); st.rotation.x = s * Math.PI / 2; st.position.set(-4.4, 0.25, 0); st.castShadow = true; g.add(st); }
-  // landing gear
-  const gear: THREE.Object3D[] = [];
-  for (const [x, z] of [[3.9, 0], [-0.3, 0.75], [-0.3, -0.75]]) {
-    const leg = p3Group(p3Mesh(p3Cyl(0.05, 0.05, 0.7, 10), dioSmooth(RA.metal, 0.4, 0.4), { p: [0, -0.35, 0] }), p3Mesh(new THREE.CylinderGeometry(0.2, 0.2, 0.16, 20), dioSmooth('#22252c', 0.8), { p: [0, -0.72, 0], r: [Math.PI / 2, 0, 0] }));
-    leg.position.set(x, -0.62, z); g.add(leg); gear.push(leg);
-  }
-  return Object.assign(g, { gear, height: 1.54 });   // height: from the wheels to the fuselage axis
-};
 
 // ---------- the Earth: one piece that turns from a globe into a flat Mercator map (morph 0 → 1) ----------
 type RaLL = [number, number];   // [longitude, latitude] in degrees
@@ -126,7 +86,7 @@ const raPin = (color = RA.red) => { const g = p3Group(p3Mesh(p3Cone(0.07, 0.3, 1
   return Object.assign(g, { pose });
 };
 // the small plane that rides a route (u: 0..1 along it)
-const raPlaneIcon = (s = 0.045) => { const p = raPlane(); p.scale.setScalar(s); p.rotation.y = -Math.PI / 2; const g = p3Group(p);   // its nose (+x) now looks along +z
+const raPlaneIcon = (s = 0.045) => { const p = dioAirliner(); p.scale.setScalar(s); p.rotation.y = -Math.PI / 2; const g = p3Group(p);   // its nose (+x) now looks along +z
   const pose = (route: RaLL[], u: number, m: number, h = 0.25, spin = 0) => {
     const f = p3Clamp(u) * (route.length - 1), i = Math.min(route.length - 2, Math.floor(f)), k = f - i, at = (j: number) => raPt(route[j][0] - spin, route[j][1], m, h);
     const P = at(i).lerp(at(i + 1), k), D = at(i + 1).sub(at(i)).normalize(), N = raNormal(route[i][0] - spin, route[i][1], m);
@@ -178,7 +138,7 @@ const raBars = () => {
     const y = 0.9 - i * 1.6, track = p3Mesh(new THREE.BoxGeometry(4.4, 0.42, 0.2), dioSmooth('#ffffff', 0.6), { p: [0.2, y, 0] });
     const geo = new THREE.BoxGeometry(1, 0.42, 0.24); geo.translate(0.5, 0, 0); const bar = p3Mesh(geo, dioSmooth(c as string, 0.45), { p: [-2.0, y, 0.02] });
     const label = new THREE.Mesh(new THREE.PlaneGeometry(2.4, 0.6), lab(txt as string)); label.position.set(-1.0, y + 0.55, 0.1);
-    const ic = raPlane(); ic.scale.setScalar(0.07); ic.position.set(-2.0, y + 0.02, 0.4); if (i) ic.rotation.y = Math.PI;
+    const ic = dioAirliner(); ic.scale.setScalar(0.07); ic.position.set(-2.0, y + 0.02, 0.4); if (i) ic.rotation.y = Math.PI;
     g.add(track, bar, label, ic); return { bar, ic, L: L as number, i };
   });
   const pose = (u1: number, u2: number) => rows.forEach((r, i) => { const u = i ? u2 : u1, l = Math.max(0.001, r.L * p3Clamp(u)); r.bar.scale.x = l; r.ic.position.x = -2.0 + l; });
@@ -220,7 +180,7 @@ defineVisuals({
     bg: RA.sky,
     build(w) {
       dioLights(w); w.add(dioDiorama()); [[-10, 14, -26, 1.8], [12, 16, -32, 2.2]].forEach(([x, y, z, s]) => w.add(dioCloud([x, y, z], s)));
-      const plane = w.add(raPlane()); plane.position.set(1, plane.height + 0.03, 0); plane.rotation.y = 0.1;
+      const plane = w.add(dioAirliner()); plane.position.set(1, plane.height + 0.03, 0); plane.rotation.y = 0.1;
       return (t) => { const u = p3Clamp((t - w.s.t0) / (w.s.t1 - w.s.t0)), a = p3Lerp(0.62, 0.5, u); w.look([6 + Math.cos(a) * 44, 16, 4 + Math.sin(a) * 44], [6, 2.2, 4], 36); };
     },
   },
@@ -228,7 +188,7 @@ defineVisuals({
     bg: RA.sky,
     build(w) {
       dioLights(w); w.add(dioDiorama()); w.add(dioCloud([-4, 12, -26], 2)); const sun = w.add(dioSun()); sun.position.set(-9, 15, -30);
-      const plane = w.add(raPlane()); plane.position.set(1, plane.height + 0.03, 0);
+      const plane = w.add(dioAirliner()); plane.position.set(1, plane.height + 0.03, 0);
       return () => { w.look([14, 2.2, 15], [2.5, 2.4, 0], 36); };
     },
   },

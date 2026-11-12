@@ -20,7 +20,7 @@ const raEarthSet = (w: World) => {
 const raAirfieldSet = (w: World) => {
   dioLights(w); w.add(dioDiorama()); [[-10, 14, -26, 1.8], [12, 16, -32, 2.2], [30, 20, -10, 2]].forEach(([x, y, z, s]) => w.add(dioCloud([x, y, z], s)));
   const sun = w.add(dioSun()); sun.position.set(-14, 22, -40);
-  const plane = w.add(raPlane()); plane.position.set(1, plane.height + 0.03, 0);
+  const plane = w.add(dioAirliner()); plane.position.set(1, plane.height + 0.03, 0);
   return { plane, cap: dioCaptions(w, RA_FIX) };
 };
 
@@ -137,7 +137,7 @@ defineVisuals({
     bg: RA.sky,
     build(w) {
       dioLights(w); const cap = dioCaptions(w, RA_FIX), R = p3Rnd(31);
-      const east = w.add(raPlane()), west = w.add(raPlane()); west.rotation.y = Math.PI; west.scale.setScalar(0.7); east.gear.forEach((l) => (l.visible = false)); west.gear.forEach((l) => (l.visible = false));
+      const east = w.add(dioAirliner()), west = w.add(dioAirliner()); west.rotation.y = Math.PI; west.scale.setScalar(0.7); east.gear.forEach((l) => (l.visible = false)); west.gear.forEach((l) => (l.visible = false));
       const clouds = Array.from({ length: 9 }, (_, i) => ({ c: w.add(dioCloud([0, -9 + (i % 3) * 2.5, -14 - (i % 4) * 4], 1.2 + (i % 3) * 0.5)), x0: i * 9 }));
       const mat = dioSmooth('#ffffff', 0.5); mat.transparent = true; mat.opacity = 0.85; const geo = new THREE.CapsuleGeometry(0.05, 2.4, 4, 8); geo.rotateZ(Math.PI / 2);
       const streaks = Array.from({ length: 26 }, () => ({ m: w.add(new THREE.Mesh(geo, mat)), x0: R() * 40, y: 1 + R() * 4.5, z: -3 + R() * 6, v: 14 + R() * 8 }));

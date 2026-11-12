@@ -1,0 +1,15 @@
+{
+  "language": "es",
+  "lead": 0.6,
+  "tail": 1.2,
+  "lines": [
+    { "id": "hook",    "text": "¿Para qué son esos pinchos que salen de las alas del avión?", "pause": 0.4 },
+    { "id": "carga",   "text": "Al volar, el avión se frota con el aire, la lluvia y el hielo, y se va cargando de electricidad, como un globo que frotas con el pelo.", "pause": 0.3 },
+    { "id": "aire",    "text": "Pero está en el aire: no toca el suelo, así que esa carga no tiene por dónde irse.", "pause": 0.3 },
+    { "id": "ruido",   "text": "Y cuando por fin salta, lo hace a chispazos, que meten ruido en la radio y en los instrumentos de navegación.", "pause": 0.35 },
+    { "id": "pinchos", "text": "Entonces le pones estas varillas en los bordes de las alas y de la cola. Acaban en punta, y por una punta la electricidad se escapa mucho más fácil: poco a poco y sin chispazos.", "pause": 0.3 },
+    { "id": "nombre",  "text": "Eso son los descargadores de estática.", "pause": 0.35 },
+    { "id": "rayo",    "text": "Pero ojo, no son pararrayos. A un avión le cae de media un rayo al año, y no pasa nada: la electricidad corre por la piel de metal, por fuera, y sale por otro punto.", "pause": 0.35 },
+    { "id": "cierre",  "text": "Así que esos pinchos están ahí para que el avión suelte, poco a poco, la electricidad que va recogiendo del aire.", "pause": 0 }
+  ]
+}

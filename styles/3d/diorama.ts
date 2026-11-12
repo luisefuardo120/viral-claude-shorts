@@ -3,7 +3,7 @@
 //  at its edges with layers of soil, striped grass with tufts, faceted hills and trees, red-roofed houses, round clouds,
 //  and word-by-word captions. Runs in the browser after detail.ts. Pair it with a video theme.css for the titles.
 //  Pieces: dioSmooth · dioBevel · dioLathe · dioGrassMat · dioAsphaltMat · dioHill · dioCloud · dioLights · dioSoil
-//          dioHouse · dioTree · dioDiorama · dioSun · dioSkyBack · dioCaptions (CSS class .dio-cap)
+//          dioHouse · dioTree · dioDiorama · dioSun · dioSkyBack · dioCaptions (CSS class .dio-cap) · dioAirliner · dioLens
 // =====================================================================
 // smooth materials: the hero look (no flat shading)
 const dioSmooth = (c: string, rough = 0.45, metal = 0) => new THREE.MeshStandardMaterial({ color: c, roughness: rough, metalness: metal });
@@ -97,3 +97,79 @@ const dioCaptions = (w: World, fix: Record<number, string> = {}) => {
 };
 
 const dioSkyBack = (w: World) => { [[-7, 6, -14, 1.5], [8, -5, -18, 2], [6, 9, -20, 1.6]].forEach(([x, y, z, k]) => w.add(dioCloud([x, y, z], k))); };
+
+// ---------- an airliner: original and generic (no airline livery); smooth lathe fuselage, bevelled wings ----------
+const DIO_PLANE = { white: '#f5f6f8', blue: '#1f5fd6', window: '#1b2433', metal: '#c9ced8' };
+// o.wicks: the static dischargers (thin rods on the trailing edges of the wings and the tail), which .wicks lists
+const dioAirliner = (o: { wicks?: boolean } = {}) => {
+  const RA = DIO_PLANE;
+  const g = p3Group(), white = dioSmooth(RA.white, 0.35);
+  // fuselage: rounded nose, long tube, tail cone rising (profile: [radius, position along the axis])
+  const P: number[][] = [[0, -5.75], [0.32, -5.5], [0.62, -4.9], [0.8, -4.1], [0.85, -3.2], [0.85, 2.5], [0.78, 4], [0.55, 5.2], [0.25, 6], [0, 6.2]];
+  const body = new THREE.Mesh(dioLathe(P), white); body.castShadow = true; g.add(body);
+  // cockpit windows and the row of cabin windows, painted as a strip of rounded dark slots
+  // u runs around the fuselage and v along it, so the slots are stacked along v
+  const tex = p3Paint(64, 1024, (c) => { c.fillStyle = RA.white; c.fillRect(0, 0, 64, 1024); c.fillStyle = RA.window;
+    for (let y = 30; y < 1000; y += 34) { c.beginPath(); c.roundRect(14, y, 36, 18, 8); c.fill(); } });
+  for (const s of [1, -1]) {
+    const strip = new THREE.Mesh(new THREE.CylinderGeometry(0.853, 0.853, 5.4, 40, 1, true, s > 0 ? 0.25 : Math.PI - 0.75, 0.5), new THREE.MeshStandardMaterial({ map: tex, roughness: 0.35 }));
+    strip.rotation.z = Math.PI / 2; strip.position.x = -0.3; g.add(strip);
+    const band = new THREE.Mesh(new THREE.CylinderGeometry(0.856, 0.856, 5.6, 40, 1, true, s > 0 ? -0.12 : Math.PI + 0.02, 0.1), dioSmooth(RA.blue, 0.4));
+    band.rotation.z = Math.PI / 2; band.position.x = -0.35; g.add(band);
+    g.add(p3Mesh(new THREE.SphereGeometry(0.16, 16, 10, 0, Math.PI), dioSmooth(RA.window, 0.2), { p: [4.85, 0.3, s * 0.45], r: [0, s > 0 ? 0 : Math.PI, 0], s: [1.4, 0.6, 0.5] }));
+  }
+  // wings: swept, thin, bevelled; engines under them
+  for (const s of [1, -1]) {
+    const wing = new THREE.Mesh(dioBevel([[0, 0], [1.4, 0], [-1.6, 5.6], [-2.3, 5.6]], 0.08, 0.05), white); wing.castShadow = true;
+    wing.rotation.set(s * Math.PI / 2 + 0.06 * s, 0, 0); wing.position.set(0.6, -0.35, 0); g.add(wing);
+    const tip = new THREE.Mesh(dioBevel([[0, 0], [0.5, 0], [0.1, 0.7], [-0.2, 0.7]], 0.05, 0.03), dioSmooth(RA.blue, 0.4));
+    tip.position.set(-1.65, -0.35, s * 5.6); g.add(tip);
+    const eng = new THREE.Mesh(dioLathe([[0, -1.0], [0.3, -1.0], [0.36, -0.8], [0.44, 0.2], [0.44, 0.8], [0.4, 1.05], [0, 1.05]], 32), dioSmooth('#dfe3ea', 0.3, 0.1));
+    eng.castShadow = true; eng.position.set(1.0, -0.85, s * 2.3); g.add(eng);
+    g.add(p3Mesh(new THREE.CircleGeometry(0.3, 24), dioSmooth('#2a2f3a', 0.6), { p: [2.06, -0.85, s * 2.3], r: [0, Math.PI / 2, 0] }));
+    g.add(p3Mesh(p3Box(0.9, 0.35, 0.08), white, { p: [0.75, -0.55, s * 2.3] }));
+  }
+  // tail: vertical fin in color, horizontal stabilizers
+  const fin = new THREE.Mesh(dioBevel([[0, 0], [1.8, 0], [-0.5, 2.6], [-1.2, 2.6]], 0.1, 0.05), dioSmooth(RA.blue, 0.4)); fin.castShadow = true;
+  fin.position.set(-4.0, 0.55, 0); g.add(fin);
+  for (const s of [1, -1]) { const st = new THREE.Mesh(dioBevel([[0, 0], [1.1, 0], [-0.4, 2.1], [-0.9, 2.1]], 0.06, 0.04), white); st.rotation.x = s * Math.PI / 2; st.position.set(-4.4, 0.25, 0); st.castShadow = true; g.add(st); }
+  // landing gear
+  const gear: THREE.Object3D[] = [];
+  for (const [x, z] of [[3.9, 0], [-0.3, 0.75], [-0.3, -0.75]]) {
+    const leg = p3Group(p3Mesh(p3Cyl(0.05, 0.05, 0.7, 10), dioSmooth(RA.metal, 0.4, 0.4), { p: [0, -0.35, 0] }), p3Mesh(new THREE.CylinderGeometry(0.2, 0.2, 0.16, 20), dioSmooth('#22252c', 0.8), { p: [0, -0.72, 0], r: [Math.PI / 2, 0, 0] }));
+    leg.position.set(x, -0.62, z); g.add(leg); gear.push(leg);
+  }
+  const wicks: THREE.Object3D[] = [];
+  if (o.wicks) {
+    const rod = (p: Vec3, ry: number, s = 1) => { const w = p3Group(p3Mesh(p3Cyl(0.012, 0.02, 0.45, 8), dioSmooth('#2a2f3a', 0.5), { p: [-0.22, 0, 0], r: [0, 0, Math.PI / 2] }), p3Mesh(new THREE.SphereGeometry(0.018, 8, 6), dioSmooth('#c9ced8', 0.4), { p: [-0.45, 0, 0] }));
+      w.position.set(...p); w.rotation.y = ry; w.scale.setScalar(s); g.add(w); wicks.push(w); return w; };
+    for (const s of [1, -1]) for (const f of [0.55, 0.75, 0.92]) rod([0.6 - 2.3 * f, -0.33, s * 5.6 * f], 0.25 * s);   // on the swept trailing edge (root x 0.6, tip x -1.7)
+    for (const s of [1, -1]) rod([-4.4 - 0.9, 0.25, s * 2.0], 0.3 * s, 0.8);
+    rod([-5.15, 3.0, 0], 0, 0.8);
+  }
+  return Object.assign(g, { gear, wicks, height: 1.54 });   // height: from the wheels to the fuselage axis
+};
+
+// ---------- the lens: a circular inset framed in lime that shows what a second camera sees (a detail, up close) ----------
+// It sits fixed on screen at (x, y), from -1 to 1 (0, 0 is the frame's center), with radius r as a fraction of the frame
+// height. Call .pose(t-free) every frame: pose(from, at, show 0..1, fov). The inset is drawn last, over everything.
+const dioLens = (w: World, o: { x?: number; y?: number; r?: number; size?: number } = {}) => {
+  const size = o.size ?? 768, rt = new THREE.WebGLRenderTarget(size, size, { colorSpace: THREE.SRGBColorSpace, samples: 4 });
+  const cam = new THREE.PerspectiveCamera(30, 1, 0.02, 600), over = (m: THREE.Mesh) => { m.renderOrder = 999; (m.material as THREE.Material).depthTest = false; (m.material as THREE.Material).depthWrite = false; return m; };
+  const g = p3Group(
+    over(new THREE.Mesh(new THREE.CircleGeometry(1.16, 64), new THREE.MeshBasicMaterial({ color: '#13203a' }))),
+    over(new THREE.Mesh(new THREE.CircleGeometry(1.1, 64), new THREE.MeshBasicMaterial({ color: '#b6f23c' }))),
+    over(new THREE.Mesh(new THREE.CircleGeometry(1, 64), new THREE.MeshBasicMaterial({ map: rt.texture }))));
+  g.children.forEach((m, i) => { m.position.z = i * 0.001; m.renderOrder = 999 + i; });
+  w.camera.add(g); if (!w.camera.parent) w.scene.add(w.camera);
+  const pose = (from: Vec3, at: Vec3, show = 1, fov = 30) => {
+    g.visible = false;
+    if (show > 0.01) {
+      cam.fov = fov; cam.updateProjectionMatrix(); cam.position.set(...from); cam.lookAt(...at);
+      const prev = w.renderer.getRenderTarget(); w.renderer.setRenderTarget(rt); w.renderer.render(w.scene, cam); w.renderer.setRenderTarget(prev);
+      const d = 1, halfH = Math.tan((w.camera.fov * Math.PI) / 360) * d, halfW = halfH * w.camera.aspect;
+      g.position.set((o.x ?? 0.45) * halfW, (o.y ?? 0.2) * halfH, -d); g.scale.setScalar(Math.max(0.001, (o.r ?? 0.17) * 2 * halfH * show)); g.visible = true;
+    }
+  };
+  return { pose, cam };
+};

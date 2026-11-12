@@ -1,0 +1,272 @@
+{
+ "style": "3d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "Channel formula (prompts/canal.md). Diorama look, lens insets. Watermark @curiosferagfx.",
+ "music": {
+  "bpm": 98
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "question",
+   "title": "¿Para qué son estos pinchos?",
+   "highlight": "pinchos",
+   "mood": "curious",
+   "ambience": [
+    "wind"
+   ],
+   "keys": [
+    {
+     "id": "lupa",
+     "at": 4,
+     "sfx": "pop",
+     "t": 0.9
+    }
+   ],
+   "visual": "the airliner in flight among clouds; the lens opens on the wicks of the wing's trailing edge",
+   "from": 0,
+   "transition": "cut",
+   "t0": 0,
+   "t1": 2.95
+  },
+  {
+   "id": "carga",
+   "type": "process",
+   "title": "Se carga de electricidad",
+   "highlight": "electricidad",
+   "mood": "calm",
+   "ambience": [
+    "wind"
+   ],
+   "keys": [
+    {
+     "id": "lluvia",
+     "at": 17,
+     "sfx": "whoosh",
+     "t": 4.44
+    },
+    {
+     "id": "carga",
+     "at": 29,
+     "sfx": "shimmer",
+     "t": 7.24
+    }
+   ],
+   "visual": "rain and ice streaks rush past; cyan sparkles build up all over the skin",
+   "from": 12,
+   "transition": "cut",
+   "t0": 2.95,
+   "t1": 8.58
+  },
+  {
+   "id": "globo",
+   "type": "object",
+   "title": "Como un globo",
+   "highlight": "globo",
+   "mood": "playful",
+   "keys": [
+    {
+     "id": "frota",
+     "at": 36,
+     "sfx": "pop",
+     "t": 9.56
+    }
+   ],
+   "visual": "a red balloon full of cyan sparkles",
+   "from": 32,
+   "transition": "cut",
+   "t0": 8.58,
+   "t1": 10.59
+  },
+  {
+   "id": "suelo",
+   "type": "question",
+   "title": "Sin tocar el suelo",
+   "highlight": "suelo",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "suelo",
+     "at": 48,
+     "sfx": "thump",
+     "t": 12.62
+    }
+   ],
+   "visual": "the plane high above the floating diorama; a dashed line down to the ground with a red X",
+   "from": 40,
+   "transition": "cut",
+   "t0": 10.59,
+   "t1": 15.63
+  },
+  {
+   "id": "chispa",
+   "type": "process",
+   "title": "Chispazos y ruido",
+   "highlight": "ruido",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "chispa",
+     "at": 66,
+     "sfx": "zip",
+     "t": 17.78
+    },
+    {
+     "id": "radio",
+     "at": 72,
+     "sfx": "scratch",
+     "t": 19.4
+    }
+   ],
+   "visual": "sparks crack off the wing; the lens shows the radio full of static",
+   "from": 58,
+   "transition": "cut",
+   "t0": 15.63,
+   "t1": 21.41
+  },
+  {
+   "id": "varillas",
+   "type": "object",
+   "title": "Varillas en los bordes",
+   "highlight": "bordes",
+   "mood": "wonder",
+   "keys": [
+    {
+     "id": "pon",
+     "at": 82,
+     "sfx": "pop",
+     "t": 22.62
+    }
+   ],
+   "visual": "the wicks pop out of the trailing edges of wings and tail and glow lime; the camera circles",
+   "from": 79,
+   "transition": "cut",
+   "t0": 21.41,
+   "t1": 25.28
+  },
+  {
+   "id": "punta",
+   "type": "process",
+   "title": "Por la punta se escapa",
+   "highlight": "punta",
+   "mood": "wonder",
+   "keys": [
+    {
+     "id": "punta",
+     "at": 96,
+     "sfx": "shimmer",
+     "t": 26.08
+    },
+    {
+     "id": "suave",
+     "at": 108,
+     "t": 29.94
+    }
+   ],
+   "visual": "close on one wick: little sparks run along it and leave from its tip, one by one; the lens shows the radio clean again",
+   "from": 94,
+   "transition": "cut",
+   "t0": 25.28,
+   "t1": 31.79
+  },
+  {
+   "id": "nombre",
+   "type": "object",
+   "title": "Descargadores de estática",
+   "highlight": "estática",
+   "mood": "epic",
+   "keys": [
+    {
+     "id": "nombre",
+     "at": 117,
+     "sfx": "impact",
+     "t": 32.6
+    }
+   ],
+   "visual": "the whole plane, every wick glowing",
+   "from": 114,
+   "transition": "cut",
+   "t0": 31.79,
+   "t1": 34.06
+  },
+  {
+   "id": "pararrayos",
+   "type": "question",
+   "title": "No son pararrayos",
+   "highlight": "pararrayos",
+   "mood": "tense",
+   "visual": "storm clouds gather around the plane",
+   "from": 120,
+   "transition": "cut",
+   "t0": 34.06,
+   "t1": 36.01
+  },
+  {
+   "id": "rayo",
+   "type": "stat",
+   "title": "Un rayo al año",
+   "highlight": "rayo",
+   "mood": "epic",
+   "stat": {
+    "value": "1 al año",
+    "text": "rayos por avión, de media"
+   },
+   "keys": [
+    {
+     "id": "stat",
+     "at": 133,
+     "sfx": "impact",
+     "t": 37.5
+    }
+   ],
+   "visual": "a lightning bolt strikes the nose",
+   "from": 126,
+   "transition": "cut",
+   "t0": 36.01,
+   "t1": 38.44
+  },
+  {
+   "id": "piel",
+   "type": "process",
+   "title": "Corre por fuera",
+   "highlight": "fuera",
+   "mood": "wonder",
+   "keys": [
+    {
+     "id": "corre",
+     "at": 143,
+     "sfx": "whoosh",
+     "t": 40.36
+    },
+    {
+     "id": "sale",
+     "at": 152,
+     "sfx": "zip",
+     "t": 42.76
+    }
+   ],
+   "visual": "a bright ring runs along the skin from nose to tail and the bolt leaves from the tail",
+   "from": 137,
+   "transition": "cut",
+   "t0": 38.44,
+   "t1": 43.77
+  },
+  {
+   "id": "cierre",
+   "type": "closing",
+   "title": "Para eso son los pinchos",
+   "highlight": "pinchos",
+   "mood": "triumphant",
+   "ambience": [
+    "wind"
+   ],
+   "visual": "the plane flies away over the diorama, its wicks glowing softly",
+   "from": 156,
+   "transition": "cut",
+   "t0": 43.77,
+   "t1": 50.26
+  }
+ ],
+ "duration": 50.26
+}

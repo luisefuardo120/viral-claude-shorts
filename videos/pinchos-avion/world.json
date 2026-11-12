@@ -1,0 +1,8 @@
+{
+ "style": "3d",
+ "shots": [
+  { "id": "test-plane", "title": "¿Para qué son estos pinchos?", "highlight": "pinchos", "duration": 3, "snap": [0.3, 2.8] },
+  { "id": "test-effects", "title": "Chispazos y radio", "duration": 3, "snap": [1.0, 2.6] },
+  { "id": "test-strike", "title": "Rayo y corriente", "duration": 3, "snap": [1.0, 1.9] }
+ ]
+}
