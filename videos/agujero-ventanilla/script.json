@@ -1,0 +1,47 @@
+{
+  "language": "es",
+  "lead": 0.6,
+  "tail": 1.2,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Ese agujerito de la ventanilla del avión NO está de adorno.",
+      "pause": 0.4
+    },
+    {
+      "id": "tres",
+      "text": "Tu ventanilla no es un cristal: son tres. El de dentro es de plástico, y solo está para que tú no rayes los otros.",
+      "pause": 0.35
+    },
+    {
+      "id": "presion",
+      "text": "Ahí arriba, dentro del avión el aire está a mucha más presión que fuera, y esa presión empuja las ventanillas hacia fuera todo el tiempo.",
+      "pause": 0.35
+    },
+    {
+      "id": "fuera",
+      "text": "Entonces el cristal de fuera es el fuerte: es el que aguanta todo ese empuje.",
+      "pause": 0.35
+    },
+    {
+      "id": "agujero",
+      "text": "Pero el del medio no debe cargar con nada, así que lleva este agujerito. Deja pasar el aire de la cabina al hueco entre los dos, y la presión a los lados del cristal del medio es la misma.",
+      "pause": 0.35
+    },
+    {
+      "id": "reserva",
+      "text": "Así se queda de reserva: si el de fuera se rompiera, el del medio aguanta solo hasta una vez y media la presión normal.",
+      "pause": 0.35
+    },
+    {
+      "id": "humedad",
+      "text": "Y de premio, por ese agujerito sale la humedad, y por eso tu ventanilla casi nunca se empaña.",
+      "pause": 0.35
+    },
+    {
+      "id": "cierre",
+      "text": "Así que ese agujerito no está de adorno: es el que decide qué cristal aguanta el avión.",
+      "pause": 0
+    }
+  ]
+}

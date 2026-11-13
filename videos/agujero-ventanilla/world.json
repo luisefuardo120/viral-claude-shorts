@@ -1,0 +1,8 @@
+{
+ "style": "3d",
+ "shots": [
+  { "id": "test-cabin", "title": "Ese agujerito NO está de adorno", "highlight": "agujerito", "duration": 3, "snap": [0.6, 2.6] },
+  { "id": "test-air", "title": "Presión, agujero y vaho", "duration": 3, "snap": [0.8, 2.6] },
+  { "id": "test-outside", "title": "Por fuera", "duration": 1.5, "snap": [0.7] }
+ ]
+}

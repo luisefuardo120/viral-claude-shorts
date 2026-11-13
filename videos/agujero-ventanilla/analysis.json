@@ -1,0 +1,187 @@
+{
+ "duration": 49.267,
+ "phrases": [
+  {
+   "n": 1,
+   "t0": 0,
+   "t1": 3.56,
+   "from": 0,
+   "to": 10,
+   "text": "Ese agujerito de la ventanilla del avión NO está de adorno.",
+   "question": false
+  },
+  {
+   "n": 2,
+   "t0": 3.86,
+   "t1": 6.14,
+   "from": 11,
+   "to": 18,
+   "text": "Tu ventanilla no es un cristal, son tres.",
+   "question": false
+  },
+  {
+   "n": 3,
+   "t0": 6.68,
+   "t1": 10.34,
+   "from": 19,
+   "to": 34,
+   "text": "El de dentro es de plástico, y solo está para que tú no rayes los otros.",
+   "question": false
+  },
+  {
+   "n": 4,
+   "t0": 10.86,
+   "t1": 17.94,
+   "from": 35,
+   "to": 59,
+   "text": "Ahí arriba, dentro del avión el aire está a mucha más presión que fuera, y esa presión empuja las ventanillas hacia fuera todo el tiempo.",
+   "question": false
+  },
+  {
+   "n": 5,
+   "t0": 18.46,
+   "t1": 20.56,
+   "from": 60,
+   "to": 67,
+   "text": "Entonces el cristal de fuera es el fuerte,",
+   "question": false
+  },
+  {
+   "n": 6,
+   "t0": 20.88,
+   "t1": 22.62,
+   "from": 68,
+   "to": 74,
+   "text": "es el que aguanta todo ese empuje.",
+   "question": false
+  },
+  {
+   "n": 7,
+   "t0": 22.9,
+   "t1": 26.6,
+   "from": 75,
+   "to": 88,
+   "text": "Pero el del medio no debe cargar con nada, así que lleva este agujerito.",
+   "question": false
+  },
+  {
+   "n": 8,
+   "t0": 26.6,
+   "t1": 32.36,
+   "from": 89,
+   "to": 113,
+   "text": "Deja pasar el aire de la cabina al hueco entre los dos, y la presión a los lados del cristal del medio es la misma.",
+   "question": false
+  },
+  {
+   "n": 9,
+   "t0": 32.86,
+   "t1": 35.46,
+   "from": 114,
+   "to": 124,
+   "text": "Así se queda de reserva, si el de fuera se rompiera,",
+   "question": false
+  },
+  {
+   "n": 10,
+   "t0": 35.74,
+   "t1": 38.8,
+   "from": 125,
+   "to": 137,
+   "text": "el del medio aguanta solo hasta una vez y media la presión normal.",
+   "question": false
+  },
+  {
+   "n": 11,
+   "t0": 39.16,
+   "t1": 44.24,
+   "from": 138,
+   "to": 155,
+   "text": "Y de premio, por ese agujerito sale la humedad, y por eso tu ventanilla casi nunca se empaña.",
+   "question": false
+  },
+  {
+   "n": 12,
+   "t0": 44.54,
+   "t1": 48.88,
+   "from": 156,
+   "to": 172,
+   "text": "Así que ese agujerito no está de adorno, es el que decide qué cristal aguanta el avión.",
+   "question": false
+  }
+ ],
+ "pauses": [
+  {
+   "t0": 3.56,
+   "t1": 3.86,
+   "dur": 0.3,
+   "after": 10
+  },
+  {
+   "t0": 6.14,
+   "t1": 6.68,
+   "dur": 0.54,
+   "after": 18
+  },
+  {
+   "t0": 10.34,
+   "t1": 10.86,
+   "dur": 0.52,
+   "after": 34
+  },
+  {
+   "t0": 17.94,
+   "t1": 18.46,
+   "dur": 0.52,
+   "after": 59
+  },
+  {
+   "t0": 20.56,
+   "t1": 20.88,
+   "dur": 0.32,
+   "after": 67
+  },
+  {
+   "t0": 32.36,
+   "t1": 32.86,
+   "dur": 0.5,
+   "after": 113
+  },
+  {
+   "t0": 35.46,
+   "t1": 35.74,
+   "dur": 0.28,
+   "after": 124
+  },
+  {
+   "t0": 38.8,
+   "t1": 39.16,
+   "dur": 0.36,
+   "after": 137
+  },
+  {
+   "t0": 44.24,
+   "t1": 44.54,
+   "dur": 0.3,
+   "after": 155
+  }
+ ],
+ "numbers": [
+  {
+   "i": 18,
+   "w": "tres.",
+   "t0": 5.84
+  },
+  {
+   "i": 100,
+   "w": "dos,",
+   "t0": 29.08
+  },
+  {
+   "i": 131,
+   "w": "una",
+   "t0": 37.12
+  }
+ ],
+ "words": 173
+}

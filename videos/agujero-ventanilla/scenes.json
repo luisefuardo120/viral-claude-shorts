@@ -1,0 +1,246 @@
+{
+ "style": "3d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "'NO está de adorno' formula (@stupy_doo). Rich cabin interior, subject fills the frame. Watermark @curiosferagfx under the captions.",
+ "music": {
+  "bpm": 98
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "question",
+   "title": "Ese agujerito NO está de adorno",
+   "highlight": "agujerito",
+   "mood": "curious",
+   "ambience": [
+    "wind"
+   ],
+   "keys": [
+    {
+     "id": "lupa",
+     "at": 4,
+     "sfx": "pop",
+     "t": 1.12
+    }
+   ],
+   "visual": "the cabin: seats, bins, the window with clouds going by; the lens finds the little hole",
+   "from": 0,
+   "transition": "cut",
+   "t0": 0,
+   "t1": 3.61
+  },
+  {
+   "id": "tres",
+   "type": "object",
+   "title": "Son tres cristales",
+   "highlight": "tres",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "separa",
+     "at": 16,
+     "sfx": "whoosh",
+     "t": 4.96
+    }
+   ],
+   "visual": "the window's three panes float out into the cabin and pull apart",
+   "from": 11,
+   "transition": "cut",
+   "t0": 3.61,
+   "t1": 6.43
+  },
+  {
+   "id": "plastico",
+   "type": "object",
+   "title": "El de dentro, de plástico",
+   "highlight": "plástico",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "rayas",
+     "at": 32,
+     "sfx": "scratch",
+     "t": 9.5
+    }
+   ],
+   "visual": "the inner plastic pane lights up and takes the scratches",
+   "from": 19,
+   "transition": "cut",
+   "t0": 6.43,
+   "t1": 10.61
+  },
+  {
+   "id": "presion",
+   "type": "process",
+   "title": "Más presión dentro",
+   "highlight": "presión",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "aire",
+     "at": 41,
+     "sfx": "whoosh",
+     "t": 12.58
+    }
+   ],
+   "visual": "dense air inside the cabin, thin air outside",
+   "from": 35,
+   "transition": "cut",
+   "t0": 10.61,
+   "t1": 14.54
+  },
+  {
+   "id": "empuja",
+   "type": "process",
+   "title": "Empuja hacia fuera",
+   "highlight": "fuera",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "empuja",
+     "at": 52,
+     "sfx": "thump",
+     "t": 15.42
+    }
+   ],
+   "visual": "red arrows push on the window, outward",
+   "from": 49,
+   "transition": "cut",
+   "t0": 14.54,
+   "t1": 18.21
+  },
+  {
+   "id": "fuerte",
+   "type": "object",
+   "title": "El de fuera, el fuerte",
+   "highlight": "fuera",
+   "mood": "epic",
+   "keys": [
+    {
+     "id": "aguanta",
+     "at": 71,
+     "sfx": "hit",
+     "t": 21.2
+    }
+   ],
+   "visual": "the outer pane glows and takes all the arrows",
+   "from": 60,
+   "transition": "cut",
+   "t0": 18.21,
+   "t1": 22.66
+  },
+  {
+   "id": "agujero",
+   "type": "object",
+   "title": "Lleva un agujerito",
+   "highlight": "agujerito",
+   "mood": "wonder",
+   "keys": [
+    {
+     "id": "agujero",
+     "at": 86,
+     "sfx": "pop",
+     "t": 25.48
+    }
+   ],
+   "visual": "the middle pane: a lime ring marks the hole; the lens shows it up close",
+   "from": 75,
+   "transition": "cut",
+   "t0": 22.66,
+   "t1": 26.64
+  },
+  {
+   "id": "misma",
+   "type": "process",
+   "title": "La misma presión",
+   "highlight": "presión",
+   "mood": "wonder",
+   "keys": [
+    {
+     "id": "pasa",
+     "at": 90,
+     "sfx": "whoosh",
+     "t": 26.98
+    },
+    {
+     "id": "igual",
+     "at": 103,
+     "sfx": "shimmer",
+     "t": 29.78
+    }
+   ],
+   "visual": "cabin air streams through the hole into the gap; the middle pane carries nothing",
+   "from": 89,
+   "transition": "cut",
+   "t0": 26.64,
+   "t1": 32.61
+  },
+  {
+   "id": "reserva",
+   "type": "stat",
+   "title": "Se queda de reserva",
+   "highlight": "reserva",
+   "mood": "epic",
+   "stat": {
+    "value": "×1,5",
+    "text": "la presión normal"
+   },
+   "keys": [
+    {
+     "id": "rompe",
+     "at": 124,
+     "sfx": "impact",
+     "t": 34.96
+    },
+    {
+     "id": "stat",
+     "at": 131,
+     "sfx": "hit",
+     "t": 37.12
+    }
+   ],
+   "visual": "the outer pane cracks; the middle one glows lime and holds",
+   "from": 114,
+   "transition": "cut",
+   "t0": 32.61,
+   "t1": 38.91
+  },
+  {
+   "id": "humedad",
+   "type": "process",
+   "title": "Sale la humedad",
+   "highlight": "humedad",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "sale",
+     "at": 144,
+     "sfx": "shimmer",
+     "t": 40.84
+    }
+   ],
+   "visual": "fog on the window clears as the moisture leaves through the hole",
+   "from": 138,
+   "transition": "cut",
+   "t0": 38.91,
+   "t1": 44.29
+  },
+  {
+   "id": "cierre",
+   "type": "closing",
+   "title": "NO está de adorno",
+   "highlight": "adorno",
+   "mood": "triumphant",
+   "ambience": [
+    "wind"
+   ],
+   "visual": "outside: the plane flies over the diorama, its row of windows",
+   "from": 156,
+   "transition": "cut",
+   "t0": 44.29,
+   "t1": 49.267
+  }
+ ],
+ "duration": 49.267
+}
