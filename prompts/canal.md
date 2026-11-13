@@ -27,3 +27,15 @@ Sacada del análisis de noviembre de 2026 (canales en español @hecho.aproposito
 - Hashtags: `#shorts` + 4–5 del tema (`#ingenieria #curiosidades #ciencia #comofunciona` + el concreto).
 - Primer comentario fijado: "¿Qué tema quieres que explique en el próximo video? 👇"
 - 4–5 videos por semana, separados unas horas. A las 48 h: % visto hasta el final (>70 % es bueno) y vistas.
+
+## Mejora continua (después de cada render)
+Cada video tiene que salir mejor que el anterior. Al terminar el render:
+1. Mirar el video terminado escena por escena: la hoja de contactos `videos/<tema>/review/sheet.jpg` y fotogramas sueltos de `final.mp4` (con `ffmpeg -ss`).
+2. Comparar con el video de referencia (el del cable del tren) y con los éxitos actuales (@stupy_doo, @hecho.aproposito).
+3. Escribir en el registro de abajo qué se puede mejorar (3–5 puntos concretos: encuadre, detalle, movimiento, claridad de la explicación, ritmo) y decírselo al usuario.
+4. Aplicar esas mejoras en el siguiente video; si son del estilo del canal, en `styles/3d/diorama.ts` para que lleguen a todos.
+
+### Registro de mejoras
+- **bulbo-proa:** siempre hay suelo (puerto en maqueta); espuma blanca en las crestas para que las olas se lean; las curvas de la explicación se dibujan por encima del agua.
+- **eje-camion:** nada entre la cámara y el protagonista (los adornos van detrás); exagerar el movimiento clave para que se note (el eje sube 60 cm).
+- **agujero-ventanilla:** fórmula "NO está de adorno"; marca de agua bajo los subtítulos; interiores con objetivo abierto (fov 50+) y llenos de detalles (paredes de dos tonos, luz ambiental, moqueta con patrón).
