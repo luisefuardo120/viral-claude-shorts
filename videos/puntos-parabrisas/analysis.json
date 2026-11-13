@@ -1,0 +1,232 @@
+{
+ "duration": 50.808,
+ "phrases": [
+  {
+   "n": 1,
+   "t0": 0,
+   "t1": 3.82,
+   "from": 0,
+   "to": 11,
+   "text": "Esos puntitos negros del borde de tu parabrisas no están de adorno.",
+   "question": false
+  },
+  {
+   "n": 2,
+   "t0": 4.2,
+   "t1": 5.88,
+   "from": 12,
+   "to": 16,
+   "text": "El parabrisas no va atornillado.",
+   "question": false
+  },
+  {
+   "n": 3,
+   "t0": 6.2,
+   "t1": 9.26,
+   "from": 17,
+   "to": 27,
+   "text": "Va pegado al coche con un pegamento muy fuerte, todo alrededor.",
+   "question": false
+  },
+  {
+   "n": 4,
+   "t0": 9.96,
+   "t1": 11.74,
+   "from": 28,
+   "to": 33,
+   "text": "Pero ese pegamento tiene un enemigo,",
+   "question": false
+  },
+  {
+   "n": 5,
+   "t0": 12.06,
+   "t1": 12.42,
+   "from": 34,
+   "to": 35,
+   "text": "el sol.",
+   "question": false
+  },
+  {
+   "n": 6,
+   "t0": 13,
+   "t1": 17.48,
+   "from": 36,
+   "to": 48,
+   "text": "Los rayos ultravioleta lo van pudriendo, y un parabrisas despegado es un peligro.",
+   "question": false
+  },
+  {
+   "n": 7,
+   "t0": 18.02,
+   "t1": 21.98,
+   "from": 49,
+   "to": 60,
+   "text": "Entonces le pintan una banda negra de cerámica, horneada dentro del cristal.",
+   "question": false
+  },
+  {
+   "n": 8,
+   "t0": 22.18,
+   "t1": 25.84,
+   "from": 61,
+   "to": 72,
+   "text": "Tapa el pegamento del sol, le da una superficie rugosa donde agarrarse,",
+   "question": false
+  },
+  {
+   "n": 9,
+   "t0": 26.12,
+   "t1": 27.14,
+   "from": 73,
+   "to": 77,
+   "text": "y de paso lo esconde.",
+   "question": false
+  },
+  {
+   "n": 10,
+   "t0": 27.14,
+   "t1": 36,
+   "from": 78,
+   "to": 109,
+   "text": "Pero lo negro se calienta mucho más rápido que el cristal transparente, y ese cambio brusco de temperatura de forma el cristal, el borde se vería como a través de una lupa.",
+   "question": false
+  },
+  {
+   "n": 11,
+   "t0": 36.44,
+   "t1": 38.22,
+   "from": 110,
+   "to": 116,
+   "text": "Entonces la banda no termina de golpe,",
+   "question": false
+  },
+  {
+   "n": 12,
+   "t0": 38.54,
+   "t1": 42.94,
+   "from": 117,
+   "to": 133,
+   "text": "se va deshaciendo en puntitos cada vez más pequeños, para que el calor cambie poco a poco.",
+   "question": false
+  },
+  {
+   "n": 13,
+   "t0": 43.4,
+   "t1": 45.02,
+   "from": 134,
+   "to": 138,
+   "text": "Eso se llama frita cerámica.",
+   "question": false
+  },
+  {
+   "n": 14,
+   "t0": 45.38,
+   "t1": 47.4,
+   "from": 139,
+   "to": 146,
+   "text": "Así que esos puntitos no están de adorno,",
+   "question": false
+  },
+  {
+   "n": 15,
+   "t0": 47.72,
+   "t1": 50.52,
+   "from": 147,
+   "to": 156,
+   "text": "son el degradado que evita que tu parabrisas se deforme.",
+   "question": false
+  }
+ ],
+ "pauses": [
+  {
+   "t0": 3.82,
+   "t1": 4.2,
+   "dur": 0.38,
+   "after": 11
+  },
+  {
+   "t0": 5.88,
+   "t1": 6.2,
+   "dur": 0.32,
+   "after": 16
+  },
+  {
+   "t0": 9.26,
+   "t1": 9.96,
+   "dur": 0.7,
+   "after": 27
+  },
+  {
+   "t0": 11.74,
+   "t1": 12.06,
+   "dur": 0.32,
+   "after": 33
+  },
+  {
+   "t0": 12.42,
+   "t1": 13,
+   "dur": 0.58,
+   "after": 35
+  },
+  {
+   "t0": 17.48,
+   "t1": 18.02,
+   "dur": 0.54,
+   "after": 48
+  },
+  {
+   "t0": 25.84,
+   "t1": 26.12,
+   "dur": 0.28,
+   "after": 72
+  },
+  {
+   "t0": 36,
+   "t1": 36.44,
+   "dur": 0.44,
+   "after": 109
+  },
+  {
+   "t0": 38.22,
+   "t1": 38.54,
+   "dur": 0.32,
+   "after": 116
+  },
+  {
+   "t0": 42.94,
+   "t1": 43.4,
+   "dur": 0.46,
+   "after": 133
+  },
+  {
+   "t0": 45.02,
+   "t1": 45.38,
+   "dur": 0.36,
+   "after": 138
+  },
+  {
+   "t0": 47.4,
+   "t1": 47.72,
+   "dur": 0.32,
+   "after": 146
+  }
+ ],
+ "numbers": [
+  {
+   "i": 52,
+   "w": "una",
+   "t0": 19.02
+  },
+  {
+   "i": 68,
+   "w": "una",
+   "t0": 23.88
+  },
+  {
+   "i": 108,
+   "w": "una",
+   "t0": 35.48
+  }
+ ],
+ "words": 157
+}

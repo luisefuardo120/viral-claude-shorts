@@ -1,0 +1,47 @@
+{
+  "language": "es",
+  "lead": 0.6,
+  "tail": 1.2,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Esos puntitos negros del borde de tu parabrisas NO están de adorno.",
+      "pause": 0.4
+    },
+    {
+      "id": "pegado",
+      "text": "El parabrisas no va atornillado: va pegado al coche con un pegamento muy fuerte, todo alrededor.",
+      "pause": 0.35
+    },
+    {
+      "id": "sol",
+      "text": "Pero ese pegamento tiene un enemigo: el sol. Los rayos ultravioleta lo van pudriendo, y un parabrisas despegado es un peligro.",
+      "pause": 0.35
+    },
+    {
+      "id": "banda",
+      "text": "Entonces le pintan una banda negra de cerámica, horneada dentro del cristal. Tapa el pegamento del sol, le da una superficie rugosa donde agarrarse, y de paso lo esconde.",
+      "pause": 0.35
+    },
+    {
+      "id": "calor",
+      "text": "Pero lo negro se calienta mucho más rápido que el cristal transparente, y ese cambio brusco de temperatura deforma el cristal: el borde se vería como a través de una lupa.",
+      "pause": 0.35
+    },
+    {
+      "id": "puntos",
+      "text": "Entonces la banda no termina de golpe: se va deshaciendo en puntitos cada vez más pequeños, para que el calor cambie poco a poco.",
+      "pause": 0.35
+    },
+    {
+      "id": "nombre",
+      "text": "Eso se llama frita cerámica.",
+      "pause": 0.35
+    },
+    {
+      "id": "cierre",
+      "text": "Así que esos puntitos no están de adorno: son el degradado que evita que tu parabrisas se deforme.",
+      "pause": 0
+    }
+  ]
+}

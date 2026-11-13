@@ -1,0 +1,260 @@
+{
+ "style": "3d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "'NO está de adorno' formula. Review lessons applied: strong colors, hero big from frame one with a pointing glove, labels, moving camera. Watermark under the captions.",
+ "music": {
+  "bpm": 100
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "question",
+   "title": "Esos puntitos NO están de adorno",
+   "highlight": "puntitos",
+   "mood": "curious",
+   "ambience": [
+    "wind"
+   ],
+   "keys": [
+    {
+     "id": "toca",
+     "at": 1,
+     "sfx": "pop",
+     "t": 0.44
+    }
+   ],
+   "visual": "close on the windshield's dotted edge; a cartoon glove taps the dots; the camera pushes in",
+   "from": 0,
+   "transition": "cut",
+   "t0": 0,
+   "t1": 3.95
+  },
+  {
+   "id": "pegado",
+   "type": "process",
+   "title": "Va pegado, no atornillado",
+   "highlight": "pegado",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "levanta",
+     "at": 18,
+     "sfx": "whoosh",
+     "t": 6.3
+    },
+    {
+     "id": "pega",
+     "at": 23,
+     "sfx": "pop",
+     "t": 7.42
+    }
+   ],
+   "visual": "the street, the car; the glass lifts off its frame and shows the yellow glue bead, labelled",
+   "from": 12,
+   "transition": "cut",
+   "t0": 3.95,
+   "t1": 9.71
+  },
+  {
+   "id": "sol",
+   "type": "question",
+   "title": "Su enemigo: el sol",
+   "highlight": "sol",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "sol",
+     "at": 33,
+     "sfx": "whoosh",
+     "t": 11.3
+    }
+   ],
+   "visual": "the sun comes out; purple UV rays reach the glue",
+   "from": 28,
+   "transition": "cut",
+   "t0": 9.71,
+   "t1": 12.75
+  },
+  {
+   "id": "pudre",
+   "type": "process",
+   "title": "Lo va pudriendo",
+   "highlight": "pudriendo",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "pudre",
+     "at": 41,
+     "sfx": "scratch",
+     "t": 14.44
+    },
+    {
+     "id": "despega",
+     "at": 45,
+     "sfx": "fail",
+     "t": 16.12
+    }
+   ],
+   "visual": "the glue turns brown and cracks; the glass comes loose and tilts",
+   "from": 36,
+   "transition": "cut",
+   "t0": 12.75,
+   "t1": 17.77
+  },
+  {
+   "id": "banda",
+   "type": "object",
+   "title": "Una banda de cerámica",
+   "highlight": "cerámica",
+   "mood": "wonder",
+   "keys": [
+    {
+     "id": "banda",
+     "at": 53,
+     "sfx": "shimmer",
+     "t": 19.18
+    }
+   ],
+   "visual": "the black ceramic band appears around the glass, labelled",
+   "from": 49,
+   "transition": "cut",
+   "t0": 17.77,
+   "t1": 22.02
+  },
+  {
+   "id": "protege",
+   "type": "process",
+   "title": "Tapa, agarra y esconde",
+   "highlight": "esconde",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "tapa",
+     "at": 61,
+     "sfx": "hit",
+     "t": 22.18
+    },
+    {
+     "id": "rugosa",
+     "at": 70,
+     "sfx": "tick",
+     "t": 24.6
+    },
+    {
+     "id": "esconde",
+     "at": 73,
+     "sfx": "pop",
+     "t": 26.12
+    }
+   ],
+   "visual": "the UV rays stop at the band; tiny bumps give the glue grip; the glue disappears under it",
+   "from": 61,
+   "transition": "cut",
+   "t0": 22.02,
+   "t1": 27.18
+  },
+  {
+   "id": "calor",
+   "type": "process",
+   "title": "Lo negro se calienta más",
+   "highlight": "calienta",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "calor",
+     "at": 80,
+     "sfx": "whoosh",
+     "t": 27.72
+    }
+   ],
+   "visual": "heat view: the band glows red-hot, the glass cold blue, heat rising",
+   "from": 78,
+   "transition": "cut",
+   "t0": 27.18,
+   "t1": 30.92
+  },
+  {
+   "id": "lupa",
+   "type": "comparison",
+   "title": "Se deformaría como una lupa",
+   "highlight": "lupa",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "deforma",
+     "at": 96,
+     "sfx": "scratch",
+     "t": 32.62
+    }
+   ],
+   "visual": "a straight grid behind the glass bends near the edge",
+   "from": 90,
+   "transition": "cut",
+   "t0": 30.92,
+   "t1": 36.19
+  },
+  {
+   "id": "puntos",
+   "type": "process",
+   "title": "Puntitos cada vez más pequeños",
+   "highlight": "puntitos",
+   "mood": "wonder",
+   "keys": [
+    {
+     "id": "puntos",
+     "at": 119,
+     "sfx": "shimmer",
+     "t": 38.78
+    },
+    {
+     "id": "recto",
+     "at": 131,
+     "sfx": "pop",
+     "t": 42.3
+    }
+   ],
+   "visual": "the dots fade in from the band; the heat steps down and the grid straightens",
+   "from": 110,
+   "transition": "cut",
+   "t0": 36.19,
+   "t1": 43.15
+  },
+  {
+   "id": "nombre",
+   "type": "object",
+   "title": "Frita cerámica",
+   "highlight": "frita",
+   "mood": "epic",
+   "keys": [
+    {
+     "id": "nombre",
+     "at": 136,
+     "sfx": "impact",
+     "t": 43.76
+    }
+   ],
+   "visual": "the dotted edge up close, labelled FRITA CERÁMICA",
+   "from": 134,
+   "transition": "cut",
+   "t0": 43.15,
+   "t1": 45.13
+  },
+  {
+   "id": "cierre",
+   "type": "closing",
+   "title": "NO están de adorno",
+   "highlight": "adorno",
+   "mood": "triumphant",
+   "ambience": [
+    "wind"
+   ],
+   "visual": "the street diorama: the car, the camera pulling back",
+   "from": 139,
+   "transition": "cut",
+   "t0": 45.13,
+   "t1": 50.808
+  }
+ ],
+ "duration": 50.808
+}

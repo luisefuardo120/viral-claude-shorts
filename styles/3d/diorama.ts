@@ -3,7 +3,7 @@
 //  at its edges with layers of soil, striped grass with tufts, faceted hills and trees, red-roofed houses, round clouds,
 //  and word-by-word captions. Runs in the browser after detail.ts. Pair it with a video theme.css for the titles.
 //  Pieces: dioSmooth · dioBevel · dioLathe · dioGrassMat · dioAsphaltMat · dioHill · dioCloud · dioLights · dioSoil
-//          dioHouse · dioTree · dioDiorama · dioSun · dioSkyBack · dioCaptions (CSS class .dio-cap) · dioAirliner · dioLens
+//          dioHouse · dioTree · dioDiorama · dioSun · dioSkyBack · dioCaptions (CSS class .dio-cap) · dioAirliner · dioLens · dioLabel
 // =====================================================================
 // smooth materials: the hero look (no flat shading)
 const dioSmooth = (c: string, rough = 0.45, metal = 0) => new THREE.MeshStandardMaterial({ color: c, roughness: rough, metalness: metal });
@@ -172,4 +172,18 @@ const dioLens = (w: World, o: { x?: number; y?: number; r?: number; size?: numbe
     }
   };
   return { pose, cam };
+};
+
+// ---------- labels: a name floating over a piece, in the titles' look (heavy caps, dark outline), always on top ----------
+// dioLabel('PEGAMENTO', '#ffd23f') -> a sprite; .pose(show 0..1) pops it in. Its size is fixed on screen (height: a fraction
+// of the frame's height), so it reads the same from any distance
+const dioLabel = (text: string, color = '#ffffff', height = 0.045) => {
+  const cv = document.createElement('canvas'), c = cv.getContext('2d')!, font = '900 96px "RA Heavy", "Arial Black", sans-serif'; c.font = font;
+  const w = Math.ceil(c.measureText(text).width) + 60; cv.width = w; cv.height = 140;
+  c.font = font; c.textAlign = 'center'; c.textBaseline = 'middle'; c.lineJoin = 'round'; c.lineWidth = 22; c.strokeStyle = '#13203a'; c.strokeText(text, w / 2, 74); c.fillStyle = color; c.fillText(text, w / 2, 74);
+  const tex = new THREE.CanvasTexture(cv); tex.colorSpace = THREE.SRGBColorSpace;
+  const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, depthTest: false, depthWrite: false, transparent: true, sizeAttenuation: false })); s.renderOrder = 950;
+  const base = [height * (w / 140), height] as const; s.scale.set(base[0], base[1], 1);
+  const pose = (show: number) => { s.visible = show > 0.02; s.scale.set(base[0] * Math.max(0.001, show), base[1] * Math.max(0.001, show), 1); };
+  return Object.assign(s, { pose });
 };

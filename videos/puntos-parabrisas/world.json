@@ -1,0 +1,7 @@
+{
+ "style": "3d",
+ "shots": [
+  { "id": "test-car", "title": "Esos puntitos NO están de adorno", "highlight": "puntitos", "duration": 2.5, "snap": [0.4, 2.2] },
+  { "id": "test-heat", "title": "Calor y deformación", "duration": 3, "snap": [1.2, 2.6] }
+ ]
+}
