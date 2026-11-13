@@ -1,0 +1,257 @@
+{
+ "style": "3d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "Channel formula (prompts/canal.md): highway diorama, detailed truck, lens. Watermark @curiosferagfx.",
+ "music": {
+  "bpm": 100
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "question",
+   "title": "¿Por qué no tocan el suelo?",
+   "highlight": "suelo",
+   "mood": "curious",
+   "ambience": [
+    "wind"
+   ],
+   "keys": [
+    {
+     "id": "lupa",
+     "at": 7,
+     "sfx": "pop",
+     "t": 2.04
+    }
+   ],
+   "visual": "the empty truck rolls with one trailer axle lifted; the lens shows the wheels in the air",
+   "from": 0,
+   "transition": "cut",
+   "t0": 0,
+   "t1": 2.94
+  },
+  {
+   "id": "peso",
+   "type": "process",
+   "title": "Destrozaría la carretera",
+   "highlight": "carretera",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "rompe",
+     "at": 23,
+     "sfx": "impact",
+     "t": 7.08
+    }
+   ],
+   "visual": "heavy arrows press on three axles; the asphalt cracks",
+   "from": 11,
+   "transition": "cut",
+   "t0": 2.94,
+   "t1": 8.44
+  },
+  {
+   "id": "ley",
+   "type": "object",
+   "title": "Un límite por eje",
+   "highlight": "eje",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "limita",
+     "at": 30,
+     "sfx": "tick",
+     "t": 9.32
+    }
+   ],
+   "visual": "an arrow on each axle",
+   "from": 26,
+   "transition": "cut",
+   "t0": 8.44,
+   "t1": 11.71
+  },
+  {
+   "id": "ejes",
+   "type": "process",
+   "title": "Más ejes, más ruedas",
+   "highlight": "ejes",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "ejes",
+     "at": 41,
+     "sfx": "pop",
+     "t": 13.1
+    }
+   ],
+   "visual": "smaller arrows spread over all six axles; no cracks",
+   "from": 37,
+   "transition": "cut",
+   "t0": 11.71,
+   "t1": 16.11
+  },
+  {
+   "id": "vacio",
+   "type": "question",
+   "title": "Cuando va vacío",
+   "highlight": "vacío",
+   "mood": "curious",
+   "ambience": [
+    "wind"
+   ],
+   "keys": [
+    {
+     "id": "vacio",
+     "at": 53,
+     "sfx": "whoosh",
+     "t": 17.26
+    }
+   ],
+   "visual": "the cargo disappears: the truck rolls empty, every wheel still down",
+   "from": 49,
+   "transition": "cut",
+   "t0": 16.11,
+   "t1": 19.58
+  },
+  {
+   "id": "gastan",
+   "type": "process",
+   "title": "Más roce, más combustible",
+   "highlight": "combustible",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "gastan",
+     "at": 61,
+     "sfx": "scratch",
+     "t": 19.94
+    }
+   ],
+   "visual": "dust and rubber fly off the extra tyres; the lens on the worn tyre",
+   "from": 60,
+   "transition": "cut",
+   "t0": 19.58,
+   "t1": 23.72
+  },
+  {
+   "id": "cojines",
+   "type": "process",
+   "title": "Cojines de aire",
+   "highlight": "aire",
+   "mood": "wonder",
+   "keys": [
+    {
+     "id": "suben",
+     "at": 81,
+     "sfx": "whoosh",
+     "t": 26.64
+    },
+    {
+     "id": "bajan",
+     "at": 88,
+     "sfx": "thump",
+     "t": 28.38
+    }
+   ],
+   "visual": "the air bags lift the axle; then the cargo comes back and it lowers",
+   "from": 71,
+   "transition": "cut",
+   "t0": 23.72,
+   "t1": 30.23
+  },
+  {
+   "id": "nombre",
+   "type": "object",
+   "title": "El eje elevable",
+   "highlight": "elevable",
+   "mood": "epic",
+   "keys": [
+    {
+     "id": "nombre",
+     "at": 98,
+     "sfx": "impact",
+     "t": 31.34
+    }
+   ],
+   "visual": "the lifted axle with a glowing ring",
+   "from": 94,
+   "transition": "cut",
+   "t0": 30.23,
+   "t1": 33.43
+  },
+  {
+   "id": "peaje",
+   "type": "process",
+   "title": "Peaje por cada eje",
+   "highlight": "peaje",
+   "mood": "curious",
+   "keys": [
+    {
+     "id": "cobra",
+     "at": 110,
+     "sfx": "tick",
+     "t": 35.5
+    }
+   ],
+   "visual": "the loaded truck passes the toll gantry; the screen counts 6 axles",
+   "from": 104,
+   "transition": "cut",
+   "t0": 33.43,
+   "t1": 37.49
+  },
+  {
+   "id": "barato",
+   "type": "stat",
+   "title": "Peaje más barato",
+   "highlight": "barato",
+   "mood": "playful",
+   "stat": {
+    "value": "5 ejes",
+    "text": "en vez de 6"
+   },
+   "keys": [
+    {
+     "id": "stat",
+     "at": 120,
+     "sfx": "pop",
+     "t": 38.82
+    }
+   ],
+   "visual": "the empty truck, axle lifted, passes: the screen counts 5, in green",
+   "from": 118,
+   "transition": "cut",
+   "t0": 37.49,
+   "t1": 39.86
+  },
+  {
+   "id": "cierre",
+   "type": "closing",
+   "title": "Suben y bajan",
+   "highlight": "bajan",
+   "mood": "triumphant",
+   "ambience": [
+    "wind"
+   ],
+   "keys": [
+    {
+     "id": "suben",
+     "at": 130,
+     "sfx": "whoosh",
+     "t": 42.24
+    },
+    {
+     "id": "bajan",
+     "at": 132,
+     "sfx": "thump",
+     "t": 42.68
+    }
+   ],
+   "visual": "the highway diorama: the truck drives away, its axle going up and down",
+   "from": 123,
+   "transition": "cut",
+   "t0": 39.86,
+   "t1": 44.722
+  }
+ ],
+ "duration": 44.722
+}

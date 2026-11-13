@@ -1,0 +1,7 @@
+{
+ "style": "3d",
+ "shots": [
+  { "id": "test-truck", "title": "¿Por qué no tocan el suelo?", "highlight": "suelo", "duration": 3, "snap": [0.8, 2.7] },
+  { "id": "test-road", "title": "Peso, grietas y peaje", "duration": 2.5, "snap": [0.6, 2.2] }
+ ]
+}
