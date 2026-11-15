@@ -1,0 +1,595 @@
+{
+ "source": "whisper:small+script",
+ "words": [
+  {
+   "word": "Este",
+   "start": 0.0,
+   "end": 0.44
+  },
+  {
+   "word": "hombre",
+   "start": 0.44,
+   "end": 0.78
+  },
+  {
+   "word": "pasó",
+   "start": 0.78,
+   "end": 1.2
+  },
+  {
+   "word": "tres",
+   "start": 1.2,
+   "end": 1.54
+  },
+  {
+   "word": "días",
+   "start": 1.54,
+   "end": 1.88
+  },
+  {
+   "word": "dentro",
+   "start": 1.88,
+   "end": 2.22
+  },
+  {
+   "word": "de",
+   "start": 2.22,
+   "end": 2.54
+  },
+  {
+   "word": "un",
+   "start": 2.54,
+   "end": 2.7
+  },
+  {
+   "word": "pez…",
+   "start": 2.7,
+   "end": 3.16
+  },
+  {
+   "word": "y",
+   "start": 3.16,
+   "end": 3.62
+  },
+  {
+   "word": "sobrevivió.",
+   "start": 3.62,
+   "end": 4.34
+  },
+  {
+   "word": "Se",
+   "start": 4.76,
+   "end": 4.94
+  },
+  {
+   "word": "llamaba",
+   "start": 4.94,
+   "end": 5.36
+  },
+  {
+   "word": "Jonás.",
+   "start": 5.36,
+   "end": 6.54
+  },
+  {
+   "word": "Dios",
+   "start": 6.54,
+   "end": 6.8
+  },
+  {
+   "word": "le",
+   "start": 6.8,
+   "end": 7.0
+  },
+  {
+   "word": "pidió",
+   "start": 7.0,
+   "end": 7.34
+  },
+  {
+   "word": "que",
+   "start": 7.34,
+   "end": 7.48
+  },
+  {
+   "word": "fuera",
+   "start": 7.48,
+   "end": 7.76
+  },
+  {
+   "word": "a",
+   "start": 7.76,
+   "end": 7.96
+  },
+  {
+   "word": "la",
+   "start": 7.96,
+   "end": 8.02
+  },
+  {
+   "word": "ciudad",
+   "start": 8.02,
+   "end": 8.32
+  },
+  {
+   "word": "de",
+   "start": 8.32,
+   "end": 8.56
+  },
+  {
+   "word": "Nínive",
+   "start": 8.56,
+   "end": 8.96
+  },
+  {
+   "word": "a",
+   "start": 8.96,
+   "end": 9.4
+  },
+  {
+   "word": "dar",
+   "start": 9.4,
+   "end": 9.54
+  },
+  {
+   "word": "un",
+   "start": 9.54,
+   "end": 9.68
+  },
+  {
+   "word": "mensaje,",
+   "start": 9.68,
+   "end": 10.26
+  },
+  {
+   "word": "pero",
+   "start": 10.6,
+   "end": 10.9
+  },
+  {
+   "word": "él",
+   "start": 10.9,
+   "end": 11.1
+  },
+  {
+   "word": "tuvo",
+   "start": 11.1,
+   "end": 11.32
+  },
+  {
+   "word": "miedo",
+   "start": 11.32,
+   "end": 11.76
+  },
+  {
+   "word": "y",
+   "start": 11.76,
+   "end": 12.28
+  },
+  {
+   "word": "huyó",
+   "start": 12.28,
+   "end": 12.52
+  },
+  {
+   "word": "en",
+   "start": 12.52,
+   "end": 12.66
+  },
+  {
+   "word": "un",
+   "start": 12.66,
+   "end": 12.82
+  },
+  {
+   "word": "barco,",
+   "start": 12.82,
+   "end": 13.24
+  },
+  {
+   "word": "justo",
+   "start": 13.56,
+   "end": 13.88
+  },
+  {
+   "word": "hacia",
+   "start": 13.88,
+   "end": 14.2
+  },
+  {
+   "word": "el",
+   "start": 14.2,
+   "end": 14.38
+  },
+  {
+   "word": "lado",
+   "start": 14.38,
+   "end": 14.54
+  },
+  {
+   "word": "contrario.",
+   "start": 14.54,
+   "end": 15.04
+  },
+  {
+   "word": "Entonces",
+   "start": 15.66,
+   "end": 16.18
+  },
+  {
+   "word": "vino",
+   "start": 16.18,
+   "end": 16.6
+  },
+  {
+   "word": "una",
+   "start": 16.6,
+   "end": 16.88
+  },
+  {
+   "word": "tormenta",
+   "start": 16.88,
+   "end": 17.48
+  },
+  {
+   "word": "tan",
+   "start": 17.48,
+   "end": 17.66
+  },
+  {
+   "word": "fuerte",
+   "start": 17.66,
+   "end": 18.06
+  },
+  {
+   "word": "que",
+   "start": 18.06,
+   "end": 18.66
+  },
+  {
+   "word": "los",
+   "start": 18.66,
+   "end": 18.84
+  },
+  {
+   "word": "marineros",
+   "start": 18.84,
+   "end": 19.38
+  },
+  {
+   "word": "pensaron",
+   "start": 19.38,
+   "end": 19.94
+  },
+  {
+   "word": "que",
+   "start": 19.94,
+   "end": 20.14
+  },
+  {
+   "word": "iban",
+   "start": 20.14,
+   "end": 20.44
+  },
+  {
+   "word": "a",
+   "start": 20.44,
+   "end": 20.54
+  },
+  {
+   "word": "morir.",
+   "start": 20.54,
+   "end": 20.92
+  },
+  {
+   "word": "Jonás",
+   "start": 20.92,
+   "end": 21.82
+  },
+  {
+   "word": "sabía",
+   "start": 21.82,
+   "end": 22.7
+  },
+  {
+   "word": "que",
+   "start": 22.7,
+   "end": 22.94
+  },
+  {
+   "word": "era",
+   "start": 22.94,
+   "end": 23.14
+  },
+  {
+   "word": "por",
+   "start": 23.14,
+   "end": 23.38
+  },
+  {
+   "word": "su",
+   "start": 23.38,
+   "end": 23.56
+  },
+  {
+   "word": "culpa,",
+   "start": 23.56,
+   "end": 23.94
+  },
+  {
+   "word": "así",
+   "start": 24.24,
+   "end": 24.48
+  },
+  {
+   "word": "que",
+   "start": 24.48,
+   "end": 24.68
+  },
+  {
+   "word": "les",
+   "start": 24.68,
+   "end": 24.8
+  },
+  {
+   "word": "pidió",
+   "start": 24.8,
+   "end": 25.32
+  },
+  {
+   "word": "que",
+   "start": 25.32,
+   "end": 25.72
+  },
+  {
+   "word": "lo",
+   "start": 25.72,
+   "end": 25.86
+  },
+  {
+   "word": "lanzaran",
+   "start": 25.86,
+   "end": 26.42
+  },
+  {
+   "word": "al",
+   "start": 26.42,
+   "end": 26.62
+  },
+  {
+   "word": "mar.",
+   "start": 26.62,
+   "end": 26.84
+  },
+  {
+   "word": "Y",
+   "start": 27.28,
+   "end": 27.46
+  },
+  {
+   "word": "en",
+   "start": 27.46,
+   "end": 27.58
+  },
+  {
+   "word": "ese",
+   "start": 27.58,
+   "end": 27.76
+  },
+  {
+   "word": "momento,",
+   "start": 27.76,
+   "end": 28.24
+  },
+  {
+   "word": "un",
+   "start": 28.24,
+   "end": 28.78
+  },
+  {
+   "word": "gran",
+   "start": 28.78,
+   "end": 29.02
+  },
+  {
+   "word": "pez",
+   "start": 29.02,
+   "end": 29.44
+  },
+  {
+   "word": "se",
+   "start": 29.44,
+   "end": 29.62
+  },
+  {
+   "word": "lo",
+   "start": 29.62,
+   "end": 29.76
+  },
+  {
+   "word": "tragó.",
+   "start": 29.76,
+   "end": 30.58
+  },
+  {
+   "word": "Allí,",
+   "start": 30.58,
+   "end": 31.1
+  },
+  {
+   "word": "en",
+   "start": 31.32,
+   "end": 31.5
+  },
+  {
+   "word": "la",
+   "start": 31.5,
+   "end": 31.6
+  },
+  {
+   "word": "oscuridad,",
+   "start": 31.6,
+   "end": 32.26
+  },
+  {
+   "word": "Jonás",
+   "start": 32.26,
+   "end": 33.0
+  },
+  {
+   "word": "oró…",
+   "start": 33.0,
+   "end": 33.36
+  },
+  {
+   "word": "y",
+   "start": 33.36,
+   "end": 34.0
+  },
+  {
+   "word": "Dios",
+   "start": 34.0,
+   "end": 34.28
+  },
+  {
+   "word": "lo",
+   "start": 34.28,
+   "end": 34.54
+  },
+  {
+   "word": "escuchó.",
+   "start": 34.54,
+   "end": 35.08
+  },
+  {
+   "word": "Al",
+   "start": 35.54,
+   "end": 35.7
+  },
+  {
+   "word": "tercer",
+   "start": 35.7,
+   "end": 35.94
+  },
+  {
+   "word": "día,",
+   "start": 35.94,
+   "end": 36.34
+  },
+  {
+   "word": "el",
+   "start": 36.34,
+   "end": 36.9
+  },
+  {
+   "word": "pez",
+   "start": 36.9,
+   "end": 37.24
+  },
+  {
+   "word": "lo",
+   "start": 37.24,
+   "end": 37.38
+  },
+  {
+   "word": "dejó",
+   "start": 37.38,
+   "end": 37.72
+  },
+  {
+   "word": "en",
+   "start": 37.72,
+   "end": 37.86
+  },
+  {
+   "word": "tierra",
+   "start": 37.86,
+   "end": 38.14
+  },
+  {
+   "word": "firme.",
+   "start": 38.14,
+   "end": 38.66
+  },
+  {
+   "word": "Porque",
+   "start": 39.12,
+   "end": 39.32
+  },
+  {
+   "word": "puedes",
+   "start": 39.32,
+   "end": 39.73
+  },
+  {
+   "word": "huir",
+   "start": 39.73,
+   "end": 40.14
+  },
+  {
+   "word": "de",
+   "start": 40.14,
+   "end": 40.28
+  },
+  {
+   "word": "Dios…",
+   "start": 40.28,
+   "end": 40.6
+  },
+  {
+   "word": "pero",
+   "start": 41.0,
+   "end": 41.16
+  },
+  {
+   "word": "Dios",
+   "start": 41.16,
+   "end": 41.44
+  },
+  {
+   "word": "nunca",
+   "start": 41.44,
+   "end": 41.88
+  },
+  {
+   "word": "huye",
+   "start": 41.88,
+   "end": 42.36
+  },
+  {
+   "word": "de",
+   "start": 42.36,
+   "end": 42.54
+  },
+  {
+   "word": "ti.",
+   "start": 42.54,
+   "end": 42.72
+  },
+  {
+   "word": "Sígueme",
+   "start": 43.24,
+   "end": 43.74
+  },
+  {
+   "word": "para",
+   "start": 43.74,
+   "end": 44.3
+  },
+  {
+   "word": "la",
+   "start": 44.3,
+   "end": 44.48
+  },
+  {
+   "word": "próxima",
+   "start": 44.48,
+   "end": 44.82
+  },
+  {
+   "word": "historia.",
+   "start": 44.82,
+   "end": 45.38
+  }
+ ]
+}

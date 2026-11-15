@@ -37,3 +37,9 @@ videos/hello-3d/
 # final videos go in GitHub releases, not in the repo
 videos/*/final.mp4
 .DS_Store
+# GrowKaz Stickman Studio: dependencies, renders and final videos stay local
+growkaz-stickman-studio/node_modules/
+growkaz-stickman-studio/projects/*/build/
+growkaz-stickman-studio/projects/*/out/
+growkaz-stickman-studio/projects/*/audio/
+growkaz-stickman-studio/examples/*/build/

@@ -1,0 +1,637 @@
+{
+ "title": "Jonas y el gran pez",
+ "duration": 46.88,
+ "shots": [
+  {
+   "id": "s01",
+   "start": 0.0,
+   "end": 1.1,
+   "line": "Este hombre",
+   "scene": "bigFace Jonás scared in the dark red belly, push in",
+   "set": "belly",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.05,
+     "name": "heartbeat",
+     "gain": -8
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s02",
+   "start": 1.1,
+   "end": 2.6,
+   "line": "pasó tres días",
+   "scene": "inside the fish: Jonás sits; three tally marks scratch the rib; 3 DÍAS pops",
+   "set": "belly",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.12,
+     "name": "pop",
+     "gain": -10
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s03",
+   "start": 2.6,
+   "end": 4.6,
+   "line": "dentro de un pez… y sobrevivió.",
+   "scene": "under the sea: the giant fish crosses; x-ray glow inside with tiny Jonás",
+   "set": "under",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 1.0,
+     "name": "shimmer",
+     "gain": -10
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "hum",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s04",
+   "start": 4.6,
+   "end": 6.35,
+   "line": "Se llamaba Jonás.",
+   "scene": "title card JONÁS over the coast at dawn",
+   "set": "coast",
+   "bars": null,
+   "in": {
+    "type": "fade",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 0.2,
+     "name": "stinger",
+     "gain": -8
+    }
+   ],
+   "notes": "",
+   "captions": false
+  },
+  {
+   "id": "s05",
+   "start": 6.35,
+   "end": 8.3,
+   "line": "Dios le pidió que fuera a la ciudad",
+   "scene": "Jonás on the beach looks up into god rays, awe",
+   "set": "coast",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "shimmer",
+     "gain": -10
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "s06",
+   "start": 8.3,
+   "end": 10.45,
+   "line": "de Nínive a dar un mensaje,",
+   "scene": "Nineveh big on the horizon, glows at 'Nínive'; Jonás from behind with a scroll",
+   "set": "coast",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.26,
+     "name": "pop",
+     "gain": -10
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "s07",
+   "start": 10.45,
+   "end": 12.15,
+   "line": "pero él tuvo miedo",
+   "scene": "bigFace Jonás worried -> scared at 'miedo', shake",
+   "set": "coast",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.85,
+     "name": "impact",
+     "gain": -8
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "s08",
+   "start": 12.15,
+   "end": 13.45,
+   "line": "y huyó en un barco,",
+   "scene": "Jonás runs left across the sand to the boat, speed lines",
+   "set": "coast",
+   "bars": null,
+   "in": {
+    "type": "whip",
+    "dur": 0.25,
+    "dir": -1
+   },
+   "sfx": [
+    {
+     "at": 0.05,
+     "name": "whoosh",
+     "gain": -8
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "s09",
+   "start": 13.45,
+   "end": 15.5,
+   "line": "justo hacia el lado contrario.",
+   "scene": "calm sea: the boat sails left; Nineveh right; red arrow grows left",
+   "set": "sea",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 1.0,
+     "name": "swish",
+     "gain": -10
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s10",
+   "start": 15.5,
+   "end": 17.4,
+   "line": "Entonces vino una tormenta",
+   "scene": "storm: dark sky, rain, lightning at 'tormenta'",
+   "set": "sea",
+   "bars": null,
+   "in": {
+    "type": "flash",
+    "dur": 0.25
+   },
+   "sfx": [
+    {
+     "at": 1.38,
+     "name": "thunder",
+     "gain": -4
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "rain",
+    "gain": -20
+   }
+  },
+  {
+   "id": "s11",
+   "start": 17.4,
+   "end": 18.6,
+   "line": "tan fuerte que",
+   "scene": "a huge wave hits the boat, heavy tilt, spray, shake",
+   "set": "sea",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.15,
+     "name": "impact",
+     "gain": -6
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "rain",
+    "gain": -20
+   }
+  },
+  {
+   "id": "s12",
+   "start": 18.6,
+   "end": 20.8,
+   "line": "los marineros pensaron que iban a morir.",
+   "scene": "medium on the deck: the sailors panic, hands on heads",
+   "set": "sea",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [],
+   "notes": "",
+   "amb": {
+    "name": "rain",
+    "gain": -20
+   }
+  },
+  {
+   "id": "s13",
+   "start": 20.8,
+   "end": 22.55,
+   "line": "Jonás sabía",
+   "scene": "bigFace Jonás sad in the rain, cold rim",
+   "set": "sea",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.1,
+     "name": "heartbeat",
+     "gain": -10
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "rain",
+    "gain": -20
+   }
+  },
+  {
+   "id": "s14",
+   "start": 22.55,
+   "end": 24.1,
+   "line": "que era por su culpa,",
+   "scene": "on deck: Jonás head down; the sailor points at him at 'culpa'",
+   "set": "sea",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 1.0,
+     "name": "hit",
+     "gain": -10
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "rain",
+    "gain": -20
+   }
+  },
+  {
+   "id": "s15",
+   "start": 24.1,
+   "end": 25.7,
+   "line": "así que les pidió",
+   "scene": "Jonás determined, points at the sea",
+   "set": "sea",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [],
+   "notes": "",
+   "amb": {
+    "name": "rain",
+    "gain": -20
+   }
+  },
+  {
+   "id": "s16",
+   "start": 25.7,
+   "end": 27.15,
+   "line": "que lo lanzaran al mar.",
+   "scene": "Jonás falls from the boat into the waves, splash",
+   "set": "sea",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.1,
+     "name": "whoosh",
+     "gain": -8
+    },
+    {
+     "at": 0.85,
+     "name": "impact",
+     "gain": -6
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "rain",
+    "gain": -20
+   }
+  },
+  {
+   "id": "s17",
+   "start": 27.15,
+   "end": 28.65,
+   "line": "Y en ese momento,",
+   "scene": "under the sea: Jonás sinks slowly, bubbles",
+   "set": "under",
+   "bars": null,
+   "in": {
+    "type": "dip",
+    "dur": 0.3
+   },
+   "sfx": [
+    {
+     "at": 0.05,
+     "name": "slowmo",
+     "gain": -10
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "hum",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s18",
+   "start": 28.65,
+   "end": 30.45,
+   "line": "un gran pez se lo tragó.",
+   "scene": "the giant fish rises with the mouth open and closes it at 'tragó'",
+   "set": "under",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.0,
+     "name": "riser",
+     "gain": -10
+    },
+    {
+     "at": 1.1,
+     "name": "impact",
+     "gain": -4
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "hum",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s19",
+   "start": 30.45,
+   "end": 32.15,
+   "line": "Allí, en la oscuridad,",
+   "scene": "inside the fish: tiny Jonás lying in the dark, slow push",
+   "set": "belly",
+   "bars": null,
+   "in": {
+    "type": "dip",
+    "dur": 0.3
+   },
+   "sfx": [],
+   "notes": "",
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s20",
+   "start": 32.15,
+   "end": 33.85,
+   "line": "Jonás oró…",
+   "scene": "Jonás kneels and prays, faint light",
+   "set": "belly",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [],
+   "notes": "",
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s21",
+   "start": 33.85,
+   "end": 35.4,
+   "line": "y Dios lo escuchó.",
+   "scene": "flash: a golden beam falls; bigFace Jonás awe lit gold",
+   "set": "belly",
+   "bars": null,
+   "in": {
+    "type": "flash",
+    "dur": 0.3
+   },
+   "sfx": [
+    {
+     "at": 0.15,
+     "name": "shimmer",
+     "gain": -6
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s22",
+   "start": 35.4,
+   "end": 36.8,
+   "line": "Al tercer día,",
+   "scene": "dawn on the coast, sun rises, DÍA 3 badge, the fish in the shallows",
+   "set": "coast",
+   "bars": null,
+   "in": {
+    "type": "dip",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "ding",
+     "gain": -10
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "s23",
+   "start": 36.8,
+   "end": 38.95,
+   "line": "el pez lo dejó en tierra firme.",
+   "scene": "the fish at the shore opens its mouth; Jonás tumbles out onto the sand",
+   "set": "coast",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.6,
+     "name": "hit",
+     "gain": -8
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "s24",
+   "start": 38.95,
+   "end": 40.85,
+   "line": "Porque puedes huir de Dios…",
+   "scene": "Jonás runs away along the beach; a warm light follows him",
+   "set": "coast",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.1,
+     "name": "footstep",
+     "gain": -12
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "s25",
+   "start": 40.85,
+   "end": 43.1,
+   "line": "pero Dios nunca huye de ti.",
+   "scene": "Jonás stops and lifts his arms; the light embraces him at 'nunca'",
+   "set": "coast",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.59,
+     "name": "shimmer",
+     "gain": -6
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "s26",
+   "start": 43.1,
+   "end": 46.88,
+   "line": "Sígueme para la próxima historia.",
+   "scene": "end screen: Cerca de ti, SÍGUEME pill, cast",
+   "set": "end",
+   "bars": null,
+   "in": {
+    "type": "fade",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 0.6,
+     "name": "pop",
+     "gain": -10
+    }
+   ],
+   "notes": "",
+   "captions": false
+  }
+ ],
+ "music": [
+  {
+   "start": 0,
+   "end": 4.6,
+   "mood": "mystery",
+   "intensity": 0.45
+  },
+  {
+   "start": 4.6,
+   "end": 10.45,
+   "mood": "hopeful",
+   "intensity": 0.35
+  },
+  {
+   "start": 10.45,
+   "end": 15.5,
+   "mood": "tension",
+   "intensity": 0.55
+  },
+  {
+   "start": 15.5,
+   "end": 27.15,
+   "mood": "action",
+   "intensity": 0.75
+  },
+  {
+   "start": 27.15,
+   "end": 30.45,
+   "mood": "epic",
+   "intensity": 0.85
+  },
+  {
+   "start": 30.45,
+   "end": 33.85,
+   "mood": "sad",
+   "intensity": 0.3
+  },
+  {
+   "start": 33.85,
+   "end": 38.95,
+   "mood": "wonder",
+   "intensity": 0.5
+  },
+  {
+   "start": 38.95,
+   "end": 46.88,
+   "mood": "triumph",
+   "intensity": 0.65
+  }
+ ]
+}
