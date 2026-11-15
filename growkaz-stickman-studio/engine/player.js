@@ -106,6 +106,8 @@ window.renderFrame = function (f) {
   if (shot.vignette !== false && grade.vignette > 0) { const v = mg.createRadialGradient(W / 2, H / 2, Math.min(W, H) * 0.35, W / 2, H / 2, Math.max(W, H) * 0.62); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, `rgba(0,0,0,${grade.vignette})`); mg.fillStyle = v; mg.fillRect(0, 0, W, H); }
   if (grade.grain > 0) { mg.save(); mg.globalAlpha = grade.grain; mg.globalCompositeOperation = 'overlay'; mg.drawImage(grainTiles[f % 4], 0, 0, W, H); mg.restore(); }
   mg.setTransform(E.PX, 0, 0, E.PX, 0, 0);
+  // channel watermark (config.watermark: { text, y (0..1 of height), size, alpha }): subtle, in the middle of the frame, under the captions
+  if (E.cfg.watermark?.text) { const w = E.cfg.watermark; text(mg, w.text, E.W / 2, E.H * (w.y ?? 0.5), { size: w.size ?? 60, color: '#ffffff', alpha: w.alpha ?? 0.14, font: FONTS.title, weight: 700, spacing: 3 }); }
   if (E.cfg.captions && shot.captions !== false) captions(mg, t, E.cfg.captionStyle || {});
   const cur = barVal(shot), prevB = i > 0 ? barVal(E.shots[i - 1]) : cur, bar = prevB + (cur - prevB) * ease.inOut(prog(lt, 0, 0.6));
   if (bar > 0) { mg.fillStyle = '#000'; mg.fillRect(0, 0, E.W, bar); mg.fillRect(0, E.H - bar, E.W, bar); }

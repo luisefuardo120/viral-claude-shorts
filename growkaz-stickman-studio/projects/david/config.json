@@ -19,5 +19,11 @@
   "enabled": true,
   "gainDb": -6
  },
- "loudness": -14
+ "loudness": -14,
+ "watermark": {
+  "text": "@cercadeti",
+  "y": 0.5,
+  "size": 60,
+  "alpha": 0.14
+ }
 }
