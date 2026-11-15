@@ -1,0 +1,254 @@
+{
+ "style": "3d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "Historias de la Biblia para el canal Cerca de ti: Jonás y el gran pez. Low-poly cálido; idea: puedes huir de Dios, pero Dios nunca huye de ti.",
+ "music": {
+  "bpm": 84,
+  "key": "D"
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "from": 0,
+   "type": "question",
+   "label": "Historias de la Biblia",
+   "title": "3 días dentro de un pez",
+   "highlight": "pez",
+   "stat": {
+    "value": "3 días",
+    "text": "dentro de un gran pez"
+   },
+   "visual": "under the sea: the great fish swims at us; at 'Jonás' it opens its mouth with a warm light inside (hookUnder)",
+   "keys": [
+    {
+     "id": "stat",
+     "at": 3,
+     "sfx": "hit",
+     "t": 1.18
+    },
+    {
+     "id": "name",
+     "at": 13,
+     "sfx": "pop",
+     "t": 5.36
+    }
+   ],
+   "mood": "curious",
+   "transition": "cut",
+   "t0": 0,
+   "t1": 6.29
+  },
+  {
+   "id": "call",
+   "from": 14,
+   "type": "object",
+   "label": "Jonás",
+   "title": "Dios lo envió a Nínive",
+   "highlight": "Nínive",
+   "visual": "coast at dawn: a beam of light on Jonah; at 'Nínive' he turns and points, a golden arrow grows and the far city glows (callWide)",
+   "keys": [
+    {
+     "id": "city",
+     "at": 23,
+     "sfx": "shimmer",
+     "t": 8.56
+    }
+   ],
+   "mood": "wonder",
+   "transition": "cut",
+   "t0": 6.29,
+   "t1": 10.35
+  },
+  {
+   "id": "flee",
+   "from": 28,
+   "type": "process",
+   "label": "Tuvo miedo",
+   "title": "Huyó al lado contrario",
+   "highlight": "contrario",
+   "visual": "calm sea: the ship's sail fills at 'huyó' and it sails away from Nineveh; a red arrow points the other way (sailSide)",
+   "keys": [
+    {
+     "id": "boat",
+     "at": 33,
+     "sfx": "whoosh",
+     "t": 12.28
+    },
+    {
+     "id": "opposite",
+     "at": 41,
+     "t": 14.54
+    }
+   ],
+   "mood": "tense",
+   "ambience": [
+    "wind"
+   ],
+   "transition": "cut",
+   "t0": 10.35,
+   "t1": 15.41
+  },
+  {
+   "id": "storm",
+   "from": 42,
+   "type": "object",
+   "label": "En el mar",
+   "title": "Una tormenta terrible",
+   "highlight": "tormenta",
+   "visual": "the sky turns dark, waves grow, rain; lightning at 'tormenta'; the sailors panic (stormWide)",
+   "keys": [
+    {
+     "id": "storm",
+     "at": 45,
+     "sfx": "impact",
+     "t": 16.88
+    },
+    {
+     "id": "sailors",
+     "at": 50,
+     "t": 18.84
+    }
+   ],
+   "mood": "dark",
+   "ambience": [
+    "wind"
+   ],
+   "transition": "cut",
+   "t0": 15.41,
+   "t1": 20.94
+  },
+  {
+   "id": "guilt",
+   "from": 56,
+   "type": "process",
+   "label": "Su culpa",
+   "title": "Láncenme al mar",
+   "highlight": "mar",
+   "visual": "on the deck in the storm: hand on his chest at 'culpa', he jumps into the sea at 'lanzaran' with a splash (deckClose)",
+   "keys": [
+    {
+     "id": "guilt",
+     "at": 62,
+     "t": 23.56
+    },
+    {
+     "id": "throw",
+     "at": 69,
+     "sfx": "whoosh",
+     "t": 25.86
+    }
+   ],
+   "mood": "tense",
+   "ambience": [
+    "wind"
+   ],
+   "transition": "cut",
+   "t0": 20.94,
+   "t1": 27.15
+  },
+  {
+   "id": "swallow",
+   "from": 72,
+   "type": "object",
+   "label": "En ese momento",
+   "title": "Un gran pez se lo tragó",
+   "highlight": "pez",
+   "visual": "under the sea: Jonah sinks, the great fish rises with its mouth open and closes it at 'pez' (underSide)",
+   "keys": [
+    {
+     "id": "gulp",
+     "at": 78,
+     "sfx": "impact",
+     "t": 29.04
+    }
+   ],
+   "mood": "epic",
+   "transition": "cut",
+   "t0": 27.15,
+   "t1": 30.33
+  },
+  {
+   "id": "belly",
+   "from": 82,
+   "type": "object",
+   "label": "Dentro del pez",
+   "title": "Oró en la oscuridad",
+   "highlight": "oscuridad",
+   "visual": "inside the fish: Jonah kneels and prays; at 'Dios' a golden beam falls and he raises his arms (bellyPush)",
+   "keys": [
+    {
+     "id": "pray",
+     "at": 87,
+     "t": 32.98
+    },
+    {
+     "id": "heard",
+     "at": 89,
+     "sfx": "shimmer",
+     "t": 34
+    }
+   ],
+   "mood": "sad",
+   "transition": "cut",
+   "t0": 30.33,
+   "t1": 35.29
+  },
+  {
+   "id": "shore",
+   "from": 92,
+   "type": "object",
+   "label": "Tierra firme",
+   "title": "Al tercer día",
+   "highlight": "día",
+   "visual": "the beach at dawn: the fish opens its mouth and Jonah tumbles out onto the sand at 'dejó', then kneels and praises (shoreThree)",
+   "keys": [
+    {
+     "id": "out",
+     "at": 97,
+     "sfx": "thump",
+     "t": 37.24
+    }
+   ],
+   "mood": "wonder",
+   "transition": "cut",
+   "t0": 35.29,
+   "t1": 38.87
+  },
+  {
+   "id": "lesson",
+   "from": 102,
+   "type": "closing",
+   "label": "La lección",
+   "title": "Dios nunca huye de ti",
+   "highlight": "nunca",
+   "visual": "Jonah walks towards Nineveh; at 'nunca' a beam of light falls on him and the city glows (followBack)",
+   "keys": [
+    {
+     "id": "never",
+     "at": 109,
+     "sfx": "shimmer",
+     "t": 41.44
+    }
+   ],
+   "mood": "triumphant",
+   "transition": "cut",
+   "t0": 38.87,
+   "t1": 42.99
+  },
+  {
+   "id": "follow",
+   "from": 113,
+   "type": "closing",
+   "label": "Cerca de ti",
+   "title": "Sígueme para más historias",
+   "highlight": "Sígueme",
+   "visual": "wide crane over the beach: Jonah praises facing the sunrise, the fish swims away (craneUp)",
+   "mood": "triumphant",
+   "transition": "cut",
+   "t0": 42.99,
+   "t1": 45.897
+  }
+ ],
+ "duration": 45.897
+}

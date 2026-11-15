@@ -1,0 +1,18 @@
+{
+ "style": "3d",
+ "shots": [
+  { "id": "test-jonah", "title": "Jonás: todos sus estados", "duration": 10, "snap": [0.8, 1.8, 2.8, 3.8, 4.8, 5.8, 6.8, 7.8, 8.8, 9.8] },
+  { "id": "test-jonah-side", "title": "Perfil: caminar, rezar, marinero", "duration": 2, "snap": [0.6, 1.6] },
+  { "id": "test-fish", "title": "El gran pez: cerrado, abierto, frente", "duration": 3, "snap": [0.5, 1.5, 2.5] },
+  { "id": "test-hook", "title": "Gancho bajo el agua", "duration": 6.3, "snap": [2.5, 6.0], "keys": [ { "id": "name", "t": 5.1 } ] },
+  { "id": "test-call", "title": "El llamado", "duration": 4.1, "snap": [1.0, 3.5], "keys": [ { "id": "city", "t": 2.2 } ] },
+  { "id": "test-flee", "title": "La huida", "duration": 5.0, "snap": [1.0, 4.6], "keys": [ { "id": "boat", "t": 1.9 }, { "id": "opposite", "t": 4.1 } ] },
+  { "id": "test-storm", "title": "La tormenta", "duration": 5.2, "snap": [1.55, 4.5], "keys": [ { "id": "storm", "t": 1.5 }, { "id": "sailors", "t": 3.4 } ] },
+  { "id": "test-guilt", "title": "Culpa y salto", "duration": 6.5, "snap": [3.0, 5.0, 5.7], "keys": [ { "id": "guilt", "t": 2.7 }, { "id": "throw", "t": 4.7 } ] },
+  { "id": "test-swallow", "title": "El pez se lo traga", "duration": 3.2, "snap": [0.8, 1.7, 2.6], "keys": [ { "id": "gulp", "t": 1.9 } ] },
+  { "id": "test-belly", "title": "Oración en la oscuridad", "duration": 5.0, "snap": [1.5, 4.5], "keys": [ { "id": "pray", "t": 2.6 }, { "id": "heard", "t": 3.6 } ] },
+  { "id": "test-shore", "title": "Tierra firme", "duration": 3.6, "snap": [1.9, 2.4, 3.5], "keys": [ { "id": "out", "t": 2.0 } ] },
+  { "id": "test-lesson", "title": "Hacia Nínive", "duration": 4.1, "snap": [3.4], "keys": [ { "id": "never", "t": 2.6 } ] },
+  { "id": "test-follow", "title": "Cierre", "duration": 2.9, "snap": [0.5, 2.7] }
+ ]
+}
