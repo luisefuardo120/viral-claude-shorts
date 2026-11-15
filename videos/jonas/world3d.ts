@@ -11,6 +11,29 @@ const JN = {
 };
 let jnUid = 0;
 const jnBg = (w: World) => w.scene.background as THREE.Color;
+const JN_NOW = { t: 0 };   // the frame being drawn (set by jnCine): idle life of the characters
+// smooth materials for the people: woven cloth and soft skin (less "toy", more film)
+const JN_CLOTH = new Map<string, THREE.MeshStandardMaterial>();
+const jnCloth = (c: string) => { let m = JN_CLOTH.get(c); if (!m) { m = p3Shader(new THREE.MeshStandardMaterial({ color: c, roughness: 0.92 }), 'jn-cloth', { bump: 0.006, color: `
+  float wv = sin(p3Pos.x * 320.0) * sin(p3Pos.y * 320.0), n = p3F(p3Pos.xy * 9.0 + p3Pos.z * 6.0), fold = p3F(vec2(atan(p3Pos.z, p3Pos.x) * 3.0, p3Pos.y * 2.5));
+  diffuseColor.rgb *= 0.8 + 0.14 * n + 0.04 * wv + 0.12 * fold; p3Ht = wv * 0.25 + fold * 0.8;` }); JN_CLOTH.set(c, m); } return m; };
+const jnSkin = () => p3Std(JN.skin, 0.62);
+// the film finish of every shot: grade (contrast, saturation), vignette and grain, reflections from a soft studio light,
+// and a slow handheld drift of the camera
+const jnCine = (shot: (w: World) => (t: number) => void, f: { sat?: number; curve?: number; vignette?: number; grain?: number; drift?: number; env?: number } = {}) => (w: World) => {
+  const r = w.renderer, composer = new THREE.EffectComposer(r, new THREE.WebGLRenderTarget(1080, 1920, { type: THREE.HalfFloatType, samples: 4 }));
+  composer.setPixelRatio(1); composer.setSize(1080, 1920);
+  composer.addPass(new THREE.RenderPass(w.scene, w.camera)); composer.addPass(new THREE.OutputPass());
+  const grade = new THREE.ShaderPass({ ...P3_GRADE, uniforms: { tDiffuse: { value: null }, uT: { value: 0 }, uSat: { value: f.sat ?? 1.1 }, uCurve: { value: f.curve ?? 0.38 }, uVig: { value: f.vignette ?? 0.85 }, uGrain: { value: f.grain ?? 0.03 }, uRed: { value: 0 }, uGray: { value: 0 } } });
+  composer.addPass(grade);
+  w.scene.environment = p3Env(r); (w.scene as any).environmentIntensity = f.env ?? 0.1; if (!(f.env ?? 0.1)) w.scene.environment = null;
+  w.present = () => composer.render();
+  const pose = shot(w), d = f.drift ?? 0.06;
+  return (t: number) => {
+    JN_NOW.t = t; pose(t); grade.uniforms.uT.value = Math.round(t * 30);
+    w.camera.position.x += Math.sin(t * 0.7) * d + Math.sin(t * 1.9) * d * 0.3; w.camera.position.y += Math.sin(t * 0.9 + 1) * d * 0.7; w.camera.updateMatrixWorld(true);
+  };
+};
 // deterministic camera shake
 const jnShake = (t: number, a: number): Vec3 => [Math.sin(t * 13.1) * a + Math.sin(t * 7.3) * a * 0.6, Math.sin(t * 11.7 + 1) * a * 0.7, Math.sin(t * 9.4 + 2) * a * 0.5];
 
@@ -46,51 +69,56 @@ const jnSteps = (t: number, steps: [number, JnPose | ((t: number) => JnPose)][],
 };
 
 const jnPerson = (look: JnLook) => {
+  const robeM = jnCloth(look.robe), sashM = jnCloth(look.sash), clothM = jnCloth(look.cloth || look.robe), skinM = jnSkin(), eyes: THREE.Object3D[] = [];
   const root = p3Group(), pelvis = p3Group(), torso = p3Group(), head = p3Group();
   root.add(pelvis); pelvis.add(torso);
-  pelvis.add(p3Mesh(p3Cyl(0.22, 0.34, 0.62, 14), look.robe, { p: [0, -0.27, 0] }));                      // skirt of the robe
-  torso.add(p3Mesh(p3Cyl(0.26, 0.2, 0.56, 14), look.robe, { p: [0, 0.28, 0] }));                         // chest wider than the waist
-  torso.add(p3Mesh(p3Cyl(0.228, 0.228, 0.09, 14), look.sash, { p: [0, 0.04, 0] }));                      // sash
-  torso.add(p3Mesh(p3Cyl(0.06, 0.075, 0.14, 8), JN.skin, { p: [0, 0.6, 0] }));                           // neck
+  pelvis.add(p3Mesh(p3Cyl(0.22, 0.34, 0.62, 14), robeM, { p: [0, -0.27, 0] }));                      // skirt of the robe
+  torso.add(p3Mesh(p3Cyl(0.26, 0.2, 0.56, 14), robeM, { p: [0, 0.28, 0] }));                         // chest wider than the waist
+  torso.add(p3Mesh(p3Cyl(0.228, 0.228, 0.09, 14), sashM, { p: [0, 0.04, 0] }));                      // sash
+  torso.add(p3Mesh(p3Cyl(0.06, 0.075, 0.14, 8), skinM, { p: [0, 0.6, 0] }));                           // neck
   head.position.y = 0.76; torso.add(head);
-  head.add(p3Mesh(p3Ball(0.15, 16, 12), JN.skin, { s: [1, 1.12, 1] }));
+  head.add(p3Mesh(p3Ball(0.15, 16, 12), skinM, { s: [1, 1.12, 1] }));
   head.add(p3Mesh(p3Ball(0.135, 12, 8), JN.hair, { p: [0, -0.07, 0.035], s: [1, 0.85, 0.85] }));        // beard
   head.add(p3Mesh(p3Cone(0.07, 0.14, 6), JN.hair, { p: [0, -0.2, 0.07], r: [Math.PI + 0.3, 0, 0] }));    // beard tip
-  head.add(p3Mesh(p3Cone(0.028, 0.07, 5), JN.skin, { p: [0, 0.0, 0.16], r: [Math.PI / 2, 0, 0] }));      // nose
+  head.add(p3Mesh(p3Cone(0.028, 0.07, 5), skinM, { p: [0, 0.0, 0.16], r: [Math.PI / 2, 0, 0] }));      // nose
   for (const s of [1, -1]) {
-    head.add(p3Mesh(p3Ball(0.024, 8, 6), '#1b1410', { p: [s * 0.055, 0.04, 0.135] }));                     // eyes
+    eyes.push(head.add(p3Mesh(p3Ball(0.024, 8, 6), '#1b1410', { p: [s * 0.055, 0.04, 0.135] })).children.at(-1)!);                     // eyes
     head.add(p3Mesh(p3Box(0.06, 0.016, 0.02), JN.hair, { p: [s * 0.056, 0.085, 0.138], r: [0, 0, s * 0.12] }));   // brows
   }
   if (look.cloth) {
-    head.add(p3Mesh(new THREE.SphereGeometry(0.168, 16, 8, 0, Math.PI * 2, 0, Math.PI * 0.5), look.cloth, { p: [0, 0.035, 0], s: [1, 1.25, 1] }));
-    head.add(p3Mesh(p3Cyl(0.172, 0.172, 0.05, 16), look.sash, { p: [0, 0.07, 0] }));
-    head.add(p3Mesh(p3Box(0.3, 0.34, 0.05), look.cloth, { p: [0, -0.1, -0.13], r: [0.15, 0, 0] }));     // cloth over the nape
+    head.add(p3Mesh(new THREE.SphereGeometry(0.168, 16, 8, 0, Math.PI * 2, 0, Math.PI * 0.5), clothM, { p: [0, 0.035, 0], s: [1, 1.25, 1] }));
+    head.add(p3Mesh(p3Cyl(0.172, 0.172, 0.05, 16), sashM, { p: [0, 0.07, 0] }));
+    head.add(p3Mesh(p3Box(0.3, 0.34, 0.05), clothM, { p: [0, -0.1, -0.13], r: [0.15, 0, 0] }));     // cloth over the nape
   } else {
     head.add(p3Mesh(new THREE.SphereGeometry(0.158, 14, 8, 0, Math.PI * 2, 0, Math.PI * 0.42), JN.hair, { p: [0, 0.02, 0], s: [1, 1.15, 1] }));
     if (look.cap) head.add(p3Mesh(p3Cyl(0.13, 0.155, 0.1, 12), look.cap, { p: [0, 0.15, 0] }));
   }
   const arm = (s: number) => {
     const sh = p3Group(), el = p3Group(); sh.position.set(s * 0.29, 0.52, 0); torso.add(sh);
-    sh.add(p3Mesh(p3Ball(0.085, 10, 8), look.robe));
-    sh.add(p3Mesh(p3Cyl(0.078, 0.066, 0.34, 10), look.robe, { p: [0, -0.17, 0] }));
+    sh.add(p3Mesh(p3Ball(0.085, 10, 8), robeM));
+    sh.add(p3Mesh(p3Cyl(0.078, 0.066, 0.34, 10), robeM, { p: [0, -0.17, 0] }));
     el.position.y = -0.34; sh.add(el);
-    el.add(p3Mesh(p3Ball(0.06, 8, 6), JN.skin));
-    el.add(p3Mesh(p3Cyl(0.052, 0.044, 0.28, 8), JN.skin, { p: [0, -0.14, 0] }));
-    el.add(p3Mesh(p3Ball(0.062, 8, 6), JN.skin, { p: [0, -0.31, 0.01], s: [0.85, 1.15, 0.7] }));
+    el.add(p3Mesh(p3Ball(0.06, 8, 6), skinM));
+    el.add(p3Mesh(p3Cyl(0.052, 0.044, 0.28, 8), skinM, { p: [0, -0.14, 0] }));
+    el.add(p3Mesh(p3Ball(0.062, 8, 6), skinM, { p: [0, -0.31, 0.01], s: [0.85, 1.15, 0.7] }));
     return { sh, el };
   };
   const leg = (s: number) => {
     const hip = p3Group(), kn = p3Group(); hip.position.set(s * 0.11, 0, 0); pelvis.add(hip);
-    hip.add(p3Mesh(p3Cyl(0.085, 0.068, 0.45, 10), look.robe, { p: [0, -0.225, 0] }));
+    hip.add(p3Mesh(p3Cyl(0.085, 0.068, 0.45, 10), robeM, { p: [0, -0.225, 0] }));
     kn.position.y = -0.45; hip.add(kn);
-    kn.add(p3Mesh(p3Ball(0.062, 8, 6), JN.skin));
-    kn.add(p3Mesh(p3Cyl(0.058, 0.046, 0.42, 8), JN.skin, { p: [0, -0.21, 0] }));
+    kn.add(p3Mesh(p3Ball(0.062, 8, 6), skinM));
+    kn.add(p3Mesh(p3Cyl(0.058, 0.046, 0.42, 8), skinM, { p: [0, -0.21, 0] }));
     kn.add(p3Mesh(p3Box(0.11, 0.06, 0.25), JN.sandal, { p: [0, -0.44, 0.05] }));
     return { hip, kn };
   };
   const L = arm(1), R = arm(-1), LL = leg(1), RL = leg(-1);
   const pose = (p: JnPose) => {
     pelvis.position.y = 0.95 + p.lift; torso.rotation.x = p.lean; head.rotation.x = p.head;
+    // life: breathing, a slow look around and a blink every few seconds (from the frame's time)
+    const t = JN_NOW.t + root.id * 1.7;
+    torso.scale.set(1 + 0.01 * Math.sin(t * 2.3), 1 + 0.018 * Math.sin(t * 2.3), 1 + 0.012 * Math.sin(t * 2.3)); head.rotation.y = 0.12 * Math.sin(t * 0.55) + 0.05 * Math.sin(t * 1.3);
+    const blink = (t * 0.29) % 1 < 0.035 ? 0.15 : 1; eyes.forEach((e) => { e.scale.y = blink; });
     LL.hip.rotation.x = p.thL; RL.hip.rotation.x = p.thR; LL.kn.rotation.x = p.knL; RL.kn.rotation.x = p.knR;
     L.sh.rotation.set(p.shLx, 0, p.shLz); R.sh.rotation.set(p.shRx, 0, -p.shRz); L.el.rotation.x = p.elL; R.el.rotation.x = p.elR;
   };
@@ -469,14 +497,14 @@ defineVisuals({
     return (t) => { const lt = t - w.s.t0; set.pose(t); f.pose(t, lt < 1 ? 0 : lt < 2 ? 1 : 0.5); f.light.intensity = lt > 2 ? 20 : 0;
       const a = lt < 1 ? 1.4 : lt < 2 ? 0.9 : 0.35; w.look([Math.sin(a) * 17, 0.5, Math.cos(a) * 17], [0.5, -0.3, 0]); };
   } },
-  'test-hook': { bg: JN.under, build: jnShotHook },
-  'test-call': { bg: JN.dawn, build: jnShotCall },
-  'test-flee': { bg: JN.sky, build: jnShotFlee },
-  'test-storm': { bg: JN.sky, build: jnShotStorm },
-  'test-guilt': { bg: JN.stormSky, build: jnShotGuilt },
-  'test-swallow': { bg: JN.under, build: jnShotSwallow },
-  'test-belly': { bg: JN.bellyBg, build: jnShotBelly },
-  'test-shore': { bg: JN.dawn, build: jnShotShore },
-  'test-lesson': { bg: JN.dawn, build: jnShotLesson },
-  'test-follow': { bg: JN.dawn, build: jnShotFollow },
+  'test-hook': { bg: JN.under, build: jnCine(jnShotHook) },
+  'test-call': { bg: JN.dawn, build: jnCine(jnShotCall) },
+  'test-flee': { bg: JN.sky, build: jnCine(jnShotFlee) },
+  'test-storm': { bg: JN.sky, build: jnCine(jnShotStorm) },
+  'test-guilt': { bg: JN.stormSky, build: jnCine(jnShotGuilt) },
+  'test-swallow': { bg: JN.under, build: jnCine(jnShotSwallow) },
+  'test-belly': { bg: JN.bellyBg, build: jnCine(jnShotBelly, { env: 0, vignette: 1.1 }) },
+  'test-shore': { bg: JN.dawn, build: jnCine(jnShotShore) },
+  'test-lesson': { bg: JN.dawn, build: jnCine(jnShotLesson) },
+  'test-follow': { bg: JN.dawn, build: jnCine(jnShotFollow) },
 });
