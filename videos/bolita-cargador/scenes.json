@@ -1,0 +1,220 @@
+{
+ "style": "3d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "'NO está de adorno'. Lessons: varied shots, lower frame busy, physical motion, labels with arrows, hero always in frame.",
+ "music": {
+  "bpm": 100
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "question",
+   "title": "Esa bolita NO está de adorno",
+   "highlight": "bolita",
+   "mood": "curious",
+   "keys": [
+    {
+     "id": "toca",
+     "at": 1,
+     "sfx": "pop",
+     "t": 0.42
+    }
+   ],
+   "visual": "close on the bead on the cable, a glove taps it; the laptop behind",
+   "from": 0,
+   "transition": "cut",
+   "t0": 0,
+   "t1": 3.29
+  },
+  {
+   "id": "ruido",
+   "type": "process",
+   "title": "Enciende y apaga miles de veces",
+   "highlight": "miles",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "abre",
+     "at": 13,
+     "sfx": "whoosh",
+     "t": 3.92
+    },
+    {
+     "id": "ruido",
+     "at": 32,
+     "sfx": "zip",
+     "t": 9.42
+    }
+   ],
+   "visual": "the charger brick's lid lifts: a blinking chip; red zigzag noise pours into the cable",
+   "from": 11,
+   "transition": "cut",
+   "t0": 3.29,
+   "t1": 11.66
+  },
+  {
+   "id": "antena",
+   "type": "process",
+   "title": "Se convierte en antena",
+   "highlight": "antena",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "antena",
+     "at": 51,
+     "sfx": "whoosh",
+     "t": 14.32
+    },
+    {
+     "id": "radio",
+     "at": 60,
+     "sfx": "scratch",
+     "t": 16.68
+    }
+   ],
+   "visual": "wide desk: red rings radiate from the cable; the radio and wifi go to static",
+   "from": 40,
+   "transition": "cut",
+   "t0": 11.66,
+   "t1": 18.63
+  },
+  {
+   "id": "reves",
+   "type": "comparison",
+   "title": "Y al revés",
+   "highlight": "revés",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "entra",
+     "at": 73,
+     "sfx": "whoosh",
+     "t": 21
+    },
+    {
+     "id": "portatil",
+     "at": 78,
+     "sfx": "scratch",
+     "t": 22.16
+    }
+   ],
+   "visual": "the microwave runs; rings close in on the cable; the laptop screen glitches",
+   "from": 66,
+   "transition": "cut",
+   "t0": 18.63,
+   "t1": 24.67
+  },
+  {
+   "id": "bolita",
+   "type": "object",
+   "title": "Le ponen esta bolita",
+   "highlight": "bolita",
+   "mood": "wonder",
+   "keys": [
+    {
+     "id": "pone",
+     "at": 90,
+     "sfx": "pop",
+     "t": 25.6
+    }
+   ],
+   "visual": "side view low on the desk: the bead slides onto the cable",
+   "from": 88,
+   "transition": "cut",
+   "t0": 24.67,
+   "t1": 26.71
+  },
+  {
+   "id": "ferrita",
+   "type": "object",
+   "title": "Un cilindro de ferrita",
+   "highlight": "ferrita",
+   "mood": "wonder",
+   "keys": [
+    {
+     "id": "abre",
+     "at": 97,
+     "sfx": "whoosh",
+     "t": 27.7
+    },
+    {
+     "id": "medio",
+     "at": 106,
+     "sfx": "tick",
+     "t": 31
+    }
+   ],
+   "visual": "close: the shell splits open; the dark ferrite cylinder, labelled with an arrow; the cable through the middle",
+   "from": 93,
+   "transition": "cut",
+   "t0": 26.71,
+   "t1": 32.37
+  },
+  {
+   "id": "filtro",
+   "type": "process",
+   "title": "Al ruido le pone un freno",
+   "highlight": "freno",
+   "mood": "epic",
+   "keys": [
+    {
+     "id": "pasa",
+     "at": 116,
+     "sfx": "pop",
+     "t": 33.74
+    },
+    {
+     "id": "freno",
+     "at": 127,
+     "sfx": "hit",
+     "t": 36.6
+    },
+    {
+     "id": "calor",
+     "at": 135,
+     "sfx": "shimmer",
+     "t": 38.72
+    }
+   ],
+   "visual": "along the cable: blue current passes, red noise enters the bead and dies; the ferrite glows, heat rises",
+   "from": 111,
+   "transition": "cut",
+   "t0": 32.37,
+   "t1": 39.67
+  },
+  {
+   "id": "nombre",
+   "type": "object",
+   "title": "Un filtro sin chips",
+   "highlight": "filtro",
+   "mood": "epic",
+   "keys": [
+    {
+     "id": "nombre",
+     "at": 140,
+     "sfx": "impact",
+     "t": 40.36
+    }
+   ],
+   "visual": "the closed bead orbiting, labelled FERRITA",
+   "from": 138,
+   "transition": "cut",
+   "t0": 39.67,
+   "t1": 43.17
+  },
+  {
+   "id": "cierre",
+   "type": "closing",
+   "title": "Calla a tu cable",
+   "highlight": "cable",
+   "mood": "triumphant",
+   "visual": "wide desk, calm: clean current, radio and wifi fine, camera pulling up",
+   "from": 148,
+   "transition": "cut",
+   "t0": 43.17,
+   "t1": 48.509
+  }
+ ],
+ "duration": 48.509
+}

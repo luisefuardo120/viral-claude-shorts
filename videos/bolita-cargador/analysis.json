@@ -1,0 +1,243 @@
+{
+ "duration": 48.509,
+ "phrases": [
+  {
+   "n": 1,
+   "t0": 0,
+   "t1": 3.2,
+   "from": 0,
+   "to": 10,
+   "text": "Esa bolita del cable de tu cargador no está de adorno.",
+   "question": false
+  },
+  {
+   "n": 2,
+   "t0": 3.54,
+   "t1": 8.46,
+   "from": 11,
+   "to": 27,
+   "text": "Dentro del cargador, hay un circuito que enciende y apaga la corriente miles de veces por segundo.",
+   "question": false
+  },
+  {
+   "n": 3,
+   "t0": 8.8,
+   "t1": 11.62,
+   "from": 28,
+   "to": 39,
+   "text": "Y eso mete un ruido eléctrico de alta frecuencia en el cable.",
+   "question": false
+  },
+  {
+   "n": 4,
+   "t0": 11.86,
+   "t1": 18.26,
+   "from": 40,
+   "to": 65,
+   "text": "Pero un cable largo con ese ruido se convierte en una antena, lo lanza al aire y te interfiere la radio, la tele o el wifi.",
+   "question": false
+  },
+  {
+   "n": 5,
+   "t0": 18.88,
+   "t1": 20.18,
+   "from": 66,
+   "to": 70,
+   "text": "Y también funciona al revés.",
+   "question": false
+  },
+  {
+   "n": 6,
+   "t0": 20.62,
+   "t1": 24.56,
+   "from": 71,
+   "to": 87,
+   "text": "El cable recoge el ruido de otros aparatos de la casa y lo mete en tu portátil.",
+   "question": false
+  },
+  {
+   "n": 7,
+   "t0": 24.92,
+   "t1": 26.5,
+   "from": 88,
+   "to": 92,
+   "text": "Entonces le ponen esta bolita.",
+   "question": false
+  },
+  {
+   "n": 8,
+   "t0": 26.96,
+   "t1": 28.66,
+   "from": 93,
+   "to": 99,
+   "text": "Por dentro es un cilindro de ferrita,",
+   "question": false
+  },
+  {
+   "n": 9,
+   "t0": 29.1,
+   "t1": 30.16,
+   "from": 100,
+   "to": 102,
+   "text": "un material magnético,",
+   "question": false
+  },
+  {
+   "n": 10,
+   "t0": 30.64,
+   "t1": 32.26,
+   "from": 103,
+   "to": 110,
+   "text": "y el cable pasa justo por el medio.",
+   "question": false
+  },
+  {
+   "n": 11,
+   "t0": 32.62,
+   "t1": 34.84,
+   "from": 111,
+   "to": 119,
+   "text": "A la corriente normal la deja pasar sin problema,",
+   "question": false
+  },
+  {
+   "n": 12,
+   "t0": 35.16,
+   "t1": 39.52,
+   "from": 120,
+   "to": 137,
+   "text": "pero al ruido rápido le pone un freno y se lo come convirtiéndolo en un poquito de calor.",
+   "question": false
+  },
+  {
+   "n": 13,
+   "t0": 39.92,
+   "t1": 40.96,
+   "from": 138,
+   "to": 141,
+   "text": "Eso es la ferrita,",
+   "question": false
+  },
+  {
+   "n": 14,
+   "t0": 41.38,
+   "t1": 42.92,
+   "from": 142,
+   "to": 147,
+   "text": "un filtro sin cables ni chips.",
+   "question": false
+  },
+  {
+   "n": 15,
+   "t0": 43.42,
+   "t1": 45.22,
+   "from": 148,
+   "to": 155,
+   "text": "Así que esa bolita no está de adorno.",
+   "question": false
+  },
+  {
+   "n": 16,
+   "t0": 45.56,
+   "t1": 48.14,
+   "from": 156,
+   "to": 168,
+   "text": "Es la que calla a tu cable para que no haga de antena.",
+   "question": false
+  }
+ ],
+ "pauses": [
+  {
+   "t0": 3.2,
+   "t1": 3.54,
+   "dur": 0.34,
+   "after": 10
+  },
+  {
+   "t0": 8.46,
+   "t1": 8.8,
+   "dur": 0.34,
+   "after": 27
+  },
+  {
+   "t0": 18.26,
+   "t1": 18.88,
+   "dur": 0.62,
+   "after": 65
+  },
+  {
+   "t0": 20.18,
+   "t1": 20.62,
+   "dur": 0.44,
+   "after": 70
+  },
+  {
+   "t0": 24.56,
+   "t1": 24.92,
+   "dur": 0.36,
+   "after": 87
+  },
+  {
+   "t0": 26.5,
+   "t1": 26.96,
+   "dur": 0.46,
+   "after": 92
+  },
+  {
+   "t0": 28.66,
+   "t1": 29.1,
+   "dur": 0.44,
+   "after": 99
+  },
+  {
+   "t0": 30.16,
+   "t1": 30.64,
+   "dur": 0.48,
+   "after": 102
+  },
+  {
+   "t0": 32.26,
+   "t1": 32.62,
+   "dur": 0.36,
+   "after": 110
+  },
+  {
+   "t0": 34.84,
+   "t1": 35.16,
+   "dur": 0.32,
+   "after": 119
+  },
+  {
+   "t0": 39.52,
+   "t1": 39.92,
+   "dur": 0.4,
+   "after": 137
+  },
+  {
+   "t0": 40.96,
+   "t1": 41.38,
+   "dur": 0.42,
+   "after": 141
+  },
+  {
+   "t0": 42.92,
+   "t1": 43.42,
+   "dur": 0.5,
+   "after": 147
+  },
+  {
+   "t0": 45.22,
+   "t1": 45.56,
+   "dur": 0.34,
+   "after": 155
+  }
+ ],
+ "numbers": [
+  {
+   "i": 50,
+   "w": "una",
+   "t0": 14.2
+  }
+ ],
+ "words": 169
+}

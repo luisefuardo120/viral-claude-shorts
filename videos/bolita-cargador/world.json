@@ -1,0 +1,7 @@
+{
+ "style": "3d",
+ "shots": [
+  { "id": "test-desk", "title": "Esa bolita NO está de adorno", "highlight": "bolita", "duration": 2, "snap": [1.0] },
+  { "id": "test-bead", "title": "Ferrita", "highlight": "Ferrita", "duration": 3, "snap": [0.3, 2.5] }
+ ]
+}

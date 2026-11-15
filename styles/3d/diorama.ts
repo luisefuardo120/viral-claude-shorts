@@ -177,13 +177,16 @@ const dioLens = (w: World, o: { x?: number; y?: number; r?: number; size?: numbe
 // ---------- labels: a name floating over a piece, in the titles' look (heavy caps, dark outline), always on top ----------
 // dioLabel('PEGAMENTO', '#ffd23f') -> a sprite; .pose(show 0..1) pops it in. Its size is fixed on screen (height: a fraction
 // of the frame's height), so it reads the same from any distance
-const dioLabel = (text: string, color = '#ffffff', height = 0.045) => {
+// arrow: a pointer under the text whose tip sits exactly at the sprite's position (so place it ON the piece it names)
+const dioLabel = (text: string, color = '#ffffff', height = 0.045, arrow = false) => {
   const cv = document.createElement('canvas'), c = cv.getContext('2d')!, font = '900 96px "RA Heavy", "Arial Black", sans-serif'; c.font = font;
-  const w = Math.ceil(c.measureText(text).width) + 60; cv.width = w; cv.height = 140;
+  const w = Math.ceil(c.measureText(text).width) + 60, H = arrow ? 230 : 140; cv.width = w; cv.height = H;
   c.font = font; c.textAlign = 'center'; c.textBaseline = 'middle'; c.lineJoin = 'round'; c.lineWidth = 22; c.strokeStyle = '#13203a'; c.strokeText(text, w / 2, 74); c.fillStyle = color; c.fillText(text, w / 2, 74);
+  if (arrow) { c.beginPath(); c.moveTo(w / 2 - 34, 136); c.lineTo(w / 2 + 34, 136); c.lineTo(w / 2, 220); c.closePath(); c.lineWidth = 16; c.stroke(); c.fill(); }
   const tex = new THREE.CanvasTexture(cv); tex.colorSpace = THREE.SRGBColorSpace;
   const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, depthTest: false, depthWrite: false, transparent: true, sizeAttenuation: false })); s.renderOrder = 950;
-  const base = [height * (w / 140), height] as const; s.scale.set(base[0], base[1], 1);
+  if (arrow) s.center.set(0.5, 0.02);   // the arrow's tip is the anchor
+  const base = [height * (w / 140), height * (H / 140)] as const; s.scale.set(base[0], base[1], 1);
   const pose = (show: number) => { s.visible = show > 0.02; s.scale.set(base[0] * Math.max(0.001, show), base[1] * Math.max(0.001, show), 1); };
   return Object.assign(s, { pose });
 };

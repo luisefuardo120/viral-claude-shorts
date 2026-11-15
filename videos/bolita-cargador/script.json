@@ -1,0 +1,47 @@
+{
+  "language": "es",
+  "lead": 0.6,
+  "tail": 1.2,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Esa bolita del cable de tu cargador NO está de adorno.",
+      "pause": 0.4
+    },
+    {
+      "id": "ruido",
+      "text": "Dentro del cargador hay un circuito que enciende y apaga la corriente miles de veces por segundo. Y eso mete un ruido eléctrico de alta frecuencia en el cable.",
+      "pause": 0.35
+    },
+    {
+      "id": "antena",
+      "text": "Pero un cable largo con ese ruido se convierte en una antena: lo lanza al aire y te interfiere la radio, la tele o el wifi.",
+      "pause": 0.35
+    },
+    {
+      "id": "revés",
+      "text": "Y también funciona al revés: el cable recoge el ruido de otros aparatos de la casa y lo mete en tu portátil.",
+      "pause": 0.35
+    },
+    {
+      "id": "ferrita",
+      "text": "Entonces le ponen esta bolita. Por dentro es un cilindro de ferrita, un material magnético, y el cable pasa justo por el medio.",
+      "pause": 0.35
+    },
+    {
+      "id": "filtro",
+      "text": "A la corriente normal la deja pasar sin problema, pero al ruido rápido le pone un freno, y se lo come convirtiéndolo en un poquito de calor.",
+      "pause": 0.35
+    },
+    {
+      "id": "nombre",
+      "text": "Eso es la ferrita, un filtro sin cables ni chips.",
+      "pause": 0.35
+    },
+    {
+      "id": "cierre",
+      "text": "Así que esa bolita no está de adorno: es la que calla a tu cable para que no haga de antena.",
+      "pause": 0
+    }
+  ]
+}
