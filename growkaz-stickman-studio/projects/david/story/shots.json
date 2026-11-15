@@ -1,0 +1,610 @@
+{
+ "title": "David y Goliat",
+ "duration": 46.12,
+ "shots": [
+  {
+   "id": "d01",
+   "start": 0.0,
+   "end": 1.8,
+   "line": "Un joven con una sola piedra",
+   "scene": "insert: a hand holds one smooth stone that glows",
+   "set": "valley",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "shimmer",
+     "gain": -10
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "d02",
+   "start": 1.8,
+   "end": 2.75,
+   "line": "derribó a",
+   "scene": "the stone flies with speed lines towards a giant silhouette",
+   "set": "valley",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.05,
+     "name": "whoosh",
+     "gain": -6
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "d03",
+   "start": 2.75,
+   "end": 4.95,
+   "line": "un gigante de casi tres metros.",
+   "scene": "low angle: Goliat towers over tiny David; a 3 m measure grows",
+   "set": "valley",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "impact",
+     "gain": -6
+    },
+    {
+     "at": 1.2,
+     "name": "blip",
+     "gain": -12
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "d04",
+   "start": 4.95,
+   "end": 7.1,
+   "line": "El gigante se llamaba Goliat.",
+   "scene": "bigFace Goliat smirks; GOLIAT pops",
+   "set": "valley",
+   "bars": null,
+   "in": {
+    "type": "flash",
+    "dur": 0.2
+   },
+   "sfx": [
+    {
+     "at": 1.35,
+     "name": "stinger",
+     "gain": -6
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "d05",
+   "start": 7.1,
+   "end": 9.2,
+   "line": "Durante cuarenta días desafió",
+   "scene": "wide valley: Goliat shouts at Israel's hill; 40 DÍAS counter",
+   "set": "valley",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.5,
+     "name": "counter",
+     "gain": -12
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "d06",
+   "start": 9.2,
+   "end": 10.9,
+   "line": "al ejército de Israel, y",
+   "scene": "Israel's soldiers on the hillside, worried",
+   "set": "valley",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "d07",
+   "start": 10.9,
+   "end": 13.05,
+   "line": "nadie se atrevía a enfrentarlo.",
+   "scene": "bigFace soldier scared; soldiers step back",
+   "set": "valley",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.2,
+     "name": "heartbeat",
+     "gain": -10
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "d08",
+   "start": 13.05,
+   "end": 14.6,
+   "line": "Hasta que llegó David,",
+   "scene": "David walks in at sunrise with his staff; DAVID label",
+   "set": "valley",
+   "bars": null,
+   "in": {
+    "type": "dip",
+    "dur": 0.3
+   },
+   "sfx": [
+    {
+     "at": 0.9,
+     "name": "ding",
+     "gain": -10
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "d09",
+   "start": 14.6,
+   "end": 16.3,
+   "line": "un joven pastor que solo traía",
+   "scene": "David among his sheep",
+   "set": "valley",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "d10",
+   "start": 16.3,
+   "end": 18.2,
+   "line": "comida para sus hermanos.",
+   "scene": "David hands a basket of bread to his brothers",
+   "set": "valley",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.6,
+     "name": "pop",
+     "gain": -12
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "d11",
+   "start": 18.2,
+   "end": 19.9,
+   "line": "Le ofrecieron una armadura,",
+   "scene": "in the tent: soldiers hold out a huge armour",
+   "set": "tent",
+   "bars": null,
+   "in": {
+    "type": "whip",
+    "dur": 0.25,
+    "dir": 1
+   },
+   "sfx": [],
+   "notes": "",
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "d12",
+   "start": 19.9,
+   "end": 21.55,
+   "line": "pero le quedaba enorme.",
+   "scene": "comedy: the helmet falls over his eyes, armour too big",
+   "set": "tent",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.6,
+     "name": "hit",
+     "gain": -8
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "d13",
+   "start": 21.55,
+   "end": 23.3,
+   "line": "Así que tomó su honda y",
+   "scene": "insert: his hands take the sling",
+   "set": "valley",
+   "bars": null,
+   "in": {
+    "type": "whip",
+    "dur": 0.25,
+    "dir": -1
+   },
+   "sfx": [
+    {
+     "at": 0.6,
+     "name": "swish",
+     "gain": -10
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "d14",
+   "start": 23.3,
+   "end": 25.2,
+   "line": "cinco piedras lisas del arroyo.",
+   "scene": "at the stream: five stones counted 1-5",
+   "set": "valley",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.15,
+     "name": "pop",
+     "gain": -12
+    },
+    {
+     "at": 0.45,
+     "name": "pop",
+     "gain": -12
+    },
+    {
+     "at": 0.75,
+     "name": "pop",
+     "gain": -12
+    },
+    {
+     "at": 1.05,
+     "name": "pop",
+     "gain": -12
+    },
+    {
+     "at": 1.35,
+     "name": "pop",
+     "gain": -12
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "d15",
+   "start": 25.2,
+   "end": 27.4,
+   "line": "Goliat se burló de él.",
+   "scene": "bigFace Goliat laughs and points",
+   "set": "valley",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 1.1,
+     "name": "stinger",
+     "gain": -8
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "d16",
+   "start": 27.4,
+   "end": 29.35,
+   "line": "Pero David le dijo:",
+   "scene": "bigFace David determined",
+   "set": "valley",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [],
+   "notes": ""
+  },
+  {
+   "id": "d17",
+   "start": 29.35,
+   "end": 31.25,
+   "line": "Tú vienes a mí con espada…",
+   "scene": "two-shot: David speaks, Goliat with a gleaming sword",
+   "set": "valley",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 1.2,
+     "name": "swish",
+     "gain": -10
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "d18",
+   "start": 31.25,
+   "end": 34.3,
+   "line": "mas yo vengo a ti en el nombre de Jehová.",
+   "scene": "bigFace David speaks; golden rays behind",
+   "set": "valley",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 1.6,
+     "name": "shimmer",
+     "gain": -6
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "d19",
+   "start": 34.3,
+   "end": 35.25,
+   "line": "Lanzó una sola",
+   "scene": "David whirls the sling and releases",
+   "set": "valley",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.1,
+     "name": "whoosh",
+     "gain": -8
+    },
+    {
+     "at": 0.55,
+     "name": "whoosh",
+     "gain": -6
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "d20",
+   "start": 35.25,
+   "end": 36.3,
+   "line": "piedra… y el",
+   "scene": "FREEZE: the stone hangs in the air in front of the helmet",
+   "set": "valley",
+   "bars": null,
+   "in": {
+    "type": "flash",
+    "dur": 0.25
+   },
+   "sfx": [
+    {
+     "at": 0.0,
+     "name": "freeze",
+     "gain": -6
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "d21",
+   "start": 36.3,
+   "end": 37.85,
+   "line": "gigante cayó.",
+   "scene": "Goliat falls backwards, dust and shake; the army cheers",
+   "set": "valley",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.5,
+     "name": "impact",
+     "gain": -3
+    },
+    {
+     "at": 0.9,
+     "name": "cheer",
+     "gain": -12
+    }
+   ],
+   "notes": "",
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "d22",
+   "start": 37.85,
+   "end": 39.85,
+   "line": "Tu gigante puede ser enorme,",
+   "scene": "you (red hoodie) small before a huge dark giant shadow",
+   "set": "void",
+   "bars": null,
+   "in": {
+    "type": "dip",
+    "dur": 0.35
+   },
+   "sfx": [
+    {
+     "at": 0.2,
+     "name": "heartbeat",
+     "gain": -8
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "d23",
+   "start": 39.85,
+   "end": 42.35,
+   "line": "pero tu Dios es más grande.",
+   "scene": "a golden light rises behind you, bigger than the shadow, which shrinks",
+   "set": "void",
+   "bars": null,
+   "in": {
+    "type": "cut"
+   },
+   "sfx": [
+    {
+     "at": 0.5,
+     "name": "riser",
+     "gain": -10
+    },
+    {
+     "at": 1.5,
+     "name": "shimmer",
+     "gain": -6
+    }
+   ],
+   "notes": ""
+  },
+  {
+   "id": "d24",
+   "start": 42.35,
+   "end": 46.12,
+   "line": "Sígueme para la próxima historia.",
+   "scene": "end screen: Cerca de ti, SÍGUEME, next story",
+   "set": "end",
+   "bars": null,
+   "in": {
+    "type": "fade",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 0.6,
+     "name": "pop",
+     "gain": -10
+    }
+   ],
+   "notes": "",
+   "captions": false
+  }
+ ],
+ "music": [
+  {
+   "start": 0,
+   "end": 4.95,
+   "mood": "epic",
+   "intensity": 0.6
+  },
+  {
+   "start": 4.95,
+   "end": 13.05,
+   "mood": "tension",
+   "intensity": 0.5
+  },
+  {
+   "start": 13.05,
+   "end": 18.2,
+   "mood": "hopeful",
+   "intensity": 0.4
+  },
+  {
+   "start": 18.2,
+   "end": 21.55,
+   "mood": "playful",
+   "intensity": 0.4
+  },
+  {
+   "start": 21.55,
+   "end": 27.4,
+   "mood": "tension",
+   "intensity": 0.55
+  },
+  {
+   "start": 27.4,
+   "end": 34.3,
+   "mood": "epic",
+   "intensity": 0.7
+  },
+  {
+   "start": 34.3,
+   "end": 37.85,
+   "mood": "action",
+   "intensity": 0.85
+  },
+  {
+   "start": 37.85,
+   "end": 46.12,
+   "mood": "triumph",
+   "intensity": 0.65
+  }
+ ]
+}
