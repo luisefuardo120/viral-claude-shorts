@@ -3,7 +3,7 @@
 
   python tools/slideshow.py --project projects/<slug> [--images projects/<slug>/input/images] [--fps 30]
 
-Reads  story/shots.json: every shot has "image" (a file in the images folder), "start", "end" and optional "move"
+Reads  story/shots.json: every shot has "image" (and, if input/clips/<same name>.mp4 exists, that video clip is used instead) (a file in the images folder), "start", "end" and optional "move"
        (in | out | up | down | left | right; default: alternates), timeline/words.json for the captions,
        config.json (captions, watermark).
 Writes build/video_silent.mp4 (1080x1920): slow Ken Burns motion on every image, crossfades between images,
@@ -60,7 +60,7 @@ def kenburns(move, n):
 
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("--project", required=True); ap.add_argument("--images"); ap.add_argument("--fps", type=int, default=30); ap.add_argument("--fade", type=float, default=0.45)
+    ap = argparse.ArgumentParser(); ap.add_argument("--project", required=True); ap.add_argument("--images"); ap.add_argument("--clips"); ap.add_argument("--fps", type=int, default=30); ap.add_argument("--fade", type=float, default=0.45)
     a = ap.parse_args(); P = a.project
     cfg = json.load(open(os.path.join(P, "config.json"), encoding="utf-8"))
     story = json.load(open(os.path.join(P, "story", "shots.json"), encoding="utf-8"))
@@ -71,10 +71,19 @@ def main():
     build = os.path.join(P, "build"); os.makedirs(build, exist_ok=True)
     words = json.load(open(os.path.join(P, "timeline", "words.json"), encoding="utf-8")); words = words.get("words", words)
 
+    clipdir = a.clips or os.path.join(P, "input", "clips"); used = []
     inputs, chains = [], []
     for i, s in enumerate(shots):
         seg = (s["end"] if i < len(shots) - 1 else total) - s["start"]
         d = seg + (F if i < len(shots) - 1 else 0); n = max(2, round(d * a.fps))
+        clip = os.path.join(clipdir, os.path.splitext(s["image"])[0] + ".mp4")
+        if os.path.exists(clip):   # a generated video clip for this shot: crop to 9:16, skip its first frames, slow it down if it is too short
+            cd = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", clip], capture_output=True, text=True).stdout or 0)
+            skip = min(s.get("clipStart", 0.3), max(0.0, cd - d)); slow = max(1.0, d / max(0.1, cd - skip)); used.append(s["image"])
+            inputs += ["-i", clip]
+            chains.append(f"[{i}:v]trim=start={skip:.3f},setpts=(PTS-STARTPTS)*{slow:.4f},fps={a.fps},scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
+                          f"trim=end_frame={n},setpts=PTS-STARTPTS,format=yuv420p[v{i}]")
+            continue
         z, x, y = kenburns(s.get("move") or MOVES[i % len(MOVES)], n)
         inputs += ["-loop", "1", "-framerate", str(a.fps), "-t", f"{d:.3f}", "-i", os.path.join(imgdir, s["image"])]
         chains.append(f"[{i}:v]scale={W * 2}:{H * 2}:force_original_aspect_ratio=increase,crop={W * 2}:{H * 2},setsar=1,"
@@ -94,6 +103,7 @@ def main():
     out = os.path.join(build, "video_silent.mp4")
     cmd = ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", *inputs, "-filter_complex", ";".join(chains), "-map", "[out]",
            "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p", "-r", str(a.fps), out]
+    print(f"video clips for {len(used)} shot(s): {', '.join(used) or 'none'}", flush=True)
     print(f"rendering {len(shots)} images -> {out} ({total:.1f}s)…", flush=True)
     r = subprocess.run(cmd)
     if r.returncode: sys.exit("ffmpeg failed")
