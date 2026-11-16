@@ -1,0 +1,15 @@
+/* Titles of this video (same look as rutas-avion), in the reference look: heavy rounded caps with a dark outline, the key word in lime, numbers in red.
+   Goes on top of styles/3d/theme.css. Montserrat (SIL Open Font License) is bundled in assets/. */
+@font-face { font-family: "RA Heavy"; src: url("assets/montserrat-900.woff2") format("woff2"); font-weight: 900; }
+:root { --font: "RA Heavy", "Montserrat", "Arial Black", sans-serif; --ra-outline: #13203a; --ra-key: #b6f23c; --ra-num: #ff4b4b; }
+.label { display: none; }
+.title { top: 230px; font-weight: 900; font-size: 86px; line-height: 1.02; letter-spacing: -1px; text-transform: uppercase; column-gap: 22px;
+  -webkit-text-stroke: 14px var(--ra-outline); paint-order: stroke fill; text-shadow: 0 7px 0 var(--ra-outline); }
+.title.long { font-size: 74px; }
+.word.hl { color: var(--ra-key); }
+.word .box { display: none; }
+.card { background: none; border: 0; box-shadow: none; justify-content: center; flex-direction: column; gap: 4px; height: auto; top: 1330px; }
+.card .value { font-size: 120px; font-weight: 900; color: var(--ra-num); letter-spacing: -2px; -webkit-text-stroke: 16px var(--ra-outline); paint-order: stroke fill; text-shadow: 0 8px 0 var(--ra-outline); }
+.card .text { font-size: 44px; font-weight: 900; color: #fff; text-transform: uppercase; -webkit-text-stroke: 10px var(--ra-outline); paint-order: stroke fill; text-align: center; }
+.dio-cap { position: absolute; top: 1110px; left: 540px; transform: translateX(-50%); white-space: nowrap; font-weight: 900; font-size: 68px; color: #fff;
+  -webkit-text-stroke: 12px var(--ra-outline); paint-order: stroke fill; text-shadow: 0 6px 0 var(--ra-outline); }

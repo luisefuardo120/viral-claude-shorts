@@ -1,0 +1,180 @@
+{
+ "style": "3d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "RETENTION TEST #2: one idea, frame 0 in motion, prize at 3.2 s, change every 1-2 s, comment question, loop. Sources: fuentes.md.",
+ "music": {
+  "bpm": 104
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "question",
+   "title": "¿Quién usa tu cámara?",
+   "highlight": "cámara",
+   "mood": "curious",
+   "keys": [
+    {
+     "id": "corte",
+     "at": 3,
+     "sfx": "pop",
+     "t": 1.44
+    },
+    {
+     "id": "final",
+     "at": 9,
+     "sfx": "whoosh",
+     "t": 3.2
+    }
+   ],
+   "visual": "frame 0: a hand holds a phone in a living room, the green dot pulsing; cut close on the dot; AL FINAL label",
+   "from": 0,
+   "transition": "cut",
+   "t0": 0,
+   "t1": 4.97
+  },
+  {
+   "id": "sistema",
+   "type": "object",
+   "title": "Te avisa el teléfono",
+   "highlight": "teléfono",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "lente",
+     "at": 15,
+     "sfx": "shimmer",
+     "t": 5.32
+    },
+    {
+     "id": "app",
+     "at": 19,
+     "sfx": "whoosh",
+     "t": 6.8
+    }
+   ],
+   "visual": "the front camera lights up, label CÁMARA ENCENDIDA; cut wider",
+   "from": 14,
+   "transition": "cut",
+   "t0": 4.97,
+   "t1": 8.35
+  },
+  {
+   "id": "naranja",
+   "type": "comparison",
+   "title": "Naranja: el micrófono",
+   "highlight": "micrófono",
+   "mood": "playful",
+   "keys": [
+    {
+     "id": "naranja",
+     "at": 28,
+     "sfx": "pop",
+     "t": 9.56
+    }
+   ],
+   "visual": "the dot turns orange, a microphone pops up, label MICRÓFONO",
+   "from": 24,
+   "transition": "cut",
+   "t0": 8.35,
+   "t1": 11.17
+  },
+  {
+   "id": "raro",
+   "type": "question",
+   "title": "Si no lo estás usando…",
+   "highlight": "usando…",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "mesa",
+     "at": 36,
+     "sfx": "thump",
+     "t": 12.18
+    },
+    {
+     "id": "ojo",
+     "at": 40,
+     "sfx": "scratch",
+     "t": 13.02
+    }
+   ],
+   "visual": "the phone lies on the coffee table, nobody using it, the green dot on; an eye appears on the screen",
+   "from": 32,
+   "transition": "cut",
+   "t0": 11.17,
+   "t1": 15.09
+  },
+  {
+   "id": "premio",
+   "type": "process",
+   "title": "Así ves qué app es",
+   "highlight": "app",
+   "mood": "epic",
+   "keys": [
+    {
+     "id": "iphone",
+     "at": 49,
+     "sfx": "whoosh",
+     "t": 16.78
+    },
+    {
+     "id": "android",
+     "at": 56,
+     "sfx": "whoosh",
+     "t": 19.24
+    },
+    {
+     "id": "toca",
+     "at": 60,
+     "sfx": "pop",
+     "t": 20.06
+    },
+    {
+     "id": "nombre",
+     "at": 66,
+     "sfx": "shimmer",
+     "t": 21.94
+    }
+   ],
+   "visual": "a finger swipes down, the panel opens with the app's name; then the other phone, tap the green icon; label AQUÍ",
+   "from": 44,
+   "transition": "cut",
+   "t0": 15.09,
+   "t1": 22.96
+  },
+  {
+   "id": "pregunta",
+   "type": "closing",
+   "title": "¿Te ha salido sin motivo?",
+   "highlight": "motivo?",
+   "mood": "playful",
+   "keys": [
+    {
+     "id": "abajo",
+     "at": 78,
+     "sfx": "pop",
+     "t": 25.02
+    }
+   ],
+   "visual": "the phone in hand, the dot pulsing, label CUÉNTAMELO ABAJO",
+   "from": 71,
+   "transition": "cut",
+   "t0": 22.96,
+   "t1": 25.95
+  },
+  {
+   "id": "loop",
+   "type": "closing",
+   "title": "¿Quién usa tu cámara?",
+   "highlight": "cámara",
+   "mood": "triumphant",
+   "visual": "frame 0's composition again, so it loops",
+   "from": 80,
+   "transition": "cut",
+   "t0": 25.95,
+   "t1": 27.951
+  }
+ ],
+ "duration": 27.951
+}

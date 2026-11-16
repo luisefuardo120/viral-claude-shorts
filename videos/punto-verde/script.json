@@ -1,0 +1,37 @@
+{
+  "language": "es",
+  "lead": 0,
+  "tail": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Este puntito verde: una app está usando tu cámara. Al final, cómo saber cuál.",
+      "pause": 0.25
+    },
+    {
+      "id": "sistema",
+      "text": "Lo enciende el propio teléfono, no la app, para avisarte.",
+      "pause": 0.25
+    },
+    {
+      "id": "naranja",
+      "text": "En iPhone, si es naranja, es el micrófono.",
+      "pause": 0.25
+    },
+    {
+      "id": "raro",
+      "text": "Si no estás haciendo una foto ni una videollamada, algo raro pasa.",
+      "pause": 0.25
+    },
+    {
+      "id": "premio",
+      "text": "Para saber cuál: en iPhone abre el Centro de control. En Android, baja la barra y toca el icono verde. Arriba sale el nombre de la app.",
+      "pause": 0.25
+    },
+    {
+      "id": "loop",
+      "text": "¿Te ha salido alguna vez sin motivo? Cuéntamelo abajo. Y la próxima vez que veas",
+      "pause": 0
+    }
+  ]
+}
