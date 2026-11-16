@@ -1,0 +1,47 @@
+{
+  "language": "es",
+  "lead": 0,
+  "tail": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Esta rayita de tu pasta NO dice si es química. Al final lo compruebas con tu propio tubo.",
+      "pause": 0.3
+    },
+    {
+      "id": "tabla",
+      "text": "Circula una tabla: verde, natural; azul, con medicina; rojo, mezcla; negro, pura química.",
+      "pause": 0.25
+    },
+    {
+      "id": "falso",
+      "text": "Es falso. Snopes lo desmintió, y los ingredientes van impresos en la caja.",
+      "pause": 0.25
+    },
+    {
+      "id": "maquina",
+      "text": "Esa rayita es para una máquina. Los tubos le llegan girados de cualquier manera.",
+      "pause": 0.2
+    },
+    {
+      "id": "sensor",
+      "text": "Un sensor de luz busca la rayita y gira el tubo hasta que el dibujo queda de frente. Luego lo rellena y lo sella.",
+      "pause": 0.25
+    },
+    {
+      "id": "color",
+      "text": "¿Y por qué cambia de color? Porque tiene que contrastar con el fondo, o el sensor no la ve.",
+      "pause": 0.25
+    },
+    {
+      "id": "premio",
+      "text": "Mira tu tubo: la rayita siempre está en el extremo sellado. Es para la máquina, no para ti.",
+      "pause": 0.25
+    },
+    {
+      "id": "loop",
+      "text": "¿A ti te llegó esa tabla? Cuéntamelo abajo. Ahora ya sabes por qué",
+      "pause": 0
+    }
+  ]
+}

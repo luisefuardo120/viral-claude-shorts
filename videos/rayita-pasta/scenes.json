@@ -1,0 +1,320 @@
+{
+ "style": "3d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "RETENTION TEST (user's rules): frame 0 in motion, prize on screen at 0 s and by voice at 3.3 s, a change every 1-2 s, comment question inside, last line loops into the first. Sources: fuentes.md.",
+ "music": {
+  "bpm": 104
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "type": "question",
+   "title": "¿Química? Compruébalo al final",
+   "highlight": "final",
+   "mood": "curious",
+   "keys": [
+    {
+     "id": "rayita",
+     "at": 1,
+     "sfx": "pop",
+     "t": 0.46
+    },
+    {
+     "id": "corte",
+     "at": 5,
+     "sfx": "whoosh",
+     "t": 1.42
+    }
+   ],
+   "visual": "frame 0: a glove squeezes the tube, paste flows onto the brush; label ESTA RAYITA; cut close on the mark",
+   "from": 0,
+   "transition": "cut",
+   "t0": 0,
+   "t1": 3.04
+  },
+  {
+   "id": "promesa",
+   "type": "question",
+   "title": "Al final, con tu tubo",
+   "highlight": "tubo",
+   "mood": "curious",
+   "keys": [
+    {
+     "id": "final",
+     "at": 11,
+     "sfx": "pop",
+     "t": 3.38
+    },
+    {
+     "id": "tubo",
+     "at": 13,
+     "sfx": "whoosh",
+     "t": 3.8
+    }
+   ],
+   "visual": "the tube spins on the counter, a ? label at its sealed end; push in",
+   "from": 10,
+   "transition": "cut",
+   "t0": 3.04,
+   "t1": 5.32
+  },
+  {
+   "id": "tabla",
+   "type": "comparison",
+   "title": "La tabla que circula",
+   "highlight": "tabla",
+   "mood": "playful",
+   "keys": [
+    {
+     "id": "verde",
+     "at": 21,
+     "sfx": "pop",
+     "t": 6.66
+    },
+    {
+     "id": "azul",
+     "at": 23,
+     "sfx": "pop",
+     "t": 7.8
+    },
+    {
+     "id": "rojo",
+     "at": 26,
+     "sfx": "pop",
+     "t": 9.14
+    },
+    {
+     "id": "negro",
+     "at": 28,
+     "sfx": "pop",
+     "t": 10.48
+    }
+   ],
+   "visual": "four tubes pop in one by one, marks green, blue, red, black, each labelled",
+   "from": 18,
+   "transition": "cut",
+   "t0": 5.32,
+   "t1": 12.09
+  },
+  {
+   "id": "falso",
+   "type": "stat",
+   "title": "Es falso",
+   "highlight": "falso",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "x",
+     "at": 31,
+     "sfx": "impact",
+     "t": 12.34
+    },
+    {
+     "id": "snopes",
+     "at": 33,
+     "sfx": "hit",
+     "t": 13.3
+    },
+    {
+     "id": "caja",
+     "at": 38,
+     "sfx": "whoosh",
+     "t": 14.88
+    }
+   ],
+   "visual": "a big red X slams over the four tubes; FALSO; cut to the box with its ingredients list",
+   "from": 31,
+   "transition": "cut",
+   "t0": 12.09,
+   "t1": 16.81
+  },
+  {
+   "id": "maquina",
+   "type": "object",
+   "title": "Es para una máquina",
+   "highlight": "máquina",
+   "mood": "wonder",
+   "keys": [
+    {
+     "id": "maquina",
+     "at": 49,
+     "sfx": "whoosh",
+     "t": 18.24
+    },
+    {
+     "id": "girados",
+     "at": 54,
+     "sfx": "tick",
+     "t": 19.92
+    }
+   ],
+   "visual": "the factory diorama; cut to the turntable, the tubes upright and turned any which way",
+   "from": 44,
+   "transition": "cut",
+   "t0": 16.81,
+   "t1": 21.43
+  },
+  {
+   "id": "sensor",
+   "type": "process",
+   "title": "Un sensor la busca",
+   "highlight": "sensor",
+   "mood": "wonder",
+   "keys": [
+    {
+     "id": "rayita",
+     "at": 64,
+     "sfx": "pop",
+     "t": 22.94
+    },
+    {
+     "id": "gira",
+     "at": 66,
+     "sfx": "whoosh",
+     "t": 23.52
+    },
+    {
+     "id": "frente",
+     "at": 72,
+     "sfx": "shimmer",
+     "t": 24.54
+    },
+    {
+     "id": "rellena",
+     "at": 78,
+     "sfx": "thump",
+     "t": 26.24
+    }
+   ],
+   "visual": "the red beam finds the mark, the tube turns until the print faces front, beam green; then it moves on to fill and crimp",
+   "from": 58,
+   "transition": "cut",
+   "t0": 21.43,
+   "t1": 27.3
+  },
+  {
+   "id": "color",
+   "type": "comparison",
+   "title": "¿Por qué cambia de color?",
+   "highlight": "color",
+   "mood": "curious",
+   "keys": [
+    {
+     "id": "pregunta",
+     "at": 87,
+     "sfx": "tick",
+     "t": 28.26
+    },
+    {
+     "id": "contraste",
+     "at": 91,
+     "sfx": "pop",
+     "t": 29.4
+    },
+    {
+     "id": "nove",
+     "at": 95,
+     "sfx": "fail",
+     "t": 30.72
+    }
+   ],
+   "visual": "a white tube with a pale mark: the beam misses (red ?); a white tube with a red mark: green check",
+   "from": 82,
+   "transition": "cut",
+   "t0": 27.3,
+   "t1": 31.72
+  },
+  {
+   "id": "premio",
+   "type": "process",
+   "title": "Mira tu tubo",
+   "highlight": "tubo",
+   "mood": "epic",
+   "keys": [
+    {
+     "id": "gira",
+     "at": 101,
+     "sfx": "whoosh",
+     "t": 31.92
+    },
+    {
+     "id": "rayita",
+     "at": 105,
+     "sfx": "pop",
+     "t": 32.9
+    },
+    {
+     "id": "extremo",
+     "at": 110,
+     "sfx": "shimmer",
+     "t": 34.04
+    }
+   ],
+   "visual": "bathroom: the glove flips the tube; the mark at the sealed end, label SIEMPRE AQUÍ",
+   "from": 101,
+   "transition": "cut",
+   "t0": 31.72,
+   "t1": 34.92
+  },
+  {
+   "id": "parati",
+   "type": "object",
+   "title": "Para la máquina",
+   "highlight": "máquina",
+   "mood": "epic",
+   "keys": [
+    {
+     "id": "maquina",
+     "at": 115,
+     "sfx": "pop",
+     "t": 35.54
+    }
+   ],
+   "visual": "quick cut: the sensor's beam on a mark, green",
+   "from": 112,
+   "transition": "cut",
+   "t0": 34.92,
+   "t1": 36.53
+  },
+  {
+   "id": "pregunta",
+   "type": "closing",
+   "title": "¿Te llegó esa tabla?",
+   "highlight": "tabla",
+   "mood": "playful",
+   "keys": [
+    {
+     "id": "tabla",
+     "at": 122,
+     "sfx": "pop",
+     "t": 37.1
+    },
+    {
+     "id": "abajo",
+     "at": 125,
+     "sfx": "whoosh",
+     "t": 38.1
+    }
+   ],
+   "visual": "the four myth tubes with the X; a comment bubble label",
+   "from": 119,
+   "transition": "cut",
+   "t0": 36.53,
+   "t1": 38.89
+  },
+  {
+   "id": "loop",
+   "type": "closing",
+   "title": "Ahora ya sabes",
+   "highlight": "sabes",
+   "mood": "triumphant",
+   "visual": "back to frame 0's composition: the glove squeezing the tube over the brush, so it loops",
+   "from": 127,
+   "transition": "cut",
+   "t0": 38.89,
+   "t1": 40.307
+  }
+ ],
+ "duration": 40.307
+}
