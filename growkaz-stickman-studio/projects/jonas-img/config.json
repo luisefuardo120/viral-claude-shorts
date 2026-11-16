@@ -1,0 +1,29 @@
+{
+ "title": "Jonas y el gran pez (imagenes)",
+ "aspect": "9:16",
+ "resolution": "1080p",
+ "fps": 24,
+ "style": "ember",
+ "voiceover": "input/voiceover.mp3",
+ "script": "input/script.txt",
+ "duration": 45.897,
+ "captions": true,
+ "bars": null,
+ "fadeIn": 0.5,
+ "fadeOut": 0.8,
+ "music": {
+  "enabled": true,
+  "gainDb": -17
+ },
+ "sfx": {
+  "enabled": true,
+  "gainDb": -6
+ },
+ "loudness": -14,
+ "watermark": {
+  "text": "@cercadeti",
+  "y": 0.5,
+  "size": 60,
+  "alpha": 0.14
+ }
+}

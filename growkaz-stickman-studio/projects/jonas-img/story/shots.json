@@ -1,0 +1,296 @@
+{
+ "title": "Jonas y el gran pez (imagenes)",
+ "duration": 46.88,
+ "shots": [
+  {
+   "id": "i01",
+   "start": 0.0,
+   "end": 2.7,
+   "line": "Este hombre pasó tres días dentro de un pez…",
+   "image": "01.jpg",
+   "move": "in",
+   "sfx": [
+    {
+     "at": 0.05,
+     "name": "heartbeat",
+     "gain": -8
+    }
+   ]
+  },
+  {
+   "id": "i02",
+   "start": 2.7,
+   "end": 4.6,
+   "line": "…y sobrevivió.",
+   "image": "02.jpg",
+   "move": "right",
+   "sfx": [],
+   "amb": {
+    "name": "hum",
+    "gain": -26
+   }
+  },
+  {
+   "id": "i03",
+   "start": 4.6,
+   "end": 6.4,
+   "line": "Se llamaba Jonás.",
+   "image": "03.jpg",
+   "move": "in",
+   "sfx": []
+  },
+  {
+   "id": "i04",
+   "start": 6.4,
+   "end": 8.3,
+   "line": "Dios le pidió que fuera a la ciudad…",
+   "image": "04.jpg",
+   "move": "up",
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "shimmer",
+     "gain": -10
+    }
+   ]
+  },
+  {
+   "id": "i05",
+   "start": 8.3,
+   "end": 10.4,
+   "line": "…de Nínive a dar un mensaje.",
+   "image": "05.jpg",
+   "move": "out",
+   "sfx": []
+  },
+  {
+   "id": "i06",
+   "start": 10.4,
+   "end": 12.2,
+   "line": "Pero él tuvo miedo…",
+   "image": "06.jpg",
+   "move": "in",
+   "sfx": [
+    {
+     "at": 0.85,
+     "name": "impact",
+     "gain": -10
+    }
+   ]
+  },
+  {
+   "id": "i07",
+   "start": 12.2,
+   "end": 15.5,
+   "line": "…y huyó en un barco, justo hacia el lado contrario.",
+   "image": "07.jpg",
+   "move": "left",
+   "sfx": [],
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "i08",
+   "start": 15.5,
+   "end": 18.6,
+   "line": "Entonces vino una tormenta tan fuerte…",
+   "image": "08.jpg",
+   "move": "in",
+   "sfx": [
+    {
+     "at": 1.38,
+     "name": "thunder",
+     "gain": -4
+    }
+   ],
+   "amb": {
+    "name": "rain",
+    "gain": -20
+   }
+  },
+  {
+   "id": "i09",
+   "start": 18.6,
+   "end": 20.8,
+   "line": "…que los marineros pensaron que iban a morir.",
+   "image": "09.jpg",
+   "move": "right",
+   "sfx": [],
+   "amb": {
+    "name": "rain",
+    "gain": -20
+   }
+  },
+  {
+   "id": "i10",
+   "start": 20.8,
+   "end": 24.1,
+   "line": "Jonás sabía que era por su culpa…",
+   "image": "10.jpg",
+   "move": "in",
+   "sfx": [],
+   "amb": {
+    "name": "rain",
+    "gain": -20
+   }
+  },
+  {
+   "id": "i11",
+   "start": 24.1,
+   "end": 27.2,
+   "line": "…así que les pidió que lo lanzaran al mar.",
+   "image": "11.jpg",
+   "move": "down",
+   "sfx": [
+    {
+     "at": 1.6,
+     "name": "impact",
+     "gain": -6
+    }
+   ],
+   "amb": {
+    "name": "rain",
+    "gain": -20
+   }
+  },
+  {
+   "id": "i12",
+   "start": 27.2,
+   "end": 30.4,
+   "line": "Y en ese momento, un gran pez se lo tragó.",
+   "image": "12.jpg",
+   "move": "in",
+   "sfx": [
+    {
+     "at": 0.0,
+     "name": "riser",
+     "gain": -10
+    },
+    {
+     "at": 2.55,
+     "name": "impact",
+     "gain": -5
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -26
+   }
+  },
+  {
+   "id": "i13",
+   "start": 30.4,
+   "end": 33.8,
+   "line": "Allí, en la oscuridad, Jonás oró…",
+   "image": "13.jpg",
+   "move": "in",
+   "sfx": []
+  },
+  {
+   "id": "i14",
+   "start": 33.8,
+   "end": 35.4,
+   "line": "…y Dios lo escuchó.",
+   "image": "14.jpg",
+   "move": "up",
+   "sfx": [
+    {
+     "at": 0.15,
+     "name": "shimmer",
+     "gain": -6
+    }
+   ]
+  },
+  {
+   "id": "i15",
+   "start": 35.4,
+   "end": 38.9,
+   "line": "Al tercer día, el pez lo dejó en tierra firme.",
+   "image": "15.jpg",
+   "move": "out",
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "ding",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "i16",
+   "start": 38.9,
+   "end": 43.1,
+   "line": "Porque puedes huir de Dios, pero Dios nunca huye de ti.",
+   "image": "16.jpg",
+   "move": "in",
+   "sfx": [
+    {
+     "at": 2.5,
+     "name": "shimmer",
+     "gain": -6
+    }
+   ]
+  },
+  {
+   "id": "i17",
+   "start": 43.1,
+   "end": 46.88,
+   "line": "Sígueme para la próxima historia.",
+   "image": "17.jpg",
+   "move": "up",
+   "sfx": []
+  }
+ ],
+ "music": [
+  {
+   "start": 0,
+   "end": 4.6,
+   "mood": "mystery",
+   "intensity": 0.45
+  },
+  {
+   "start": 4.6,
+   "end": 10.45,
+   "mood": "hopeful",
+   "intensity": 0.35
+  },
+  {
+   "start": 10.45,
+   "end": 15.5,
+   "mood": "tension",
+   "intensity": 0.55
+  },
+  {
+   "start": 15.5,
+   "end": 27.15,
+   "mood": "action",
+   "intensity": 0.75
+  },
+  {
+   "start": 27.15,
+   "end": 30.45,
+   "mood": "epic",
+   "intensity": 0.85
+  },
+  {
+   "start": 30.45,
+   "end": 33.85,
+   "mood": "sad",
+   "intensity": 0.3
+  },
+  {
+   "start": 33.85,
+   "end": 38.95,
+   "mood": "wonder",
+   "intensity": 0.5
+  },
+  {
+   "start": 38.95,
+   "end": 46.88,
+   "mood": "triumph",
+   "intensity": 0.65
+  }
+ ]
+}
