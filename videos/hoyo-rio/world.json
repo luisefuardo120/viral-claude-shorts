@@ -1,0 +1,1 @@
+{ "style": "3d", "shots": [ { "id": "test-build", "title": "De hoyo a río", "highlight": "río", "duration": 5, "snap": [0.5, 1.5, 2.5, 3.5, 4.5] } ] }

@@ -1,0 +1,52 @@
+{
+  "language": "es",
+  "lead": 0,
+  "tail": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Este hoyo en tu patio, en cinco pasos, es un río que te lleva flotando. Y al final te digo cuánto cuesta.",
+      "pause": 0.25
+    },
+    {
+      "id": "problema",
+      "text": "Si lo llenas así, el agua se queda quieta: es un charco.",
+      "pause": 0.25
+    },
+    {
+      "id": "forma",
+      "text": "Paso uno: lo cavas en forma de anillo, con curvas suaves, para que el agua no frene.",
+      "pause": 0.2
+    },
+    {
+      "id": "hormigon",
+      "text": "Paso dos: acero y hormigón, como una piscina, pero de un metro de hondo.",
+      "pause": 0.2
+    },
+    {
+      "id": "rejillas",
+      "text": "Paso tres: rejillas en el fondo que chupan el agua hacia una bomba.",
+      "pause": 0.2
+    },
+    {
+      "id": "chorros",
+      "text": "Paso cuatro, el truco: la bomba la escupe por chorros que apuntan todos hacia delante, cuatro veces más rápido que la corriente.",
+      "pause": 0.25
+    },
+    {
+      "id": "flota",
+      "text": "Paso cinco: agua y flotador. Te lleva a unos tres kilómetros por hora, como caminando despacio.",
+      "pause": 0.3
+    },
+    {
+      "id": "premio",
+      "text": "¿Cuánto cuesta? En Estados Unidos, entre ciento veinte mil y medio millón de dólares.",
+      "pause": 0.3
+    },
+    {
+      "id": "loop",
+      "text": "¿Tú lo pagarías, o mejor la piscina? Dímelo abajo. Y todo empezó con",
+      "pause": 0
+    }
+  ]
+}

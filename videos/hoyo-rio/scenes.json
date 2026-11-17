@@ -1,0 +1,270 @@
+{
+ "style": "3d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "RETENTION TEST #4, same look as hoyo-piscina (cutaway yard, 2D worker, one big coloured word, numbered steps). Prize (the price) announced at 4.3 s, answered at 36.4 s. Sources: fuentes.md.",
+ "music": {
+  "bpm": 108
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "from": 0,
+   "type": "question",
+   "title": "De hoyo a río",
+   "highlight": "río",
+   "mood": "curious",
+   "keys": [
+    {
+     "id": "flash",
+     "at": 10,
+     "sfx": "shimmer",
+     "t": 2.76
+    },
+    {
+     "id": "final",
+     "at": 16,
+     "sfx": "whoosh",
+     "t": 4.34
+    }
+   ],
+   "visual": "frame 0: the worker digging the ring in the cutaway yard; at 'río' a flash of the finished river with him floating; back to the hole, label ¿CUÁNTO CUESTA?",
+   "t0": 0,
+   "t1": 5.84
+  },
+  {
+   "id": "problema",
+   "from": 22,
+   "type": "question",
+   "title": "¿Y si lo llenas así?",
+   "highlight": "así",
+   "mood": "playful",
+   "keys": [
+    {
+     "id": "agua",
+     "at": 24,
+     "sfx": "whoosh",
+     "t": 6.3
+    },
+    {
+     "id": "quieta",
+     "at": 29,
+     "sfx": "fail",
+     "t": 7.54
+    }
+   ],
+   "visual": "the hose fills the bare ring, the water does not move, label ¡QUIETA!",
+   "t0": 5.84,
+   "t1": 9.03
+  },
+  {
+   "id": "forma",
+   "from": 34,
+   "type": "process",
+   "title": "Paso 1: forma",
+   "highlight": "forma",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "anillo",
+     "at": 40,
+     "sfx": "pop",
+     "t": 10.94
+    },
+    {
+     "id": "curvas",
+     "at": 42,
+     "sfx": "pop",
+     "t": 11.62
+    },
+    {
+     "id": "frena",
+     "at": 44,
+     "sfx": "tick",
+     "t": 12.48
+    }
+   ],
+   "visual": "seen from above: the ring is dug, labels ANILLO and CURVAS SUAVES",
+   "t0": 9.03,
+   "t1": 13.61
+  },
+  {
+   "id": "hormigon",
+   "from": 50,
+   "type": "process",
+   "title": "Paso 2: hormigón",
+   "highlight": "hormigón",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "acero",
+     "at": 52,
+     "sfx": "pop",
+     "t": 14.82
+    },
+    {
+     "id": "spray",
+     "at": 54,
+     "sfx": "whoosh",
+     "t": 15.26
+    },
+    {
+     "id": "hondo",
+     "at": 60,
+     "sfx": "tick",
+     "t": 17.44
+    }
+   ],
+   "visual": "the steel grid, then concrete sprayed with the hose; label 1 METRO on the cut",
+   "t0": 13.61,
+   "t1": 18.37
+  },
+  {
+   "id": "rejillas",
+   "from": 64,
+   "type": "process",
+   "title": "Paso 3: rejillas",
+   "highlight": "rejillas",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "rejillas",
+     "at": 66,
+     "sfx": "pop",
+     "t": 19.7
+    },
+    {
+     "id": "bomba",
+     "at": 74,
+     "sfx": "pop",
+     "t": 21.24
+    }
+   ],
+   "visual": "grates appear on the floor, pipes under the ground to the blue pump: labels REJILLA and BOMBA",
+   "t0": 18.37,
+   "t1": 22.13
+  },
+  {
+   "id": "chorros",
+   "from": 77,
+   "type": "process",
+   "title": "Paso 4: el truco",
+   "highlight": "truco",
+   "mood": "curious",
+   "keys": [
+    {
+     "id": "chorros",
+     "at": 86,
+     "sfx": "whoosh",
+     "t": 25.2
+    },
+    {
+     "id": "x4",
+     "at": 92,
+     "sfx": "hit",
+     "t": 26.92
+    }
+   ],
+   "visual": "close on the wall: the jets shoot forward; label x4 MÁS RÁPIDO",
+   "t0": 22.13,
+   "t1": 29.16
+  },
+  {
+   "id": "flota",
+   "from": 99,
+   "type": "process",
+   "title": "Paso 5: ¡a flotar!",
+   "highlight": "flotar",
+   "mood": "triumphant",
+   "keys": [
+    {
+     "id": "agua",
+     "at": 101,
+     "sfx": "whoosh",
+     "t": 30.34
+    },
+    {
+     "id": "flota",
+     "at": 103,
+     "sfx": "pop",
+     "t": 30.74
+    },
+    {
+     "id": "kmh",
+     "at": 109,
+     "sfx": "tick",
+     "t": 32.2
+    }
+   ],
+   "visual": "the river fills, the current streaks start, the worker floats round on a ring; label 3 KM/H",
+   "t0": 29.16,
+   "t1": 34.46
+  },
+  {
+   "id": "premio",
+   "from": 115,
+   "type": "stat",
+   "title": "¿Cuánto cuesta?",
+   "highlight": "cuesta",
+   "mood": "triumphant",
+   "stat": {
+    "value": "$120–500 MIL",
+    "text": "dólares, en Estados Unidos"
+   },
+   "keys": [
+    {
+     "id": "stat",
+     "at": 120,
+     "sfx": "impact",
+     "t": 36.44
+    }
+   ],
+   "visual": "high shot of the river with the worker floating; the price card",
+   "t0": 34.46,
+   "t1": 38.54
+  },
+  {
+   "id": "pregunta",
+   "from": 128,
+   "type": "closing",
+   "title": "¿Río o piscina?",
+   "highlight": "río",
+   "mood": "playful",
+   "keys": [
+    {
+     "id": "pagas",
+     "at": 130,
+     "sfx": "pop",
+     "t": 39
+    },
+    {
+     "id": "piscina",
+     "at": 132,
+     "sfx": "pop",
+     "t": 39.84
+    },
+    {
+     "id": "abajo",
+     "at": 134,
+     "sfx": "tick",
+     "t": 40.22
+    }
+   ],
+   "visual": "the worker floating, labels ¿LO PAGARÍAS? and ¿O LA PISCINA?, DÍMELO ABAJO",
+   "t0": 38.54,
+   "t1": 41.44
+  },
+  {
+   "id": "loop",
+   "from": 137,
+   "type": "closing",
+   "title": "De hoyo a río",
+   "highlight": "río",
+   "mood": "curious",
+   "visual": "frame 0's composition again (the hole, the worker digging), so it loops",
+   "t0": 41.44,
+   "t1": 42.893
+  }
+ ],
+ "duration": 42.893
+}
