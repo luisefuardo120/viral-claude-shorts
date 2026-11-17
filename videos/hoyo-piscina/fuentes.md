@@ -7,3 +7,7 @@
 - Llenar una piscina tarda unas 24–48 horas según el tamaño: Premier Pools & Spas.
 - 48.000 litros: cálculo propio, 8 m × 4 m × 1,5 m = 48 m³ = 48.000 L.
 - Formato inspirado en la tendencia "How a hole becomes…" (World In A Box, Low Poly Films, hole story 3d, nov. 2026) y en el estilo del Short propio "¿Sobrevivirías en este refugio contra tornados?". Guion e imágenes propios.
+
+## Bañeras (comparación del premio)
+- Duravit: una bañera estándar de 180 × 80 cm lleva 150–180 L de agua. https://www.duravit.com/products/bathing/bathtubs/large_bathtubs.com-en.html
+- 48.000 L ÷ ~160 L ≈ 300 bañeras (con 150–180 L: 267–320).

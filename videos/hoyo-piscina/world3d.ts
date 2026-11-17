@@ -94,8 +94,8 @@ const hpShovel = () => p3Group(p3Mesh(p3Cyl(0.025, 0.025, 1.1, 8), dioSmooth('#8
 const hpHose = () => p3Group(p3Mesh(new THREE.CylinderGeometry(0.05, 0.07, 0.5, 12), dioSmooth('#2a2f3a', 0.5), { r: [0, 0, Math.PI / 2] }), p3Tube([[-0.25, 0, 0], [-0.8, -0.5, 0.4], [-1.6, -0.2, 1.2], [-3, 0, 2]], 0.05, dioSmooth('#ffcf4a', 0.5), 24));
 
 // ---------- captions: one big word at a time; danger in red, fixes in green, results in yellow ----------
-const HP_FIX: Record<number, string> = { 92: 'uno', 94: 'dos', 98: '¿Cuánta?', 109: '', 110: '', 116: '¿Tobogán', 117: 'o jacuzzi?', 123: 'con…' };
-const HP_COLOR: Record<string, string> = { hoyo: 'y', piscina: 'y', agua: 'g', chupa: 'r', derrumban: 'r', jaula: 'g', acero: 'g', esqueleto: 'g', tubos: 'g', hormigón: 'g', manguera: 'g', pasar: 'r', impermeable: 'g', días: 'y', '48.000': 'y', litros: 'y', metros: 'y', hondo: 'y' };
+const HP_FIX: Record<number, string> = { 36: 'uno', 47: 'dos', 58: 'tres', 67: 'cuatro', 85: 'cinco', 94: '¿Cuánta?', 105: '', 106: '', 109: '300', 116: '¿Tobogán', 117: 'o jacuzzi?', 123: 'con…' };
+const HP_COLOR: Record<string, string> = { hoyo: 'y', piscina: 'y', agua: 'g', chupa: 'r', derrumban: 'r', jaula: 'g', acero: 'g', esqueleto: 'g', tubos: 'g', hormigón: 'g', manguera: 'g', pasar: 'r', impermeable: 'g', días: 'y', '48.000': 'y', litros: 'y', metros: 'y', hondo: 'y', truco: 'y', capa: 'g', '300': 'y', bañeras: 'y', uno: 'y', dos: 'y', tres: 'y', cuatro: 'y', cinco: 'y' };
 const hpCaptions = (w: World, step: number) => {
   const el = document.createElement('div'); el.className = 'hp-cap'; w.titles.appendChild(el);
   const tag = document.createElement('div'); tag.className = 'hp-tag'; tag.innerHTML = `<span>DE HOYO</span><div class="bar"><div class="fill" style="width:${Math.round(step * 100)}%"></div></div><span>PISCINA</span>`; w.titles.appendChild(tag);

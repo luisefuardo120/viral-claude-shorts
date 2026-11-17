@@ -2,7 +2,7 @@
  "style": "3d",
  "fps": 30,
  "format": "9:16",
- "notes": "RETENTION TEST #3, in the style of the channel's tornado-shelter short (cutaway ground, 2D worker, one big coloured word). Prize (litres) announced at 3.8 s, answered at 32.8 s. Sources: fuentes.md.",
+ "notes": "RETENTION TEST #3, in the style of the channel's tornado-shelter short (cutaway ground, 2D worker, one big coloured word). Prize (litres) announced at 3.5 s, answered at 30.6 s. Sources: fuentes.md.",
  "music": {
   "bpm": 108
  },
@@ -19,22 +19,22 @@
      "id": "flash",
      "at": 10,
      "sfx": "shimmer",
-     "t": 2.9
+     "t": 2.78
     },
     {
      "id": "final",
-     "at": 11,
+     "at": 12,
      "sfx": "whoosh",
-     "t": 3.8
+     "t": 3.5
     }
    ],
    "visual": "frame 0: worker digging the hole in the cutaway yard; flash of the finished pool at 'piscina'; back to the hole with the label AL FINAL: ¿CUÁNTOS LITROS?",
    "t0": 0,
-   "t1": 5.83
+   "t1": 5.25
   },
   {
    "id": "problema",
-   "from": 19,
+   "from": 20,
    "type": "question",
    "title": "¿Y si lo llenas así?",
    "highlight": "así",
@@ -42,30 +42,30 @@
    "keys": [
     {
      "id": "agua",
-     "at": 21,
+     "at": 22,
      "sfx": "whoosh",
-     "t": 6.36
+     "t": 5.74
     },
     {
      "id": "chupa",
-     "at": 26,
+     "at": 27,
      "sfx": "tick",
-     "t": 7.82
+     "t": 7
     },
     {
      "id": "cae",
-     "at": 31,
+     "at": 32,
      "sfx": "fail",
-     "t": 8.72
+     "t": 8.12
     }
    ],
    "visual": "the hose pours into the bare hole, the soil darkens and drinks it, the walls crumble, the worker shocked",
-   "t0": 5.83,
-   "t1": 9.7
+   "t0": 5.25,
+   "t1": 9.19
   },
   {
    "id": "acero",
-   "from": 34,
+   "from": 35,
    "type": "process",
    "title": "Paso 1: acero",
    "highlight": "acero",
@@ -75,18 +75,18 @@
      "id": "jaula",
      "at": 38,
      "sfx": "pop",
-     "t": 11.02
+     "t": 10.34
     },
     {
      "id": "esqueleto",
      "at": 43,
      "sfx": "shimmer",
-     "t": 12.52
+     "t": 11.72
     }
    ],
    "visual": "the rebar cage grows rod by rod, label ESQUELETO",
-   "t0": 9.7,
-   "t1": 13.49
+   "t0": 9.19,
+   "t1": 12.62
   },
   {
    "id": "tubos",
@@ -98,24 +98,24 @@
    "keys": [
     {
      "id": "tubos",
-     "at": 51,
+     "at": 49,
      "sfx": "pop",
-     "t": 15.22
+     "t": 13.64
     },
     {
      "id": "flujo",
-     "at": 54,
+     "at": 52,
      "sfx": "whoosh",
-     "t": 16.36
+     "t": 14.68
     }
    ],
    "visual": "the white pipes appear under the floor to the pump, labels ENTRA / SALE",
-   "t0": 13.49,
-   "t1": 17.87
+   "t0": 12.62,
+   "t1": 15.73
   },
   {
    "id": "hormigon",
-   "from": 59,
+   "from": 57,
    "type": "process",
    "title": "Paso 3: hormigón",
    "highlight": "hormigón",
@@ -123,24 +123,24 @@
    "keys": [
     {
      "id": "spray",
-     "at": 61,
+     "at": 59,
      "sfx": "whoosh",
-     "t": 18.38
+     "t": 16.78
     },
     {
      "id": "cubre",
-     "at": 69,
+     "at": 63,
      "sfx": "hit",
-     "t": 20.8
+     "t": 18.14
     }
    ],
    "visual": "the worker sprays concrete with the hose; the shell grows over the steel",
-   "t0": 17.87,
-   "t1": 21.88
+   "t0": 15.73,
+   "t1": 19.03
   },
   {
    "id": "acabado",
-   "from": 72,
+   "from": 66,
    "type": "process",
    "title": "Paso 4: acabado",
    "highlight": "acabado",
@@ -148,24 +148,24 @@
    "keys": [
     {
      "id": "fuga",
-     "at": 76,
+     "at": 73,
      "sfx": "fail",
-     "t": 22.88
+     "t": 21.4
     },
     {
      "id": "capa",
-     "at": 85,
+     "at": 82,
      "sfx": "shimmer",
-     "t": 24.94
+     "t": 23.26
     }
    ],
    "visual": "water seeps through the bare concrete (red); the light-blue waterproof finish covers it, label IMPERMEABLE",
-   "t0": 21.88,
-   "t1": 26
+   "t0": 19.03,
+   "t1": 24.25
   },
   {
    "id": "agua",
-   "from": 87,
+   "from": 84,
    "type": "process",
    "title": "Paso 5: agua",
    "highlight": "agua",
@@ -173,24 +173,24 @@
    "keys": [
     {
      "id": "llena",
-     "at": 90,
+     "at": 86,
      "sfx": "whoosh",
-     "t": 27.04
+     "t": 25.42
     },
     {
      "id": "dias",
-     "at": 92,
+     "at": 88,
      "sfx": "tick",
-     "t": 27.76
+     "t": 26.04
     }
    ],
    "visual": "the pool fills up, label 1-2 DÍAS",
-   "t0": 26,
-   "t1": 29.24
+   "t0": 24.25,
+   "t1": 27.42
   },
   {
    "id": "premio",
-   "from": 98,
+   "from": 94,
    "type": "stat",
    "title": "¿Cuánta agua le cabe?",
    "highlight": "agua",
@@ -202,32 +202,38 @@
    "keys": [
     {
      "id": "largo",
-     "at": 99,
+     "at": 95,
      "sfx": "tick",
-     "t": 30.08
+     "t": 28.32
     },
     {
      "id": "ancho",
-     "at": 101,
+     "at": 97,
      "sfx": "tick",
-     "t": 30.52
+     "t": 28.72
     },
     {
      "id": "hondo",
-     "at": 106,
+     "at": 102,
      "sfx": "tick",
-     "t": 31.94
+     "t": 29.86
     },
     {
      "id": "stat",
-     "at": 109,
+     "at": 105,
      "sfx": "impact",
-     "t": 32.8
+     "t": 30.64
+    },
+    {
+     "id": "banera",
+     "at": 110,
+     "sfx": "pop",
+     "t": 32.44
     }
    ],
    "visual": "the full pool, measures 8 m / 4 m / 1,5 m pop one by one, then 48.000 LITROS",
-   "t0": 29.24,
-   "t1": 34.21
+   "t0": 27.42,
+   "t1": 33.52
   },
   {
    "id": "pregunta",
@@ -241,24 +247,24 @@
      "id": "tobogan",
      "at": 116,
      "sfx": "pop",
-     "t": 35.48
+     "t": 34.76
     },
     {
      "id": "jacuzzi",
      "at": 117,
      "sfx": "pop",
-     "t": 35.96
+     "t": 35.2
     },
     {
      "id": "abajo",
      "at": 118,
      "sfx": "tick",
-     "t": 36.68
+     "t": 35.94
     }
    ],
    "visual": "the worker at the pool edge, labels TOBOGÁN and JACUZZI pop at each side, DÍMELO ABAJO",
-   "t0": 34.21,
-   "t1": 37.38
+   "t0": 33.52,
+   "t1": 36.67
   },
   {
    "id": "loop",
@@ -268,9 +274,9 @@
    "highlight": "piscina",
    "mood": "curious",
    "visual": "frame 0's composition again (the hole, the worker digging), so it loops",
-   "t0": 37.38,
-   "t1": 39.158
+   "t0": 36.67,
+   "t1": 38.165
   }
  ],
- "duration": 39.158
+ "duration": 38.165
 }

@@ -10,7 +10,7 @@ defineVisuals({
   // 1. (0 s) the worker digging; at "piscina" a flash of the finished pool; back to the hole: AL FINAL ¿CUÁNTOS LITROS?
   hook: {
     bg: HP.sky,
-    build(w) { const S = hpSet(w, 0), fin = hpLab(w, '¿CUÁNTOS LITROS?', HP.yellow, [0.3, 0.9, -2], 0.04);
+    build(w) { const S = hpSet(w, 0), fin = hpLab(w, '¿CUÁNTOS LITROS?', HP.yellow, [-0.1, 0.9, -2], 0.04);
       return (t) => { const kf = w.K('flash'), kn = w.K('final'), flash = t >= kf && t < kn;
         if (flash) { hpBuild(S, t, { rebar: 1, pipes: 1, shell: 1, finish: 1, water: 0.92 }); hpWorker(S, w, t, HP_EDGE, { expr: 'grin', mode: 'stand', wave: 1 }); hpCut(w, 0.5, 0, 12, 0.6); }
         else { hpBuild(S, t, { dig: 0.55 + 0.1 * p3Clamp(t / kf) + (t >= kn ? 0.15 : 0) }); hpWorker(S, w, t, HP_IN, { expr: 'stern', mode: 'stand' }, 'shovel'); hpCut(w, t < kn ? p3Clamp(t / kf) : 0.5 + 0.3 * p3Clamp((t - kn) / 2)); }
@@ -71,9 +71,9 @@ defineVisuals({
   // 8. (29.2 s) the prize: 8 m, 4 m, 1,5 m pop one by one; the stat card 48.000 L
   premio: {
     bg: HP.sky,
-    build(w) { const S = hpSet(w, 1), L = hpLab(w, '8 m', HP.yellow, [1.6, 0.25, -4.5], 0.05), A = hpLab(w, '4 m', HP.yellow, [0.4, 0.25, -0.4], 0.05), H = hpLab(w, '1,5 m', HP.yellow, [-1.2, -0.75, -0.2], 0.05);
+    build(w) { const S = hpSet(w, 1), L = hpLab(w, '8 m', HP.yellow, [1.6, 0.25, -4.5], 0.05), A = hpLab(w, '4 m', HP.yellow, [0.4, 0.25, -0.4], 0.05), H = hpLab(w, '1,5 m', HP.yellow, [-1.2, -0.75, -0.2], 0.05), B = hpLab(w, '≈ 300 BAÑERAS', '#ffffff', [0, 0.05, -4], 0.05);
       return (t) => { hpBuild(S, t, { rebar: 1, pipes: 1, shell: 1, finish: 1, water: 0.92 }); hpWorker(S, w, t, HP_EDGE, { expr: 'smile', mode: 'stand' });
-        L.pose(hpPop(t, w.K('largo'))); A.pose(hpPop(t, w.K('ancho'))); H.pose(hpPop(t, w.K('hondo')));
+        const kb = w.K('banera'), m = t < kb ? 1 : 0.001; L.pose(hpPop(t, w.K('largo')) * m); A.pose(hpPop(t, w.K('ancho')) * m); H.pose(hpPop(t, w.K('hondo')) * m); B.pose(hpPop(t, kb));
         const u = hpU(w, t); w.look([1.4 - u * 0.6, 4.6, 8.5], [-0.2, -1.3, -3.5], 40); S.cap(t); }; },
   },
   // 9. (34.2 s) slide or jacuzzi? tell me below

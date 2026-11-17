@@ -1,52 +1,52 @@
 {
-  "language": "es",
-  "lead": 0,
-  "tail": 0.3,
-  "lines": [
-    {
-      "id": "hook",
-      "text": "Este hoyo en tu patio, en treinta segundos, es una piscina. Al final te digo cuánta agua le cabe.",
-      "pause": 0.25
-    },
-    {
-      "id": "problema",
-      "text": "Si lo llenas así, la tierra se chupa el agua y las paredes se derrumban.",
-      "pause": 0.25
-    },
-    {
-      "id": "acero",
-      "text": "Entonces le pones una jaula de varillas de acero: es el esqueleto.",
-      "pause": 0.2
-    },
-    {
-      "id": "tubos",
-      "text": "Antes de cerrar, pasas los tubos: por aquí entra y sale el agua.",
-      "pause": 0.2
-    },
-    {
-      "id": "hormigon",
-      "text": "Y le disparas hormigón con una manguera, por encima y alrededor del acero.",
-      "pause": 0.25
-    },
-    {
-      "id": "acabado",
-      "text": "Pero el hormigón deja pasar el agua, así que lo cubres con un acabado impermeable.",
-      "pause": 0.25
-    },
-    {
-      "id": "agua",
-      "text": "Y ahora sí, agua: tarda uno o dos días en llenarse.",
-      "pause": 0.25
-    },
-    {
-      "id": "premio",
-      "text": "¿Cuánta? Ocho por cuatro metros, y metro y medio de hondo: cuarenta y ocho mil litros.",
-      "pause": 0.3
-    },
-    {
-      "id": "loop",
-      "text": "¿Tú qué le pondrías, tobogán o jacuzzi? Dímelo abajo. Y todo empezó con",
-      "pause": 0
-    }
-  ]
+ "language": "es",
+ "lead": 0,
+ "tail": 0.3,
+ "lines": [
+  {
+   "id": "hook",
+   "text": "Este hoyo en tu patio, en cinco pasos, es una piscina. Y al final te digo cuánta agua le cabe.",
+   "pause": 0.25
+  },
+  {
+   "id": "problema",
+   "text": "Si lo llenas así, la tierra se chupa el agua y las paredes se derrumban.",
+   "pause": 0.25
+  },
+  {
+   "id": "acero",
+   "text": "Paso uno: una jaula de varillas de acero. Es el esqueleto.",
+   "pause": 0.2
+  },
+  {
+   "id": "tubos",
+   "text": "Paso dos: los tubos. Por aquí entra y sale el agua.",
+   "pause": 0.2
+  },
+  {
+   "id": "hormigon",
+   "text": "Paso tres: hormigón disparado con manguera sobre el acero.",
+   "pause": 0.25
+  },
+  {
+   "id": "acabado",
+   "text": "Paso cuatro, el truco: el hormigón deja pasar el agua, así que lo cubres con una capa impermeable.",
+   "pause": 0.25
+  },
+  {
+   "id": "agua",
+   "text": "Paso cinco: agua. Tarda uno o dos días en llenarse.",
+   "pause": 0.25
+  },
+  {
+   "id": "premio",
+   "text": "¿Cuánta? Ocho por cuatro metros y metro y medio de hondo: cuarenta y ocho mil litros. Como trescientas bañeras llenas.",
+   "pause": 0.3
+  },
+  {
+   "id": "loop",
+   "text": "¿Tú qué le pondrías: tobogán o jacuzzi? Dímelo abajo. Y todo empezó con",
+   "pause": 0
+  }
+ ]
 }
