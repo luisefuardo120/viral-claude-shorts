@@ -1,0 +1,276 @@
+{
+ "style": "3d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "RETENTION TEST #3, in the style of the channel's tornado-shelter short (cutaway ground, 2D worker, one big coloured word). Prize (litres) announced at 3.8 s, answered at 32.8 s. Sources: fuentes.md.",
+ "music": {
+  "bpm": 108
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "from": 0,
+   "type": "question",
+   "title": "De hoyo a piscina",
+   "highlight": "piscina",
+   "mood": "curious",
+   "keys": [
+    {
+     "id": "flash",
+     "at": 10,
+     "sfx": "shimmer",
+     "t": 2.9
+    },
+    {
+     "id": "final",
+     "at": 11,
+     "sfx": "whoosh",
+     "t": 3.8
+    }
+   ],
+   "visual": "frame 0: worker digging the hole in the cutaway yard; flash of the finished pool at 'piscina'; back to the hole with the label AL FINAL: ¿CUÁNTOS LITROS?",
+   "t0": 0,
+   "t1": 5.83
+  },
+  {
+   "id": "problema",
+   "from": 19,
+   "type": "question",
+   "title": "¿Y si lo llenas así?",
+   "highlight": "así",
+   "mood": "playful",
+   "keys": [
+    {
+     "id": "agua",
+     "at": 21,
+     "sfx": "whoosh",
+     "t": 6.36
+    },
+    {
+     "id": "chupa",
+     "at": 26,
+     "sfx": "tick",
+     "t": 7.82
+    },
+    {
+     "id": "cae",
+     "at": 31,
+     "sfx": "fail",
+     "t": 8.72
+    }
+   ],
+   "visual": "the hose pours into the bare hole, the soil darkens and drinks it, the walls crumble, the worker shocked",
+   "t0": 5.83,
+   "t1": 9.7
+  },
+  {
+   "id": "acero",
+   "from": 34,
+   "type": "process",
+   "title": "Paso 1: acero",
+   "highlight": "acero",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "jaula",
+     "at": 38,
+     "sfx": "pop",
+     "t": 11.02
+    },
+    {
+     "id": "esqueleto",
+     "at": 43,
+     "sfx": "shimmer",
+     "t": 12.52
+    }
+   ],
+   "visual": "the rebar cage grows rod by rod, label ESQUELETO",
+   "t0": 9.7,
+   "t1": 13.49
+  },
+  {
+   "id": "tubos",
+   "from": 46,
+   "type": "process",
+   "title": "Paso 2: tubos",
+   "highlight": "tubos",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "tubos",
+     "at": 51,
+     "sfx": "pop",
+     "t": 15.22
+    },
+    {
+     "id": "flujo",
+     "at": 54,
+     "sfx": "whoosh",
+     "t": 16.36
+    }
+   ],
+   "visual": "the white pipes appear under the floor to the pump, labels ENTRA / SALE",
+   "t0": 13.49,
+   "t1": 17.87
+  },
+  {
+   "id": "hormigon",
+   "from": 59,
+   "type": "process",
+   "title": "Paso 3: hormigón",
+   "highlight": "hormigón",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "spray",
+     "at": 61,
+     "sfx": "whoosh",
+     "t": 18.38
+    },
+    {
+     "id": "cubre",
+     "at": 69,
+     "sfx": "hit",
+     "t": 20.8
+    }
+   ],
+   "visual": "the worker sprays concrete with the hose; the shell grows over the steel",
+   "t0": 17.87,
+   "t1": 21.88
+  },
+  {
+   "id": "acabado",
+   "from": 72,
+   "type": "process",
+   "title": "Paso 4: acabado",
+   "highlight": "acabado",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "fuga",
+     "at": 76,
+     "sfx": "fail",
+     "t": 22.88
+    },
+    {
+     "id": "capa",
+     "at": 85,
+     "sfx": "shimmer",
+     "t": 24.94
+    }
+   ],
+   "visual": "water seeps through the bare concrete (red); the light-blue waterproof finish covers it, label IMPERMEABLE",
+   "t0": 21.88,
+   "t1": 26
+  },
+  {
+   "id": "agua",
+   "from": 87,
+   "type": "process",
+   "title": "Paso 5: agua",
+   "highlight": "agua",
+   "mood": "triumphant",
+   "keys": [
+    {
+     "id": "llena",
+     "at": 90,
+     "sfx": "whoosh",
+     "t": 27.04
+    },
+    {
+     "id": "dias",
+     "at": 92,
+     "sfx": "tick",
+     "t": 27.76
+    }
+   ],
+   "visual": "the pool fills up, label 1-2 DÍAS",
+   "t0": 26,
+   "t1": 29.24
+  },
+  {
+   "id": "premio",
+   "from": 98,
+   "type": "stat",
+   "title": "¿Cuánta agua le cabe?",
+   "highlight": "agua",
+   "mood": "triumphant",
+   "stat": {
+    "value": "48.000 L",
+    "text": "8 × 4 × 1,5 m"
+   },
+   "keys": [
+    {
+     "id": "largo",
+     "at": 99,
+     "sfx": "tick",
+     "t": 30.08
+    },
+    {
+     "id": "ancho",
+     "at": 101,
+     "sfx": "tick",
+     "t": 30.52
+    },
+    {
+     "id": "hondo",
+     "at": 106,
+     "sfx": "tick",
+     "t": 31.94
+    },
+    {
+     "id": "stat",
+     "at": 109,
+     "sfx": "impact",
+     "t": 32.8
+    }
+   ],
+   "visual": "the full pool, measures 8 m / 4 m / 1,5 m pop one by one, then 48.000 LITROS",
+   "t0": 29.24,
+   "t1": 34.21
+  },
+  {
+   "id": "pregunta",
+   "from": 112,
+   "type": "closing",
+   "title": "¿Tobogán o jacuzzi?",
+   "highlight": "jacuzzi",
+   "mood": "playful",
+   "keys": [
+    {
+     "id": "tobogan",
+     "at": 116,
+     "sfx": "pop",
+     "t": 35.48
+    },
+    {
+     "id": "jacuzzi",
+     "at": 117,
+     "sfx": "pop",
+     "t": 35.96
+    },
+    {
+     "id": "abajo",
+     "at": 118,
+     "sfx": "tick",
+     "t": 36.68
+    }
+   ],
+   "visual": "the worker at the pool edge, labels TOBOGÁN and JACUZZI pop at each side, DÍMELO ABAJO",
+   "t0": 34.21,
+   "t1": 37.38
+  },
+  {
+   "id": "loop",
+   "from": 120,
+   "type": "closing",
+   "title": "De hoyo a piscina",
+   "highlight": "piscina",
+   "mood": "curious",
+   "visual": "frame 0's composition again (the hole, the worker digging), so it loops",
+   "t0": 37.38,
+   "t1": 39.158
+  }
+ ],
+ "duration": 39.158
+}

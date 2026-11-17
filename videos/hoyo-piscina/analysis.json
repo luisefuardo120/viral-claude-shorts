@@ -1,0 +1,258 @@
+{
+ "duration": 39.158,
+ "phrases": [
+  {
+   "n": 1,
+   "t0": 0,
+   "t1": 2.32,
+   "from": 0,
+   "to": 7,
+   "text": "Este hoyo en tu patio, en 30 segundos,",
+   "question": false
+  },
+  {
+   "n": 2,
+   "t0": 2.6,
+   "t1": 3.38,
+   "from": 8,
+   "to": 10,
+   "text": "es una piscina.",
+   "question": false
+  },
+  {
+   "n": 3,
+   "t0": 3.8,
+   "t1": 5.62,
+   "from": 11,
+   "to": 18,
+   "text": "Al final te digo cuánta agua le cabe.",
+   "question": false
+  },
+  {
+   "n": 4,
+   "t0": 6.08,
+   "t1": 6.94,
+   "from": 19,
+   "to": 22,
+   "text": "Si lo llenas así,",
+   "question": false
+  },
+  {
+   "n": 5,
+   "t0": 7.3,
+   "t1": 9.66,
+   "from": 23,
+   "to": 33,
+   "text": "la tierra se chupa el agua y las paredes se derrumban.",
+   "question": false
+  },
+  {
+   "n": 6,
+   "t0": 9.94,
+   "t1": 13.42,
+   "from": 34,
+   "to": 45,
+   "text": "Entonces le pones una jaula de varillas de acero, es el esqueleto.",
+   "question": false
+  },
+  {
+   "n": 7,
+   "t0": 13.74,
+   "t1": 14.5,
+   "from": 46,
+   "to": 48,
+   "text": "Antes de cerrar,",
+   "question": false
+  },
+  {
+   "n": 8,
+   "t0": 14.82,
+   "t1": 15.66,
+   "from": 49,
+   "to": 51,
+   "text": "pasas los tubos.",
+   "question": false
+  },
+  {
+   "n": 9,
+   "t0": 16,
+   "t1": 17.5,
+   "from": 52,
+   "to": 58,
+   "text": "Por aquí entra y sale el agua.",
+   "question": false
+  },
+  {
+   "n": 10,
+   "t0": 18.12,
+   "t1": 25.96,
+   "from": 59,
+   "to": 86,
+   "text": "Y le disparas hormigón con una manguera por encima y alrededor del acero, pero el hormigón deja pasar el agua, así que lo cubres con un acabado impermeable.",
+   "question": false
+  },
+  {
+   "n": 11,
+   "t0": 26.22,
+   "t1": 29.2,
+   "from": 87,
+   "to": 97,
+   "text": "Y ahora sí, agua tarda 1 o 2 días en llenarse.",
+   "question": false
+  },
+  {
+   "n": 12,
+   "t0": 29.2,
+   "t1": 29.84,
+   "from": 98,
+   "to": 98,
+   "text": "Cuanta?",
+   "question": true
+  },
+  {
+   "n": 13,
+   "t0": 30.08,
+   "t1": 34.08,
+   "from": 99,
+   "to": 111,
+   "text": "8 por 4 metros y metro y medio de hondo, 48 mil litros.",
+   "question": false
+  },
+  {
+   "n": 14,
+   "t0": 34.46,
+   "t1": 35.24,
+   "from": 112,
+   "to": 115,
+   "text": "¿Tú qué le pondrías?",
+   "question": true
+  },
+  {
+   "n": 15,
+   "t0": 35.48,
+   "t1": 37.34,
+   "from": 116,
+   "to": 119,
+   "text": "Tobogano yacusi, dímelo abajo.",
+   "question": false
+  },
+  {
+   "n": 16,
+   "t0": 37.62,
+   "t1": 38.88,
+   "from": 120,
+   "to": 123,
+   "text": "Y todo empezó con...",
+   "question": false
+  }
+ ],
+ "pauses": [
+  {
+   "t0": 2.32,
+   "t1": 2.6,
+   "dur": 0.28,
+   "after": 7
+  },
+  {
+   "t0": 3.38,
+   "t1": 3.8,
+   "dur": 0.42,
+   "after": 10
+  },
+  {
+   "t0": 5.62,
+   "t1": 6.08,
+   "dur": 0.46,
+   "after": 18
+  },
+  {
+   "t0": 6.94,
+   "t1": 7.3,
+   "dur": 0.36,
+   "after": 22
+  },
+  {
+   "t0": 13.42,
+   "t1": 13.74,
+   "dur": 0.32,
+   "after": 45
+  },
+  {
+   "t0": 14.5,
+   "t1": 14.82,
+   "dur": 0.32,
+   "after": 48
+  },
+  {
+   "t0": 15.66,
+   "t1": 16,
+   "dur": 0.34,
+   "after": 51
+  },
+  {
+   "t0": 17.5,
+   "t1": 18.12,
+   "dur": 0.62,
+   "after": 58
+  },
+  {
+   "t0": 34.08,
+   "t1": 34.46,
+   "dur": 0.38,
+   "after": 111
+  }
+ ],
+ "numbers": [
+  {
+   "i": 6,
+   "w": "30",
+   "t0": 1.62
+  },
+  {
+   "i": 9,
+   "w": "una",
+   "t0": 2.74
+  },
+  {
+   "i": 37,
+   "w": "una",
+   "t0": 10.8
+  },
+  {
+   "i": 64,
+   "w": "una",
+   "t0": 19.42
+  },
+  {
+   "i": 92,
+   "w": "1",
+   "t0": 27.76
+  },
+  {
+   "i": 94,
+   "w": "2",
+   "t0": 28.18
+  },
+  {
+   "i": 99,
+   "w": "8",
+   "t0": 30.08
+  },
+  {
+   "i": 101,
+   "w": "4",
+   "t0": 30.52
+  },
+  {
+   "i": 109,
+   "w": "48",
+   "t0": 32.8
+  },
+  {
+   "i": 110,
+   "w": "mil",
+   "t0": 33.14
+  }
+ ],
+ "words": 124
+}

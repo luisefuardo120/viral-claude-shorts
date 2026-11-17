@@ -190,3 +190,26 @@ const dioLabel = (text: string, color = '#ffffff', height = 0.045, arrow = false
   const pose = (show: number) => { s.visible = show > 0.02; s.scale.set(base[0] * Math.max(0.001, show), base[1] * Math.max(0.001, show), 1); };
   return Object.assign(s, { pose });
 };
+
+// ---------- a 2D cartoon character card (Toon) standing in the 3D world, always facing the camera ----------
+// dioToon(outfit, height m) -> a group whose origin is at the soles; .pose(camera, opts) redraws only when the pose changes
+// (opts are Toon.FrontOpts: expr, mode 'stand'|'stroll'|'march'|'sit'|'fall', phase, look, blink, wave, tilt, light, facing...)
+const DIO_TOON_PX = 0.6;   // canvas pixels per design unit (600 x 1000 design -> 360 x 600 px)
+const dioToon = (o: Toon.Outfit, height = 1.75, seed = 1) => {
+  const cv = document.createElement('canvas'); cv.width = 600 * DIO_TOON_PX; cv.height = 1000 * DIO_TOON_PX;
+  const tex = new THREE.CanvasTexture(cv); tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 8;
+  const H = (height / 0.975) * 1.0, W = H * 0.6;   // the card: soles (y 975 of 1000) at the origin
+  const geo = new THREE.PlaneGeometry(W, H); geo.translate(0, H / 2 - H * 0.025, 0);
+  const card = new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ map: tex, transparent: true, alphaTest: 0.05, side: THREE.DoubleSide }));
+  const shadow = new THREE.Mesh(new THREE.CircleGeometry(W * 0.28, 24), new THREE.MeshBasicMaterial({ color: '#000000', transparent: true, opacity: 0.22, depthWrite: false }));
+  shadow.rotation.x = -Math.PI / 2; shadow.position.y = 0.01; shadow.scale.y = 0.45;
+  const g = p3Group(card, shadow); let last = '';
+  const pose = (cam: THREE.Camera, opts: Toon.FrontOpts = {}) => {
+    const k = JSON.stringify(opts, (_, v) => (typeof v === 'number' ? Math.round(v * 40) / 40 : v));
+    if (k !== last) { last = k; const c = cv.getContext('2d')!; c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, cv.width, cv.height); c.setTransform(DIO_TOON_PX, 0, 0, DIO_TOON_PX, 0, 0);
+      Toon.bodyFront(new Toon.Pen(c), o, { seed, mode: 'stand', ...opts }); tex.needsUpdate = true; }
+    g.updateMatrixWorld(true); const p = g.getWorldPosition(new THREE.Vector3()), cp = cam.getWorldPosition(new THREE.Vector3());
+    card.rotation.y = Math.atan2(cp.x - p.x, cp.z - p.z);   // billboard around the vertical axis (the card's parent is not rotated)
+  };
+  return Object.assign(g, { pose, card });
+};
