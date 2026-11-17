@@ -35,7 +35,8 @@ const meas = spawnSync('ffmpeg', ['-hide_banner', '-i', raw, '-af', `${LN}:print
 const m = JSON.parse(meas.slice(meas.lastIndexOf('{'), meas.lastIndexOf('}') + 1));
 run(['-i', raw, '-af', `${LN}:measured_I=${m.input_i}:measured_TP=${m.input_tp}:measured_LRA=${m.input_lra}:measured_thresh=${m.input_thresh}:offset=${m.target_offset}:linear=true`, '-ar', '48000', mix]);
 fs.rmSync(raw, { force: true });
-const mark = `drawtext=text='${WATERMARK}':font=Sans:fontsize=34:fontcolor=white@0.75:shadowcolor=black@0.6:shadowx=2:shadowy=2:x=(w-text_w)/2:y=1212`;
+const MARK_FONT = path.join(path.dirname(new URL(import.meta.url).pathname), '..', 'assets', 'fonts', 'Lemon-Regular.ttf');   // Lemon (OFL), assets/fonts
+const mark = `drawtext=text='${WATERMARK}':fontfile=${MARK_FONT}:fontsize=30:fontcolor=white@0.45:shadowcolor=black@0.3:shadowx=1:shadowy=1:x=(w-text_w)/2:y=1212`;   // subtle: the channel's mark under the captions
 run(['-i', video, '-i', mix, '-map', '0:v:0', '-map', '1:a:0', '-vf', mark, '-c:v', 'libx264', '-preset', 'slow', '-crf', '18', '-pix_fmt', 'yuv420p',
   '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', out]);
 console.log(`final.mp4: ${vdur.toFixed(2)} s, voice ${path.basename(voice)}${fs.existsSync(mus) ? ` + music at ${MUS} dB` : ''}, -14 LUFS -> ${out}`);
