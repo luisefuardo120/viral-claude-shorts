@@ -1,7 +1,7 @@
 // Look test for the "ink" style: the same backyard (cutaway, finished pool, worker) with a mansion and a rich background,
 // once in the channel's current look and once with the cartoon ink finish at sunset. Prefix pt.
 
-const PT_WORKER: Toon.Outfit = { jacket: '#ff8a1f', pants: '#2f5fb5', boots: '#3a2a1e', hat: 'cap', cap: '#1f5fd6' };
+const PT_WORKER: Toon.Outfit = { jacket: '#ff8a1f', pants: '#2f5fb5', boots: '#3a2a1e', hat: 'cap', cap: '#1f5fd6', scarf: '#d93b3b' };
 const ptSet = (w: World, ink: boolean) => {
   if (ink) inkLights(w, 'sunset'); else dioLights(w);
   // land: a block cut open at the front, the pool in the middle
@@ -22,14 +22,15 @@ const ptSet = (w: World, ink: boolean) => {
   const umb = new THREE.ConeGeometry(1.2, 0.5, 8); w.add(p3Mesh(umb, dioSmooth('#ff4b4b', 0.6), { p: [4.4, 2.1, -2.5] }));
   // far: neighbours, pines, hills, mountains, clouds, sun
   for (const [x, z, s] of [[-14, -22, 1.2], [13, -24, 1.3], [-20, -30, 1.1]]) w.add(dioHouse([x, 0, z], 0.3, s));
-  for (let i = 0; i < 60; i++) { const x = -30 + (i * 1.7) % 60, z = -24 - ((i * 7) % 5) * 2.2; w.add(inkPine([x, 0, z], 1.8 + ((i * 3) % 5) * 0.35, ['#1f5a3a', '#2a6b43', '#184d31'][i % 3], i + 1)); }
+  for (let i = 0; i < 60; i++) { const x = -30 + (i * 1.7) % 60, z = -24 - ((i * 7) % 5) * 2.2; if (x > -14 && x < -4 && z > -30) continue; w.add(inkPine([x, 0, z], 1.8 + ((i * 3) % 5) * 0.35, ['#1f5a3a', '#2a6b43', '#184d31'][i % 3], i + 1)); }
   for (const [x, z, s] of [[-8, -6, 1.3], [8.5, -3, 1.1], [-9, 1, 1.0]]) w.add(inkPine([x, 0, z], s, '#2a6b43'));
-  inkHills(w, -45, ['#2c6a47', '#356f4b', '#3d7a52']); if (ink) { w.add(inkSunGlow([-9, 12, -70], 50)); w.add(p3Mesh(new THREE.CircleGeometry(3.4, 32), new THREE.MeshBasicMaterial({ color: '#ffb066', fog: false }), { p: [-9, 11.5, -72] })); } else { const sun = w.add(dioSun()); sun.position.set(-10, 7, -58); sun.scale.setScalar(1.6); }
+  inkHills(w, -45, ['#2c6a47', '#356f4b', '#3d7a52']); if (ink) { w.add(inkSunGlow([-9, 12, -70], 50, '#ff9a55')); w.add(p3Mesh(new THREE.CircleGeometry(3.4, 32), new THREE.MeshBasicMaterial({ color: '#ff8c42', fog: false }), { p: [-9, 11.5, -72] })); } else { const sun = w.add(dioSun()); sun.position.set(-10, 7, -58); sun.scale.setScalar(1.6); }
+  if (ink) w.add(inkSiteProps([-4.3, 0, -1.2], 0.5));
   const worker = w.add(dioToon(PT_WORKER, 1.75, 4)); worker.position.set(-2.6, 0, -1.0);
   return { worker, spark };
 };
 defineVisuals({
-  antes: { bg: '#5bb8f5', build(w) { const S = ptSet(w, false); return (t) => { S.spark.pose(t * 3); S.worker.pose(w.camera, { expr: 'grin', mode: 'stand', wave: 1 }); w.look([-0.3, 3.8, 8.0], [-0.7, 0.9, -8], 50); }; } },
-  tinta: { bg: '#5bb8f5', build(w) { const S = ptSet(w, true); inkLook(w); return (t) => { S.spark.pose(t * 3); S.worker.pose(w.camera, { expr: 'grin', mode: 'stand', wave: 1 }); w.look([-0.3, 3.8, 8.0], [-0.7, 0.9, -8], 50); }; } },
+  antes: { bg: '#5bb8f5', build(w) { const S = ptSet(w, false); return (t) => { S.spark.pose(t * 3); S.worker.pose(w.camera, { expr: 'grin', mode: 'stand', wave: 1 }); w.look([-1.3, 3.8, 8.0], [-1.5, 0.9, -8], 50); }; } },
+  tinta: { bg: '#5bb8f5', build(w) { const S = ptSet(w, true); inkLook(w); return (t) => { S.spark.pose(t * 3); S.worker.pose(w.camera, { expr: 'grin', mode: 'stand', wave: 1 }); w.look([-1.3, 3.8, 8.0], [-1.5, 0.9, -8], 50); }; } },
   'tinta-cerca': { bg: '#5bb8f5', build(w) { const S = ptSet(w, true); inkLook(w, { focus: 6 }); return (t) => { S.spark.pose(t * 3); S.worker.pose(w.camera, { expr: 'grin', mode: 'stand', wave: 1 }); w.look([-1.0, 1.7, 4.0], [-2.6, 1.0, -1.0], 42); }; } },
 });

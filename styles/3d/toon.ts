@@ -18,7 +18,7 @@ const SH_FELT: C3 = [0.62, 0.62, 0.7];
 export type Build = "adult" | "stout" | "kid";
 export type Outfit = {
   jacket: string; pants: string; boots: string; hat?: string | null; belt?: string | null; buttons?: string; rifle?: boolean;
-  sash?: string; sword?: boolean; moustache?: string; skin?: string; head?: number; cap?: string; hair?: string; dress?: string;
+  sash?: string; scarf?: string; sword?: boolean; moustache?: string; skin?: string; head?: number; cap?: string; hair?: string; dress?: string;
   build?: Build;
 };
 type P2 = [number, number];
@@ -570,6 +570,12 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
     });
     if (o.sash) { const s = facing || 1; p.poly([[tcx + s * 0.55 * T.a, torsoBot - 0.3 * HH], [tcx + s * 0.75 * T.a, torsoBot + 0.05 * HH], [tcx + s * 0.45 * T.a, torsoBot + 0.02 * HH]], o.sash, 1.6 * u); }
     p.inkRing(tp, ow, thick);
+  }
+  if (o.scarf && !dress) { // a scarf round the neck, one end hanging on the side the body faces
+    const y = chin + 0.05 * HH, s = facing || 1;
+    p.band([[tcx - 0.62 * T.a, y], [tcx + 0.62 * T.a, y]], o.scarf, 0.12 * HH, 1.8 * u, "round");
+    p.poly([[tcx + s * 0.18 * T.a, y], [tcx + s * 0.46 * T.a, y], [tcx + s * 0.56 * T.a, y + 0.46 * HH], [tcx + s * 0.26 * T.a, y + 0.48 * HH]], o.scarf, 1.8 * u);
+    p.band([[tcx + s * 0.24 * T.a, y + 0.4 * HH], [tcx + s * 0.55 * T.a, y + 0.38 * HH]], shade(o.scarf, 0.7), 2.5 * u, 0);
   }
   // in front of the body: hands holding props
   for (const a of arms) if (a.front) {

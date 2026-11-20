@@ -142,6 +142,13 @@ const inkMansion = (p: Vec3, ry = 0, s = 1) => { const g = p3Group(), wall = ink
   // balcony rail on the first floor
   for (let x = -1.6; x <= 1.6; x += 0.2) g.add(p3Mesh(p3Box(0.05, 0.4, 0.05), trim, { p: [x, 2.52, 2.8] })); g.add(p3Mesh(p3Box(3.4, 0.06, 0.08), trim, { p: [0, 2.74, 2.8] }));
   g.add(p3Mesh(p3Box(0.6, 1.4, 0.6), dioSmooth('#b9a48a', 0.9), { p: [1.8, 5.2, -0.6] }));
+  // details: shutters, flower boxes under the ground-floor windows, a cornice band, a round window in the pediment
+  const shut = dioSmooth('#3f6e58', 0.7), box = dioSmooth('#8a5a34', 0.8), fl = ['#ff5d8f', '#ffd23f', '#ff8a3d'];
+  for (const [bx, bw, bz, bd, fls] of [[0, 6, 0, 3.6, 2], [-4.4, 3, 0.3, 3, 1], [4.4, 3, 0.3, 3, 1]] as const) for (let f = 0; f < fls; f++) for (let wx = -bw / 2 + 0.7; wx <= bw / 2 - 0.6; wx += 1.0) {
+    const y = 0.95 + f * (fls > 1 ? 2.1 : 3), zf = bz + bd / 2 + 0.03; for (const s2 of [-1, 1]) g.add(p3Mesh(p3Box(0.16, 0.85, 0.04), shut, { p: [bx + wx + s2 * 0.38, y, zf] }));
+    if (f === 0) { g.add(p3Mesh(p3Box(0.62, 0.14, 0.18), box, { p: [bx + wx, y - 0.55, zf + 0.08] })); for (let k = 0; k < 4; k++) g.add(p3Mesh(new THREE.SphereGeometry(0.06, 8, 6), fl[(k + Math.round(wx)) % 3], { p: [bx + wx - 0.21 + k * 0.14, y - 0.45, zf + 0.1] })); } }
+  g.add(p3Mesh(p3Box(6.3, 0.18, 3.9), trim, { p: [0, 4.05, 0] }));
+  g.add(p3Mesh(new THREE.CircleGeometry(0.22, 20), glass, { p: [0, 2.72, 2.47] }));
   g.position.set(...p); g.rotation.y = ry; g.scale.setScalar(s); return g; };
 
 // a soft glow round the low sun (drawn on top, no ink)
@@ -152,3 +159,12 @@ const inkSunGlow = (p: Vec3, size = 30, color = '#ffd29a') => { const t = p3Pain
 const inkWaterMat = (opacity = 0.86) => { const t = p3Paint(256, 256, (c) => { const g = c.createLinearGradient(0, 0, 0, 256); g.addColorStop(0, '#c9f1ff'); g.addColorStop(0.5, '#7fd0f0'); g.addColorStop(1, '#3f9fd6'); c.fillStyle = g; c.fillRect(0, 0, 256, 256);
     c.strokeStyle = 'rgba(255,255,255,0.35)'; c.lineWidth = 5; for (let i = 0; i < 7; i++) { c.beginPath(); const x = 20 + i * 36; c.moveTo(x, 256); c.lineTo(x + 70, 0); c.stroke(); } });
   t.colorSpace = THREE.SRGBColorSpace; return new THREE.MeshBasicMaterial({ map: t, transparent: true, opacity, depthWrite: false }); };
+
+// foreground clutter for a building site: a wheelbarrow, cement sacks, a toolbox (r: turn)
+const inkSiteProps = (p: Vec3, r = 0) => { const g = p3Group(), metal = dioSmooth('#d8553f', 0.6), dark = dioSmooth('#33363d', 0.6), sack = inkTex('plaster', '#e8dcc2');
+  const tray = new THREE.CylinderGeometry(0.55, 0.32, 0.4, 4, 1, true); tray.rotateY(Math.PI / 4); tray.scale(1.4, 1, 1); const t = p3Mesh(tray, metal, { p: [0, 0.6, 0] }); (t.material as THREE.Material).side = THREE.DoubleSide; g.add(t);
+  g.add(p3Mesh(new THREE.TorusGeometry(0.2, 0.06, 8, 16), dark, { p: [0.75, 0.22, 0], r: [0, Math.PI / 2, 0] }));
+  for (const s of [-1, 1]) { g.add(p3Rod([0.5, 0.42, s * 0.3], [-0.9, 0.62, s * 0.36], 0.03, dioSmooth('#8a5a34', 0.7), 6)); g.add(p3Rod([-0.2, 0.42, s * 0.25], [-0.25, 0, s * 0.28], 0.03, dark, 6)); }
+  for (const [x, z, ry] of [[-1.6, -0.9, 0.3], [-1.7, -1.6, -0.2], [-1.65, -1.25, 0.1]]) { const m = p3Mesh(new THREE.RoundedBoxGeometry(0.75, 0.24, 0.45, 2, 0.08), sack, { p: [x, x === -1.65 ? 0.36 : 0.12, z] }); m.rotation.y = ry; g.add(m); }
+  g.add(p3Mesh(new THREE.RoundedBoxGeometry(0.6, 0.3, 0.3, 2, 0.04), dioSmooth('#2f5fb5', 0.5), { p: [-1.3, 0.15, 0.5] }));
+  g.position.set(...p); g.rotation.y = r; return g; };
