@@ -35,7 +35,7 @@ const adapter: Adapter = {
     bundleThree(path.join(PROJ, 'three.js'));
     // the style's theme, plus the video's own theme.css on top if it has one (its fonts and colors go in videos/<topic>/assets/)
     fs.writeFileSync(path.join(PROJ, 'theme.css'), [path.join(HERE, 'theme.css'), path.join(v, 'theme.css')].filter((f) => fs.existsSync(f)).map((f) => fs.readFileSync(f, 'utf8')).join('\n'));
-    for (const f of ['engine', 'library', 'detail', 'toon', 'diorama']) fs.writeFileSync(path.join(PROJ, `${f}.js`), toJs(path.join(HERE, `${f}.ts`)));
+    for (const f of ['engine', 'library', 'detail', 'toon', 'diorama', 'ink']) fs.writeFileSync(path.join(PROJ, `${f}.js`), toJs(path.join(HERE, `${f}.ts`)));
     // the video's world (reusable pieces, their states, sets, camera moves) and its scenes
     for (const [src, out] of [['world3d.ts', 'world.js'], ['visuals3d.ts', 'visuals.js']]) { const f = path.join(v, src); fs.writeFileSync(path.join(PROJ, out), fs.existsSync(f) ? toJs(f) : ''); }
     fs.rmSync(path.join(PROJ, 'assets'), { recursive: true, force: true });
@@ -71,6 +71,7 @@ ${voice ? `      <audio id="voice" src="voice.wav" data-start="0" data-duration=
     <script src="detail.js"></script>
     <script src="toon.js"></script>
     <script src="diorama.js"></script>
+    <script src="ink.js"></script>
     <script src="world.js"></script>
     <script src="visuals.js"></script>
     <script src="engine.js"></script>

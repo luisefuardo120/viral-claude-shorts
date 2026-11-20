@@ -1,0 +1,1 @@
+{ "style": "3d", "shots": [ { "id": "antes", "title": "Antes", "duration": 1, "snap": [0.5] }, { "id": "tinta", "title": "Tinta", "duration": 1, "snap": [0.5] }, { "id": "tinta-cerca", "title": "Tinta cerca", "duration": 1, "snap": [0.5] } ] }
