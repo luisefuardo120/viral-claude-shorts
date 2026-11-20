@@ -7,22 +7,22 @@
 // Original code for this repo (same idea as the edge-detect pass in mromidev/claude-animated-shorts, written from scratch).
 
 const INK_SKY: Record<string, { top: string; mid: string; low: string; fog: string; sun: string; hemi: [string, string]; el: number; az: number; i: number }> = {
-  sunset: { top: '#3d6fb6', mid: '#f3a76b', low: '#ffd9a0', fog: '#f6c595', sun: '#ffd2a1', hemi: ['#ffe6cc', '#5d7f45'], el: 22, az: 215, i: 2.6 },
+  sunset: { top: '#7c9ad6', mid: '#f7b48a', low: '#ffe3b8', fog: '#f8cfa6', sun: '#ffe2bd', hemi: ['#dfe8ff', '#b88a6a'], el: 20, az: 200, i: 2.9 },
   day: { top: '#3f8fe0', mid: '#8fd0ff', low: '#dff3ff', fog: '#cfeaff', sun: '#fff4e0', hemi: ['#e8f4ff', '#4f7f35'], el: 48, az: 30, i: 1.6 },
 };
 // a vertical gradient for the background (screen space)
 const inkSkyTex = (top: string, mid: string, low: string) => { const t = p3Paint(4, 512, (c) => { const g = c.createLinearGradient(0, 0, 0, 512); g.addColorStop(0, top); g.addColorStop(0.62, mid); g.addColorStop(1, low); c.fillStyle = g; c.fillRect(0, 0, 4, 512); });
   t.colorSpace = THREE.SRGBColorSpace; return t; };
 const inkLights = (w: World, preset: 'sunset' | 'day' = 'sunset') => { const P = INK_SKY[preset];
-  w.scene.background = inkSkyTex(P.top, P.mid, P.low); w.scene.fog = new THREE.Fog(P.fog, 45, 120);
-  w.add(new THREE.HemisphereLight(P.hemi[0], P.hemi[1], 1.2));
+  w.scene.background = inkSkyTex(P.top, P.mid, P.low); w.scene.fog = new THREE.Fog(P.fog, 30, 115);   // strong haze: far layers turn pastel, like a painted backdrop
+  w.add(new THREE.HemisphereLight(P.hemi[0], P.hemi[1], 1.0));
   const sun = new THREE.DirectionalLight(P.sun, P.i), el = THREE.MathUtils.degToRad(P.el), az = THREE.MathUtils.degToRad(P.az);
   sun.position.set(Math.sin(az) * Math.cos(el) * 30, Math.sin(el) * 30, -Math.cos(az) * Math.cos(el) * 30 + 6); sun.castShadow = true; sun.shadow.mapSize.set(4096, 4096); sun.shadow.radius = 3; sun.shadow.bias = -0.0004;
   Object.assign(sun.shadow.camera, { left: -26, right: 26, top: 26, bottom: -26, far: 90 }); w.add(sun);
   return { sun, preset: P }; };
 
-// 3 flat light steps
-const INK_RAMP = (() => { const t = new THREE.DataTexture(new Uint8Array([150, 150, 150, 255, 205, 205, 205, 255, 255, 255, 255, 255]), 3, 1); t.minFilter = t.magFilter = THREE.NearestFilter; t.needsUpdate = true; return t; })();
+// 3 light steps with soft edges between them (painted, not plastic)
+const INK_RAMP = (() => { const t = new THREE.DataTexture(new Uint8Array([150, 150, 150, 255, 215, 215, 215, 255, 255, 255, 255, 255]), 3, 1); t.minFilter = t.magFilter = THREE.LinearFilter; t.needsUpdate = true; return t; })();
 // every plain lit material -> toon (keeps colour, map, emissive); shader-patched materials stay as they are
 const inkToonify = (root: THREE.Object3D) => { const cache = new Map<THREE.Material, THREE.Material>();
   root.traverse((o) => { const m = o as THREE.Mesh; if (!m.isMesh || Array.isArray(m.material)) return; const src = m.material as THREE.MeshStandardMaterial;
@@ -50,10 +50,12 @@ const INK_FINAL = (o: { ink: string; width: number; sat: number; vig: number; wa
       for (int i = 0; i < 8; i++) { float a = float(i) * 0.785398; vec2 o = vec2(cos(a), sin(a)) * uW / uRes; vec4 n1 = texture2D(tN, vUv + o); float d1 = n1.a * ${INK_FAR.toFixed(1)};
         if (d1 - d0 > 0.04 + d0 * 0.02) e = 1.0;
         if (abs(d1 - d0) < 0.25 + d0 * 0.02 && dot(N0, n1.rgb * 2.0 - 1.0) < 0.7) e = max(e, 0.9); }
-      col = mix(col, uInk, e * k * 0.92);
+      col = mix(col, uInk * mix(vec3(1.0), col, 0.35), e * k * 0.9);   // ink takes a little of the colour under it, like a brush line
       // grade: saturation, warmth, vignette
       float l = dot(col, vec3(0.299, 0.587, 0.114)); col = mix(vec3(l), col, uSat); col *= vec3(1.0 + uWarm, 1.0 + uWarm * 0.35, 1.0 - uWarm * 0.6);
       vec2 q = vUv - 0.5; col *= 1.0 - uVig * dot(q, q) * 1.6;
+      col = col * 0.93 + vec3(0.05, 0.035, 0.03);   // lifted shadows, warm
+      vec2 pp = floor(vUv * uRes / 3.0); float pn = fract(sin(dot(pp, vec2(12.9898, 78.233))) * 43758.5453); col *= 0.975 + 0.05 * pn;   // paper grain
       gl_FragColor = vec4(col, 1.0);
       #include <tonemapping_fragment>
       #include <colorspace_fragment>
@@ -66,7 +68,7 @@ const inkIsOverlay = (o: THREE.Object3D) => { const m = o as THREE.Mesh; if ((o 
 const inkLook = (w: World, o: { ink?: string; width?: number; sat?: number; vig?: number; warm?: number; blur?: number; focus?: number } = {}) => {
   const r = w.renderer, S = 1080, H = 1920;
   const rtC = new THREE.WebGLRenderTarget(S, H, { type: THREE.HalfFloatType, samples: 4 }), rtN = new THREE.WebGLRenderTarget(S, H, { type: THREE.HalfFloatType });
-  const fin = INK_FINAL({ ink: o.ink ?? '#1c1426', width: o.width ?? 3, sat: o.sat ?? 1.3, vig: o.vig ?? 0.45, warm: o.warm ?? 0.04, blur: o.blur ?? 5, focus: o.focus ?? 14 });
+  const fin = INK_FINAL({ ink: o.ink ?? '#3b2730', width: o.width ?? 2.4, sat: o.sat ?? 1.08, vig: o.vig ?? 0.45, warm: o.warm ?? 0.04, blur: o.blur ?? 5, focus: o.focus ?? 14 });
   const quad = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), fin); quad.frustumCulled = false; const qs = new THREE.Scene(); qs.add(quad); const qc = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
   let toon = false;
   w.present = () => { const sc = w.scene, cam = w.camera; if (!toon) { inkToonify(sc); toon = true; }
@@ -99,7 +101,7 @@ const inkLamp = (p: Vec3) => p3Group(p3Mesh(p3Cyl(0.04, 0.06, 1.8, 8), '#2a2a33'
 const inkHills = (w: World, z = -40, c = ['#6f9a52', '#5e8a48', '#7fa95e']) => { [[-22, 9, 1], [-6, 12, 0], [14, 10, 2], [30, 8, 1]].forEach(([x, s, i]) => { const m = p3Mesh(new THREE.SphereGeometry(s, 24, 12), c[i], { p: [x, -s * 0.55, z - (i as number) * 3] }); m.scale.y = 0.55; w.add(m); }); };
 const inkMountains = (w: World, z = -62) => { [[-28, 14], [-10, 18], [8, 15], [26, 19]].forEach(([x, h]) => { w.add(p3Mesh(new THREE.ConeGeometry(h * 0.9, h, 6), '#8d8fb8', { p: [x, h / 2 - 3, z] })); w.add(p3Mesh(new THREE.ConeGeometry(h * 0.28, h * 0.31, 6), '#f4f2ff', { p: [x, h - 3 - h * 0.155 + 0.02, z] })); }); };
 // a two-storey mansion: main body, two wings, columns and a porch, a balcony, big windows (lit), hipped roofs, a chimney, steps
-const inkMansion = (p: Vec3, ry = 0, s = 1) => { const g = p3Group(), wall = dioSmooth('#f4ead8', 0.8), trim = dioSmooth('#ffffff', 0.6), roof = dioSmooth('#7a3b34', 0.8), glass = new THREE.MeshBasicMaterial({ color: '#ffd889' }), dark = dioSmooth('#4a3a2c', 0.8);
+const inkMansion = (p: Vec3, ry = 0, s = 1) => { const g = p3Group(), wall = dioSmooth('#f6e9d4', 0.8), trim = dioSmooth('#fffaf0', 0.6), roof = dioSmooth('#b4584b', 0.8), glass = new THREE.MeshBasicMaterial({ color: '#ffd889' }), dark = dioSmooth('#4a3a2c', 0.8);
   const hip = (w: number, d: number, h: number, y: number, x = 0, z = 0) => { const geo = new THREE.ConeGeometry(Math.SQRT1_2, 1, 4, 1); geo.rotateY(Math.PI / 4); const m = p3Mesh(geo, roof, { p: [x, y + h / 2, z] }); m.scale.set(w * 1.08, h, d * 1.08); g.add(m); };
   const body = (w: number, h: number, d: number, x: number, z: number, floors: number) => { g.add(p3Mesh(p3Box(w, h, d), wall, { p: [x, h / 2, z] }));
     g.add(p3Mesh(p3Box(w + 0.12, 0.12, d + 0.12), trim, { p: [x, h, z] })); if (floors > 1) g.add(p3Mesh(p3Box(w + 0.06, 0.08, d + 0.06), trim, { p: [x, h / 2, z] }));
@@ -115,3 +117,7 @@ const inkMansion = (p: Vec3, ry = 0, s = 1) => { const g = p3Group(), wall = dio
   for (let x = -1.6; x <= 1.6; x += 0.2) g.add(p3Mesh(p3Box(0.05, 0.4, 0.05), trim, { p: [x, 2.52, 2.8] })); g.add(p3Mesh(p3Box(3.4, 0.06, 0.08), trim, { p: [0, 2.74, 2.8] }));
   g.add(p3Mesh(p3Box(0.6, 1.4, 0.6), dioSmooth('#b9a48a', 0.9), { p: [1.8, 5.2, -0.6] }));
   g.position.set(...p); g.rotation.y = ry; g.scale.setScalar(s); return g; };
+
+// a soft glow round the low sun (drawn on top, no ink)
+const inkSunGlow = (p: Vec3, size = 30, color = '#ffd29a') => { const t = p3Paint(256, 256, (c) => { const g = c.createRadialGradient(128, 128, 0, 128, 128, 128); g.addColorStop(0, '#ffffff'); g.addColorStop(0.08, color); g.addColorStop(0.35, color + '66'); g.addColorStop(1, color + '00'); c.fillStyle = g; c.fillRect(0, 0, 256, 256); });
+  t.colorSpace = THREE.SRGBColorSpace; const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: t, transparent: true, depthWrite: false, fog: false, blending: THREE.AdditiveBlending })); s.position.set(...p); s.scale.setScalar(size); return s; };

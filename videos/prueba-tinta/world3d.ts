@@ -5,7 +5,7 @@ const PT_WORKER: Toon.Outfit = { jacket: '#ff8a1f', pants: '#2f5fb5', boots: '#3
 const ptSet = (w: World, ink: boolean) => {
   if (ink) inkLights(w, 'sunset'); else dioLights(w);
   // land: a block cut open at the front, the pool in the middle
-  const soil = dioSoil(); soil.repeat.set(1.5, 1); const face = new THREE.MeshStandardMaterial({ map: soil, roughness: 0.95 }), grass = dioSmooth('#4f9e3a', 0.95), dark = dioSmooth('#6b3c1c', 0.95);
+  const soil = dioSoil(); soil.repeat.set(1.5, 1); const face = new THREE.MeshStandardMaterial({ map: soil, roughness: 0.95 }), grass = dioSmooth('#86b85c', 0.95), dark = dioSmooth('#6b3c1c', 0.95);
   const block = (x0: number, x1: number, y0: number, z0: number) => w.add(new THREE.Mesh(new THREE.BoxGeometry(x1 - x0, -y0, -z0), [dark, dark, grass, dark, face, dark])).position.set((x0 + x1) / 2, y0 / 2, z0 / 2);
   block(-9, -2, -4, -30); block(2, 9, -4, -30); w.add(new THREE.Mesh(new THREE.BoxGeometry(4, 4, 22), [dark, dark, grass, dark, face, dark])).position.set(0, -2, -19); w.add(new THREE.Mesh(new THREE.BoxGeometry(4, 2.5, 8), [dark, dark, dark, dark, face, dark])).position.set(0, -2.75, -4);
   const wall = dioSmooth('#dff4ff', 0.4); w.add(p3Mesh(p3Box(4, 0.1, 8), wall, { p: [0, -1.45, -4] })); w.add(p3Mesh(p3Box(0.12, 1.5, 8), wall, { p: [-1.94, -0.75, -4] })); w.add(p3Mesh(p3Box(0.12, 1.5, 8), wall, { p: [1.94, -0.75, -4] })); w.add(p3Mesh(p3Box(4, 1.5, 0.12), wall, { p: [0, -0.75, -7.94] }));
@@ -20,13 +20,14 @@ const ptSet = (w: World, ink: boolean) => {
   const umb = new THREE.ConeGeometry(1.2, 0.5, 8); w.add(p3Mesh(umb, dioSmooth('#ff4b4b', 0.6), { p: [4.4, 2.1, -2.5] }));
   // far: neighbours, pines, hills, mountains, clouds, sun
   for (const [x, z, s] of [[-14, -22, 1.2], [13, -24, 1.3], [-20, -30, 1.1]]) w.add(dioHouse([x, 0, z], 0.3, s));
-  for (let i = 0; i < 18; i++) w.add(inkPine([-26 + i * 3.1, 0, -26 - (i % 3) * 3], 1.6 + (i % 4) * 0.3, ['#2f6b3a', '#3c7d44', '#285c33'][i % 3]));
-  inkHills(w); inkMountains(w); [[-14, 19, -60, 2.6], [15, 22, -66, 3], [2, 25, -70, 2.4]].forEach(([x, y, z, k]) => w.add(dioCloud([x, y, z], k))); const sun = w.add(dioSun()); sun.position.set(-10, 7, -58); sun.scale.setScalar(1.6);
-  const worker = w.add(dioToon(PT_WORKER, 1.75, 4)); worker.position.set(-2.6, 0, -1.2);
+  for (let i = 0; i < 60; i++) { const x = -30 + (i * 1.7) % 60, z = -24 - ((i * 7) % 5) * 2.2; w.add(inkPine([x, 0, z], 1.8 + ((i * 3) % 5) * 0.35, ['#1f5a3a', '#2a6b43', '#184d31'][i % 3])); }
+  for (const [x, z, s] of [[-8, -6, 1.3], [8.5, -3, 1.1], [-9, 1, 1.0]]) w.add(inkPine([x, 0, z], s, '#2a6b43'));
+  inkHills(w, -45, ['#2c6a47', '#356f4b', '#3d7a52']); if (ink) { w.add(inkSunGlow([-5, 7, -70], 46)); w.add(p3Mesh(new THREE.CircleGeometry(3, 32), new THREE.MeshBasicMaterial({ color: '#ff9a52', fog: false }), { p: [-5, 6, -72] })); } else { const sun = w.add(dioSun()); sun.position.set(-10, 7, -58); sun.scale.setScalar(1.6); }
+  const worker = w.add(dioToon(PT_WORKER, 1.75, 4)); worker.position.set(-2.6, 0, -1.0);
   return { worker };
 };
 defineVisuals({
-  antes: { bg: '#5bb8f5', build(w) { const S = ptSet(w, false); return () => { S.worker.pose(w.camera, { expr: 'grin', mode: 'stand', wave: 1 }); w.look([1.6, 5.2, 15], [0, 1.2, -9], 40); }; } },
-  tinta: { bg: '#5bb8f5', build(w) { const S = ptSet(w, true); inkLook(w); return () => { S.worker.pose(w.camera, { expr: 'grin', mode: 'stand', wave: 1 }); w.look([1.6, 5.2, 15], [0, 1.2, -9], 40); }; } },
-  'tinta-cerca': { bg: '#5bb8f5', build(w) { const S = ptSet(w, true); inkLook(w, { focus: 6 }); return () => { S.worker.pose(w.camera, { expr: 'grin', mode: 'stand', wave: 1 }); w.look([-1.2, 1.4, 3.2], [-2.6, 0.9, -1.2], 36); }; } },
+  antes: { bg: '#5bb8f5', build(w) { const S = ptSet(w, false); return () => { S.worker.pose(w.camera, { expr: 'grin', mode: 'stand', wave: 1 }); w.look([-0.3, 3.8, 8.0], [-0.7, 0.9, -8], 50); }; } },
+  tinta: { bg: '#5bb8f5', build(w) { const S = ptSet(w, true); inkLook(w); return () => { S.worker.pose(w.camera, { expr: 'grin', mode: 'stand', wave: 1 }); w.look([-0.3, 3.8, 8.0], [-0.7, 0.9, -8], 50); }; } },
+  'tinta-cerca': { bg: '#5bb8f5', build(w) { const S = ptSet(w, true); inkLook(w, { focus: 6 }); return () => { S.worker.pose(w.camera, { expr: 'grin', mode: 'stand', wave: 1 }); w.look([-1.0, 1.7, 4.0], [-2.6, 1.0, -1.0], 42); }; } },
 });
