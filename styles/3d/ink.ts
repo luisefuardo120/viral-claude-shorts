@@ -13,8 +13,8 @@ const INK_SKY: Record<string, { top: string; mid: string; low: string; fog: stri
 // a vertical gradient for the background (screen space)
 const inkSkyTex = (top: string, mid: string, low: string) => { const t = p3Paint(4, 512, (c) => { const g = c.createLinearGradient(0, 0, 0, 512); g.addColorStop(0, top); g.addColorStop(0.62, mid); g.addColorStop(1, low); c.fillStyle = g; c.fillRect(0, 0, 4, 512); });
   t.colorSpace = THREE.SRGBColorSpace; return t; };
-const inkLights = (w: World, preset: 'sunset' | 'day' = 'sunset') => { const P = INK_SKY[preset];
-  w.scene.background = inkSkyTex(P.top, P.mid, P.low); w.scene.fog = new THREE.Fog(P.fog, 30, 115);   // strong haze: far layers turn pastel, like a painted backdrop
+const inkLights = (w: World, preset: 'sunset' | 'day' = 'sunset', fog: [number, number] = [30, 115]) => { const P = INK_SKY[preset];   // fog: near/far in m (bigger sets need it farther)
+  w.scene.background = inkSkyTex(P.top, P.mid, P.low); w.scene.fog = new THREE.Fog(P.fog, fog[0], fog[1]);   // strong haze: far layers turn pastel, like a painted backdrop
   w.add(new THREE.HemisphereLight(P.hemi[0], P.hemi[1], 1.0));
   const sun = new THREE.DirectionalLight(P.sun, P.i), el = THREE.MathUtils.degToRad(P.el), az = THREE.MathUtils.degToRad(P.az);
   sun.position.set(Math.sin(az) * Math.cos(el) * 30, Math.sin(el) * 30, -Math.cos(az) * Math.cos(el) * 30 + 6); sun.castShadow = true; sun.shadow.mapSize.set(4096, 4096); sun.shadow.radius = 3; sun.shadow.bias = -0.0004;
@@ -67,9 +67,10 @@ const INK_FINAL = (o: { ink: string; width: number; sat: number; vig: number; wa
 const inkIsOverlay = (o: THREE.Object3D) => { const m = o as THREE.Mesh; if ((o as THREE.Sprite).isSprite || (o as THREE.Points).isPoints || (o as THREE.InstancedMesh).isInstancedMesh || o.userData.noInk) return true;
   if (!m.isMesh) return false; const mat = m.material as THREE.Material | THREE.Material[]; return Array.isArray(mat) ? mat.some((x) => x.transparent) : mat.transparent; };
 
+let INK_RT: { rtC: THREE.WebGLRenderTarget; rtN: THREE.WebGLRenderTarget } | null = null;
 const inkLook = (w: World, o: { ink?: string; width?: number; sat?: number; vig?: number; warm?: number; blur?: number; focus?: number } = {}) => {
   const r = w.renderer, S = 1080, H = 1920;
-  const rtC = new THREE.WebGLRenderTarget(S, H, { type: THREE.HalfFloatType, samples: 4 }), rtN = new THREE.WebGLRenderTarget(S, H, { type: THREE.HalfFloatType });
+  const { rtC, rtN } = INK_RT ??= { rtC: new THREE.WebGLRenderTarget(S, H, { type: THREE.HalfFloatType, samples: 4 }), rtN: new THREE.WebGLRenderTarget(S, H, { type: THREE.HalfFloatType }) };   // shared by every scene (memory)
   const fin = INK_FINAL({ ink: o.ink ?? '#3b2730', width: o.width ?? 2.4, sat: o.sat ?? 1.08, vig: o.vig ?? 0.45, warm: o.warm ?? 0.04, blur: o.blur ?? 5, focus: o.focus ?? 14 });
   const quad = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), fin); quad.frustumCulled = false; const qs = new THREE.Scene(); qs.add(quad); const qc = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
   let toon = false;

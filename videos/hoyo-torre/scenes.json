@@ -1,0 +1,258 @@
+{
+ "style": "3d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "RETENTION TEST #5, first video in the ink look (styles/3d/ink.ts). Prize (what hit it can take) announced at 4.4 s, answered at 32.7 s. Sources: fuentes.md.",
+ "music": {
+  "bpm": 104
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "from": 0,
+   "type": "question",
+   "title": "De hoyo a torre",
+   "highlight": "torre",
+   "mood": "curious",
+   "keys": [
+    {
+     "id": "flash",
+     "at": 10,
+     "sfx": "shimmer",
+     "t": 2.64
+    },
+    {
+     "id": "final",
+     "at": 17,
+     "sfx": "whoosh",
+     "t": 4.44
+    }
+   ],
+   "visual": "frame 0: the worker digging a pit in the beach; at 'torre' a flash of the finished tower with people on top and the flood below; back to the pit, label ¿QUÉ GOLPE AGUANTA?",
+   "t0": 0,
+   "t1": 6.15
+  },
+  {
+   "id": "problema",
+   "from": 25,
+   "type": "question",
+   "title": "¿Y si construyes así?",
+   "highlight": "así",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "quake",
+     "at": 30,
+     "sfx": "impact",
+     "t": 8.08
+    },
+    {
+     "id": "sopa",
+     "at": 34,
+     "sfx": "fail",
+     "t": 9.2
+    },
+    {
+     "id": "hunde",
+     "at": 37,
+     "sfx": "hit",
+     "t": 9.92
+    }
+   ],
+   "visual": "a tower standing on the sand without piles; the quake shakes everything, the sand turns to soup, the tower sinks and tilts",
+   "t0": 6.15,
+   "t1": 10.73
+  },
+  {
+   "id": "pilotes",
+   "from": 40,
+   "type": "process",
+   "title": "Paso 1: pilotes",
+   "highlight": "pilotes",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "pilotes",
+     "at": 42,
+     "sfx": "pop",
+     "t": 11.76
+    },
+    {
+     "id": "roca",
+     "at": 48,
+     "sfx": "hit",
+     "t": 13.7
+    }
+   ],
+   "visual": "steel piles driven down through the cut to the rock; labels 20 M and ROCA",
+   "t0": 10.73,
+   "t1": 14.44
+  },
+  {
+   "id": "patas",
+   "from": 51,
+   "type": "process",
+   "title": "Paso 2: patas",
+   "highlight": "patas",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "patas",
+     "at": 53,
+     "sfx": "pop",
+     "t": 15.48
+    },
+    {
+     "id": "agua",
+     "at": 57,
+     "sfx": "whoosh",
+     "t": 16.76
+    }
+   ],
+   "visual": "the pile cap and four separate legs rise; water flows between them, label EL AGUA PASA",
+   "t0": 14.44,
+   "t1": 18.3
+  },
+  {
+   "id": "plataforma",
+   "from": 64,
+   "type": "process",
+   "title": "Paso 3: plataforma",
+   "highlight": "plataforma",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "plat",
+     "at": 67,
+     "sfx": "pop",
+     "t": 19.46
+    },
+    {
+     "id": "ola",
+     "at": 73,
+     "sfx": "whoosh",
+     "t": 21.34
+    }
+   ],
+   "visual": "the platform lands on top; the flood rises to 8 m and stays below it; label 11,5 M",
+   "t0": 18.3,
+   "t1": 22.2
+  },
+  {
+   "id": "escaleras",
+   "from": 77,
+   "type": "process",
+   "title": "Paso 4: el truco",
+   "highlight": "truco",
+   "mood": "curious",
+   "keys": [
+    {
+     "id": "escaleras",
+     "at": 81,
+     "sfx": "pop",
+     "t": 23.74
+    },
+    {
+     "id": "gente",
+     "at": 87,
+     "sfx": "pop",
+     "t": 25.38
+    }
+   ],
+   "visual": "wide stairs zigzag up the side; people climb them; label 700 PERSONAS",
+   "t0": 22.2,
+   "t1": 26.79
+  },
+  {
+   "id": "techo",
+   "from": 90,
+   "type": "process",
+   "title": "Paso 5: techo",
+   "highlight": "techo",
+   "mood": "triumphant",
+   "keys": [
+    {
+     "id": "techo",
+     "at": 91,
+     "sfx": "pop",
+     "t": 27.3
+    }
+   ],
+   "visual": "railings and the roof go on; the people on top",
+   "t0": 26.79,
+   "t1": 28.68
+  },
+  {
+   "id": "premio",
+   "from": 95,
+   "type": "stat",
+   "title": "¿Qué golpe aguanta?",
+   "highlight": "golpe",
+   "mood": "tense",
+   "stat": {
+    "value": "36 KM/H",
+    "text": "barco de 10 toneladas"
+   },
+   "keys": [
+    {
+     "id": "barco",
+     "at": 106,
+     "sfx": "whoosh",
+     "t": 31.46
+    },
+    {
+     "id": "stat",
+     "at": 111,
+     "sfx": "impact",
+     "t": 32.68
+    }
+   ],
+   "visual": "the flood; a fishing boat rides the wave in and hits a leg; the tower holds, the people safe on top",
+   "t0": 28.68,
+   "t1": 34.16
+  },
+  {
+   "id": "pregunta",
+   "from": 115,
+   "type": "closing",
+   "title": "¿Subirías o correrías?",
+   "highlight": "subirías",
+   "mood": "playful",
+   "keys": [
+    {
+     "id": "subir",
+     "at": 116,
+     "sfx": "pop",
+     "t": 34.44
+    },
+    {
+     "id": "correr",
+     "at": 118,
+     "sfx": "pop",
+     "t": 35.04
+    },
+    {
+     "id": "abajo",
+     "at": 119,
+     "sfx": "tick",
+     "t": 35.74
+    }
+   ],
+   "visual": "the people on top waving; labels ¿SUBIRÍAS? ¿O CORRERÍAS? DÍMELO ABAJO",
+   "t0": 34.16,
+   "t1": 36.48
+  },
+  {
+   "id": "loop",
+   "from": 121,
+   "type": "closing",
+   "title": "De hoyo a torre",
+   "highlight": "torre",
+   "mood": "curious",
+   "visual": "frame 0's composition again (the pit, the worker digging), so it loops",
+   "t0": 36.48,
+   "t1": 38.191
+  }
+ ],
+ "duration": 38.191
+}

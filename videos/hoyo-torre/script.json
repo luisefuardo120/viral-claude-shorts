@@ -1,0 +1,52 @@
+{
+  "language": "es",
+  "lead": 0,
+  "tail": 0.3,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Este hoyo en la playa, en cinco pasos, es una torre que te salva de un tsunami. Y al final te digo qué golpe aguanta.",
+      "pause": 0.25
+    },
+    {
+      "id": "problema",
+      "text": "Si construyes encima así, el terremoto vuelve la arena sopa y la torre se hunde.",
+      "pause": 0.25
+    },
+    {
+      "id": "pilotes",
+      "text": "Paso uno: pilotes de acero, clavados veinte metros hasta la roca.",
+      "pause": 0.2
+    },
+    {
+      "id": "patas",
+      "text": "Paso dos: patas separadas, para que el agua pase en vez de empujar.",
+      "pause": 0.2
+    },
+    {
+      "id": "plataforma",
+      "text": "Paso tres: la plataforma, a once metros y medio, encima de la ola.",
+      "pause": 0.2
+    },
+    {
+      "id": "escaleras",
+      "text": "Paso cuatro, el truco: escaleras anchas por fuera, para que suban setecientas personas.",
+      "pause": 0.2
+    },
+    {
+      "id": "techo",
+      "text": "Paso cinco: baranda y techo.",
+      "pause": 0.25
+    },
+    {
+      "id": "premio",
+      "text": "¿Qué golpe aguanta? Hay una en Japón hecha para aguantar un barco de diez toneladas a treinta y seis kilómetros por hora.",
+      "pause": 0.3
+    },
+    {
+      "id": "loop",
+      "text": "¿Tú subirías o correrías? Dímelo abajo. Y todo empezó con",
+      "pause": 0
+    }
+  ]
+}
