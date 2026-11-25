@@ -69,9 +69,10 @@ const inkIsOverlay = (o: THREE.Object3D) => { const m = o as THREE.Mesh; if ((o 
 
 let INK_RT: { rtC: THREE.WebGLRenderTarget; rtN: THREE.WebGLRenderTarget } | null = null;
 const inkLook = (w: World, o: { ink?: string; width?: number; sat?: number; vig?: number; warm?: number; blur?: number; focus?: number } = {}) => {
-  const r = w.renderer, S = 1080, H = 1920;
+  const r = w.renderer, sz = r.getSize(new THREE.Vector2()), S = sz.x, H = sz.y;
   const { rtC, rtN } = INK_RT ??= { rtC: new THREE.WebGLRenderTarget(S, H, { type: THREE.HalfFloatType, samples: 4 }), rtN: new THREE.WebGLRenderTarget(S, H, { type: THREE.HalfFloatType }) };   // shared by every scene (memory)
   const fin = INK_FINAL({ ink: o.ink ?? '#3b2730', width: o.width ?? 2.4, sat: o.sat ?? 1.08, vig: o.vig ?? 0.45, warm: o.warm ?? 0.04, blur: o.blur ?? 5, focus: o.focus ?? 14 });
+  fin.uniforms.uRes.value.set(S, H);
   const quad = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), fin); quad.frustumCulled = false; const qs = new THREE.Scene(); qs.add(quad); const qc = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
   let toon = false;
   w.present = () => { const sc = w.scene, cam = w.camera; if (!toon) { inkToonify(sc); toon = true; }

@@ -40,13 +40,14 @@ function buildTimeline(): gsap.core.Timeline {
 
 function build3D(tl: gsap.core.Timeline) {
   const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('gl') as HTMLCanvasElement, antialias: true, preserveDrawingBuffer: true });
-  renderer.setPixelRatio(1); renderer.setSize(1080, 1920, false);
+  const FW = SCENES.format === '16:9' ? 1920 : 1080, FH = SCENES.format === '16:9' ? 1080 : 1920;   // vertical Short or horizontal long video
+  renderer.setPixelRatio(1); renderer.setSize(FW, FH, false);
   renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   const worlds = SCENES.scenes.map((s) => {
     const V = VISUALS[s.id] || LIBRARY[s.type] || LIBRARY.object;
     const scene = new THREE.Scene(); scene.background = new THREE.Color(V.bg || P3_SKY);
-    const camera = new THREE.PerspectiveCamera(40, 1080 / 1920, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(40, FW / FH, 0.1, 1000);
     const w: World = {
       s, scene, camera, renderer, tl, K: keyOf(s),
       titles: document.querySelector<HTMLElement>('#sc-' + s.id + ' .titles')!,
