@@ -1,0 +1,52 @@
+{
+  "language": "es",
+  "lead": 0,
+  "tail": 0.4,
+  "lines": [
+    {
+      "id": "hook",
+      "text": "Imagina que te dan un trozo de desierto. Arena, sol y nada más. Y te dicen: aquí tiene que vivir una ciudad de millones de personas, con rascacielos y playas. No hay ríos. No hay lagos. Casi nunca llueve. Parece imposible. Pero tienes un plan. Y al final te digo qué pasa si un día ese plan se apaga.",
+      "pause": 0.3
+    },
+    {
+      "id": "plan",
+      "text": "¿Qué necesita una ciudad para vivir en el desierto? Cuatro cosas: agua, frío, tierra para construir y energía. Y tú vas a fabricar las cuatro.",
+      "pause": 0.3
+    },
+    {
+      "id": "agua",
+      "text": "Pieza uno: el agua. Si no hay ríos, la sacas del único sitio donde sobra: el mar. Pero el agua del mar tiene sal. Así que construyes desalinizadoras: fábricas que empujan el agua del mar, a mucha presión, contra una membrana con agujeros tan pequeños que la sal no cabe. De un lado sale agua dulce. Del otro, salmuera que vuelve al mar. Solo una planta de Dubái, la de Jebel Ali, da ciento ochenta y dos millones de litros al día. Abres el grifo en el desierto, y sale agua del mar.",
+      "pause": 0.3
+    },
+    {
+      "id": "frio",
+      "text": "Pieza dos: el frío. Con el calor del verano, una ciudad sin aire acondicionado no se puede habitar. Pero un aparato en cada ventana gasta muchísimo. Así que lo haces al revés: enfrías agua en plantas gigantes y la mandas por tubos bajo las calles, a barrios enteros. Una de esas plantas, en Business Bay, tiene un récord Guinness: es la más grande del mundo. Tu ciudad no tiene aire acondicionado. Tu ciudad es un aire acondicionado.",
+      "pause": 0.3
+    },
+    {
+      "id": "tierra",
+      "text": "Pieza tres: la tierra. Y aquí viene lo más loco. Estás rodeado de arena, y no te sirve. El viento ha pulido la arena del desierto durante miles de años. Sus granos son redondos, y en el hormigón resbalan en vez de agarrarse. Así que los países del Golfo importan arena. Al desierto. Y cuando te falta tierra, la fabricas: para una isla con forma de palmera sacaron del fondo del mar noventa y cuatro millones de metros cúbicos de arena.",
+      "pause": 0.3
+    },
+    {
+      "id": "muro",
+      "text": "Y entonces chocas contra una pared. Todo esto necesita electricidad. Si se va la luz, se va el agua. Y se va el frío.",
+      "pause": 0.3
+    },
+    {
+      "id": "energia",
+      "text": "Pieza cuatro: la energía. Usas lo único que el desierto tiene de sobra: el sol. El parque solar Mohammed bin Rashid ya produce más de tres mil ochocientos megavatios, y quieren pasar de siete mil antes de dos mil treinta. El mismo sol que te quemaba ahora te da la luz.",
+      "pause": 0.3
+    },
+    {
+      "id": "tablero",
+      "text": "Mira el tablero completo. Agua, del mar. Frío, por tubos. Tierra, importada y ganada al mar. Energía, del sol. Claro, tiene un precio: la salmuera vuelve al mar más salada, y sacar arena del fondo cambia la costa.",
+      "pause": 0.3
+    },
+    {
+      "id": "remate",
+      "text": "¿Y qué pasa si un día el plan se apaga? El agua deja de salir, el frío se acaba, y la ciudad vuelve a ser lo que era: desierto. Por eso no construiste una ciudad en el desierto. Construiste una máquina gigante que tiene que estar encendida para siempre. ¿Tú vivirías ahí? Dímelo abajo.",
+      "pause": 0
+    }
+  ]
+}

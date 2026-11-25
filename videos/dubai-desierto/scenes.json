@@ -1,0 +1,666 @@
+{
+ "style": "3d",
+ "fps": 30,
+ "format": "9:16",
+ "notes": "Short of 2.5 min, 'Imagina que...' structure (plan of 4 pieces, board, payoff). Low-poly polished look (no ink). Sources: fuentes.md.",
+ "music": {
+  "bpm": 100
+ },
+ "scenes": [
+  {
+   "id": "hook",
+   "from": 0,
+   "type": "question",
+   "mood": "curious",
+   "keys": [
+    {
+     "id": "ciudad",
+     "at": 21,
+     "sfx": "whoosh",
+     "t": 6.18
+    }
+   ],
+   "title": "Imagina que…",
+   "highlight": "Imagina",
+   "t0": 0,
+   "t1": 9.24
+  },
+  {
+   "id": "sin",
+   "from": 30,
+   "type": "question",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "rios",
+     "at": 32,
+     "sfx": "tick",
+     "t": 9.76
+    },
+    {
+     "id": "lagos",
+     "at": 35,
+     "sfx": "tick",
+     "t": 10.7
+    },
+    {
+     "id": "lluvia",
+     "at": 37,
+     "sfx": "tick",
+     "t": 11.6
+    },
+    {
+     "id": "imposible",
+     "at": 39,
+     "sfx": "fail",
+     "t": 12.62
+    }
+   ],
+   "t0": 9.24,
+   "t1": 13.6
+  },
+  {
+   "id": "promesa",
+   "from": 41,
+   "type": "question",
+   "mood": "curious",
+   "keys": [
+    {
+     "id": "plan",
+     "at": 44,
+     "sfx": "shimmer",
+     "t": 14.44
+    },
+    {
+     "id": "apaga",
+     "at": 56,
+     "sfx": "scratch",
+     "t": 16.98
+    }
+   ],
+   "t0": 13.6,
+   "t1": 17.83
+  },
+  {
+   "id": "plan",
+   "from": 59,
+   "type": "object",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "agua",
+     "at": 70,
+     "sfx": "pop",
+     "t": 21.54
+    },
+    {
+     "id": "frio",
+     "at": 71,
+     "sfx": "pop",
+     "t": 22.16
+    },
+    {
+     "id": "tierra",
+     "at": 72,
+     "sfx": "pop",
+     "t": 22.7
+    },
+    {
+     "id": "energia",
+     "at": 76,
+     "sfx": "pop",
+     "t": 23.86
+    }
+   ],
+   "title": "El plan",
+   "highlight": "plan",
+   "t0": 17.83,
+   "t1": 26.04
+  },
+  {
+   "id": "agua",
+   "from": 84,
+   "type": "process",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "mar",
+     "at": 100,
+     "sfx": "whoosh",
+     "t": 30.96
+    },
+    {
+     "id": "sal",
+     "at": 106,
+     "sfx": "pop",
+     "t": 32.3
+    }
+   ],
+   "title": "Pieza 1: el agua",
+   "highlight": "agua",
+   "t0": 26.04,
+   "t1": 33.01
+  },
+  {
+   "id": "desal",
+   "from": 108,
+   "type": "process",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "planta",
+     "at": 110,
+     "sfx": "pop",
+     "t": 33.66
+    },
+    {
+     "id": "presion",
+     "at": 121,
+     "sfx": "whoosh",
+     "t": 37.5
+    },
+    {
+     "id": "membrana",
+     "at": 124,
+     "sfx": "pop",
+     "t": 38.64
+    },
+    {
+     "id": "nocabe",
+     "at": 131,
+     "sfx": "hit",
+     "t": 40.58
+    }
+   ],
+   "t0": 33.01,
+   "t1": 41.43
+  },
+  {
+   "id": "salida",
+   "from": 134,
+   "type": "process",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "dulce",
+     "at": 138,
+     "sfx": "shimmer",
+     "t": 42.38
+    },
+    {
+     "id": "salmuera",
+     "at": 142,
+     "sfx": "whoosh",
+     "t": 43.7
+    }
+   ],
+   "t0": 41.43,
+   "t1": 45.15
+  },
+  {
+   "id": "jebel",
+   "from": 148,
+   "type": "stat",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "stat",
+     "at": 158,
+     "sfx": "impact",
+     "t": 48.34
+    }
+   ],
+   "stat": {
+    "value": "182 MILLONES",
+    "text": "litros al día · Jebel Ali"
+   },
+   "t0": 45.15,
+   "t1": 50.73
+  },
+  {
+   "id": "grifo",
+   "from": 164,
+   "type": "object",
+   "mood": "triumphant",
+   "keys": [
+    {
+     "id": "abre",
+     "at": 165,
+     "sfx": "tick",
+     "t": 51.26
+    },
+    {
+     "id": "sale",
+     "at": 171,
+     "sfx": "shimmer",
+     "t": 52.6
+    }
+   ],
+   "t0": 50.73,
+   "t1": 53.55
+  },
+  {
+   "id": "frio",
+   "from": 175,
+   "type": "process",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "calor",
+     "at": 181,
+     "sfx": "riser",
+     "t": 55.62
+    }
+   ],
+   "title": "Pieza 2: el frío",
+   "highlight": "frío",
+   "t0": 53.55,
+   "t1": 59.03
+  },
+  {
+   "id": "ventanas",
+   "from": 193,
+   "type": "comparison",
+   "mood": "playful",
+   "keys": [
+    {
+     "id": "aparatos",
+     "at": 195,
+     "sfx": "pop",
+     "t": 59.62
+    },
+    {
+     "id": "gasta",
+     "at": 199,
+     "sfx": "fail",
+     "t": 60.7
+    },
+    {
+     "id": "reves",
+     "at": 204,
+     "sfx": "scratch",
+     "t": 62.32
+    }
+   ],
+   "t0": 59.03,
+   "t1": 63.14
+  },
+  {
+   "id": "tubos",
+   "from": 207,
+   "type": "process",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "enfria",
+     "at": 208,
+     "sfx": "shimmer",
+     "t": 63.5
+    },
+    {
+     "id": "tubos",
+     "at": 217,
+     "sfx": "whoosh",
+     "t": 65.78
+    },
+    {
+     "id": "barrios",
+     "at": 222,
+     "sfx": "pop",
+     "t": 67.3
+    }
+   ],
+   "t0": 63.14,
+   "t1": 68.37
+  },
+  {
+   "id": "guinness",
+   "from": 224,
+   "type": "stat",
+   "mood": "triumphant",
+   "keys": [
+    {
+     "id": "record",
+     "at": 233,
+     "sfx": "impact",
+     "t": 70.96
+    }
+   ],
+   "stat": {
+    "value": "RÉCORD",
+    "text": "la planta de frío más grande del mundo"
+   },
+   "t0": 68.37,
+   "t1": 73.16
+  },
+  {
+   "id": "ciudadac",
+   "from": 241,
+   "type": "object",
+   "mood": "playful",
+   "keys": [
+    {
+     "id": "es",
+     "at": 249,
+     "sfx": "hit",
+     "t": 75.86
+    }
+   ],
+   "t0": 73.16,
+   "t1": 77.5
+  },
+  {
+   "id": "tierra",
+   "from": 253,
+   "type": "process",
+   "mood": "curious",
+   "keys": [
+    {
+     "id": "loco",
+     "at": 262,
+     "sfx": "riser",
+     "t": 80.04
+    },
+    {
+     "id": "nosirve",
+     "at": 267,
+     "sfx": "fail",
+     "t": 81.7
+    }
+   ],
+   "title": "Pieza 3: la tierra",
+   "highlight": "tierra",
+   "t0": 77.5,
+   "t1": 82.68
+  },
+  {
+   "id": "granos",
+   "from": 271,
+   "type": "comparison",
+   "mood": "calm",
+   "keys": [
+    {
+     "id": "redondos",
+     "at": 286,
+     "sfx": "pop",
+     "t": 87.1
+    },
+    {
+     "id": "resbalan",
+     "at": 291,
+     "sfx": "whoosh",
+     "t": 88.44
+    }
+   ],
+   "t0": 82.68,
+   "t1": 90.09
+  },
+  {
+   "id": "importa",
+   "from": 296,
+   "type": "process",
+   "mood": "playful",
+   "keys": [
+    {
+     "id": "barco",
+     "at": 299,
+     "sfx": "whoosh",
+     "t": 90.8
+    },
+    {
+     "id": "desierto",
+     "at": 305,
+     "sfx": "scratch",
+     "t": 93.08
+    }
+   ],
+   "t0": 90.09,
+   "t1": 94.08
+  },
+  {
+   "id": "isla",
+   "from": 307,
+   "type": "process",
+   "mood": "triumphant",
+   "keys": [
+    {
+     "id": "fabricas",
+     "at": 312,
+     "sfx": "whoosh",
+     "t": 95.22
+    },
+    {
+     "id": "palmera",
+     "at": 319,
+     "sfx": "pop",
+     "t": 97.38
+    },
+    {
+     "id": "stat",
+     "at": 325,
+     "sfx": "impact",
+     "t": 99.04
+    }
+   ],
+   "stat": {
+    "value": "94 MILLONES",
+    "text": "m³ de arena del fondo del mar"
+   },
+   "t0": 94.08,
+   "t1": 102.1
+  },
+  {
+   "id": "muro",
+   "from": 333,
+   "type": "question",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "pared",
+     "at": 334,
+     "sfx": "impact",
+     "t": 102.38
+    },
+    {
+     "id": "luz",
+     "at": 344,
+     "sfx": "hit",
+     "t": 106.26
+    },
+    {
+     "id": "agua",
+     "at": 349,
+     "sfx": "fail",
+     "t": 107.3
+    },
+    {
+     "id": "frio",
+     "at": 351,
+     "sfx": "fail",
+     "t": 107.68
+    }
+   ],
+   "t0": 102.1,
+   "t1": 108.78
+  },
+  {
+   "id": "energia",
+   "from": 356,
+   "type": "process",
+   "mood": "triumphant",
+   "keys": [
+    {
+     "id": "sol",
+     "at": 368,
+     "sfx": "shimmer",
+     "t": 112.54
+    }
+   ],
+   "title": "Pieza 4: la energía",
+   "highlight": "energía",
+   "t0": 108.78,
+   "t1": 113.52
+  },
+  {
+   "id": "solar",
+   "from": 371,
+   "type": "stat",
+   "mood": "triumphant",
+   "keys": [
+    {
+     "id": "paneles",
+     "at": 372,
+     "sfx": "pop",
+     "t": 113.84
+    },
+    {
+     "id": "mw",
+     "at": 381,
+     "sfx": "impact",
+     "t": 116.46
+    },
+    {
+     "id": "meta",
+     "at": 387,
+     "sfx": "pop",
+     "t": 118.98
+    }
+   ],
+   "stat": {
+    "value": "3.800 MW",
+    "text": "meta: 7.000+ en 2030"
+   },
+   "t0": 113.52,
+   "t1": 120.83
+  },
+  {
+   "id": "tablero",
+   "from": 391,
+   "type": "object",
+   "mood": "triumphant",
+   "keys": [
+    {
+     "id": "tab",
+     "at": 402,
+     "sfx": "whoosh",
+     "t": 123.5
+    },
+    {
+     "id": "agua",
+     "at": 406,
+     "sfx": "pop",
+     "t": 124.94
+    },
+    {
+     "id": "frio",
+     "at": 409,
+     "sfx": "pop",
+     "t": 126.16
+    },
+    {
+     "id": "tierra",
+     "at": 411,
+     "sfx": "pop",
+     "t": 127.4
+    },
+    {
+     "id": "energia",
+     "at": 417,
+     "sfx": "pop",
+     "t": 129.52
+    }
+   ],
+   "title": "El plan completo",
+   "highlight": "completo",
+   "t0": 120.83,
+   "t1": 130.7
+  },
+  {
+   "id": "precio",
+   "from": 420,
+   "type": "comparison",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "salmuera",
+     "at": 425,
+     "sfx": "whoosh",
+     "t": 132.44
+    },
+    {
+     "id": "costa",
+     "at": 432,
+     "sfx": "pop",
+     "t": 134.34
+    }
+   ],
+   "t0": 130.7,
+   "t1": 136.33
+  },
+  {
+   "id": "apaga",
+   "from": 439,
+   "type": "question",
+   "mood": "tense",
+   "keys": [
+    {
+     "id": "agua",
+     "at": 449,
+     "sfx": "fail",
+     "t": 138.58
+    },
+    {
+     "id": "frio",
+     "at": 455,
+     "sfx": "fail",
+     "t": 139.8
+    },
+    {
+     "id": "desierto",
+     "at": 461,
+     "sfx": "impact",
+     "t": 141.12
+    }
+   ],
+   "title": "¿Y si se apaga?",
+   "highlight": "apaga",
+   "t0": 136.33,
+   "t1": 142.96
+  },
+  {
+   "id": "maquina",
+   "from": 468,
+   "type": "closing",
+   "mood": "triumphant",
+   "keys": [
+    {
+     "id": "maquina",
+     "at": 479,
+     "sfx": "shimmer",
+     "t": 146.1
+    }
+   ],
+   "t0": 142.96,
+   "t1": 148.66
+  },
+  {
+   "id": "pregunta",
+   "from": 488,
+   "type": "closing",
+   "mood": "playful",
+   "keys": [
+    {
+     "id": "abajo",
+     "at": 491,
+     "sfx": "tick",
+     "t": 149.84
+    }
+   ],
+   "title": "¿Vivirías ahí?",
+   "highlight": "Vivirías",
+   "t0": 148.66,
+   "t1": 150.7
+  }
+ ],
+ "duration": 150.7
+}

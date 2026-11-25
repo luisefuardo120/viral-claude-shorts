@@ -1,0 +1,1 @@
+{ "style": "3d", "shots": [ { "id": "test-sets", "duration": 4, "snap": [0.5, 3.5] }, { "id": "test-lab", "duration": 4, "snap": [0.5, 3.5] } ] }
