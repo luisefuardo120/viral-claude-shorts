@@ -1,0 +1,9 @@
+# Fuentes: ciudad en el desierto (Dubái)
+
+- Capacidad de desalinización de DEWA: 495 millones de galones imperiales/día a finales de 2025 — DEWA Annual Statistics Booklet 2025: https://dewa.gov.ae/-/media/Files/About-DEWA/Annual-Statistics/DEWA_Annual_Statistics_Booklet_2025_EN.ashx
+- Planta SWRO de Jebel Ali: 40 MIGD, 182 millones de litros/día a plena capacidad — ACCIONA: https://www.acciona.com/updates/news/acciona-built-jebel-ali-swro-desalination-plant-producing-full-capacity-supplying-dubai-water-network/
+- Refrigeración urbana (Empower): ~1,7 millones RT conectadas y ~2,0 millones RT contratadas a finales de 2025; récord Guinness de la planta de Business Bay — Dubai Media Office: https://www.mediaoffice.ae/en/news/2026/january/20-01/empower-connected-capacity ; Guinness: https://www.guinnessworldrecords.com/world-records/671519-largest-district-cooling-plant
+- Arena del desierto demasiado redonda para hormigón; el Golfo importa arena — AGBI: https://www.agbi.com/analysis/construction/2022/07/gulf-construction-may-face-imminent-sand-shortage/ ; The National: https://thenationalnews.com/lifestyle/dunes-and-don-ts-the-nitty-gritty-about-sand-1.516940
+- Palm Jumeirah: ~94 millones m³ de arena y 7 millones t de roca — Royal IHC: https://www.royalihc.com/dredging/project-type/creating-palm-islands ; UBC: https://cases.open.ubc.ca/?p=20843
+- Parque solar Mohammed bin Rashid: 3.860 MW en 2025; objetivo 2030 subido a 7.260 MW — WAM: https://www.wam.ae/en/article/bnfaptu-mohammed-bin-rashid-maktoum-solar-park-hits-new ; Zawya: https://www.zawya.com/en/projects/utilities/dubais-dewa-raises-mohammed-bin-rashid-solar-park-target-to-7-260mw-by-2030-abz7i7co
+- Pendiente de verificar antes de grabar: "todavía queman mucho gas" (cuota de gas en la electricidad de Dubái) y "en verano el aire quema" (temperaturas máximas típicas).
