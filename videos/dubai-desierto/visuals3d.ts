@@ -9,8 +9,9 @@ const DB_LABCAM = (w: World, u: number, d = 20) => w.look([2 - u, 5, d - u * 2],
 
 defineVisuals({
   // 1. (0 s) a piece of desert, nothing else; at "ciudad" the towers rise out of the sand
-  hook: { bg: '#5f7fc8', build(w) { const { C, cap } = dbDesert(w, 0, -1), wk = dbWorker(w, [0, 0, 17]);
-    return (t) => { const kc = w.K('ciudad'); C.pose(t, p3Ramp(t, kc, kc + 2.2)); wk.pose(w.camera, { expr: t < kc ? 'neutral' : 'shock', mode: 'stand' }); const u = dbU(w, t); w.look([1 + u, 2.2 + u * 3, 24 - u * 2], [0, 2.6 + u * 9, -60], 50); cap(t); }; } },
+  hook: { bg: '#5f7fc8', build(w) { const { C, cap } = dbDesert(w, 0, -1), wk = dbWorker(w, [0, 0, 17]), wind = w.add(p3Swarm(160, new THREE.SphereGeometry(0.022, 4, 3), new THREE.MeshBasicMaterial({ color: '#e6c48c' }))), R = p3Rnd(21), P = Array.from({ length: 160 }, () => [R(), R() * 1.6, 10 + R() * 12, 0.6 + R()]);
+    return (t) => { P.forEach(([ph, y, z, sp], i) => { const u = (ph + t * 0.35 * sp) % 1; wind.put(i, -9 + u * 18, y + Math.sin(u * 9 + ph * 6) * 0.25, z, 1); }); wind.done();   // blowing sand: something moves from frame 0
+      const kc = w.K('ciudad'); C.pose(t, p3Ramp(t, kc, kc + 2.2)); wk.pose(w.camera, { expr: t < kc ? 'neutral' : 'shock', mode: 'stand' }); const u = dbU(w, t); w.look([1 + u, 2.2 + u * 3, 24 - u * 2], [0, 2.6 + u * 9, -60], 50); cap(t); }; } },
   // 2. (9 s) no rivers, no lakes, almost no rain: the city fades back, three red crosses
   sin: { bg: '#5f7fc8', build(w) { const { C, cap } = dbDesert(w, 0, -1), a = dbLab3(w, '✗ RÍOS', DB.red, [0, 11, -10], 0.05), b = dbLab3(w, '✗ LAGOS', DB.red, [0, 8.5, -10], 0.05), c = dbLab3(w, '✗ LLUVIA', DB.red, [0, 6, -10], 0.05), wk = dbWorker(w, [0, 0, 12]);
     return (t) => { C.pose(t, 1 - p3Ramp(t, w.s.t0, w.s.t0 + 1)); a.pose(dbPop(t, w.K('rios'))); b.pose(dbPop(t, w.K('lagos'))); c.pose(dbPop(t, w.K('lluvia'))); wk.pose(w.camera, { expr: t < w.K('imposible') ? 'nervous' : 'pained', mode: 'stand' });
